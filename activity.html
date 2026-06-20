@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nujeen — Activity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#13526E;--blue-bright:#1B6CA8;--ink:#10242E;--bone:#FAF8F4;--bone-2:#F2EEE7;--rose:#C97E76;--rose-soft:#F0E2DE;--teal:#2F8E78;--grey:#52606A;--line:rgba(16,36,46,.10);--line-soft:rgba(16,36,46,.06)}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bone);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none;color:inherit}.serif{font-family:'Fraunces',serif}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  .read{max-width:760px;margin:0 auto}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);font-weight:600}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:var(--bone);padding:13px 26px;border-radius:2px;font-weight:500;font-size:15px;transition:.25s}
+  .btn:hover{background:var(--blue)}
+  .btn-line{background:transparent;color:var(--ink);border:1px solid var(--line)}.btn-line:hover{background:var(--ink);color:var(--bone)}
+  .topbar{border-bottom:1px solid var(--line-soft);font-size:13px;color:var(--grey)}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:46px}
+  .place{display:flex;align-items:center;gap:8px}.dot{width:5px;height:5px;border-radius:50%;background:var(--teal)}
+  .langs{display:flex;gap:2px}.langs span{padding:4px 11px;border-radius:2px}.langs span.on{background:var(--ink);color:var(--bone)}
+  header{position:sticky;top:0;z-index:50;background:rgba(250,248,244,.85);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line-soft)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:88px}
+  .brand{display:flex;flex-direction:column;line-height:1}
+  .brand .nm{font-family:'Fraunces',serif;font-weight:600;font-size:30px;color:var(--blue);letter-spacing:-.02em}.brand .nm i{font-style:normal;color:var(--ink)}
+  .brand .tag{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);margin-top:5px;font-weight:500}
+  nav ul{display:flex;gap:38px;list-style:none}
+  nav a{font-size:15px;font-weight:500;opacity:.78;position:relative;padding:4px 0}nav a:hover,nav a.on{opacity:1}
+  nav a.on::after{content:'';position:absolute;left:0;bottom:-3px;width:14px;height:2px;background:var(--rose)}
+
+  /* article header */
+  .ahead{padding:60px 0 44px}
+  .crumb{font-size:13px;color:var(--grey);margin-bottom:26px}
+  .crumb a:hover{color:var(--ink)}
+  .tags{display:flex;gap:8px;margin-bottom:22px}
+  .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:6px 13px;border-radius:2px;background:var(--bone-2);color:var(--blue)}
+  .tag.rose{background:var(--rose-soft);color:#9c5249}
+  .ahead h1{font-family:'Fraunces',serif;font-weight:500;font-size:50px;line-height:1.08;letter-spacing:-.02em;max-width:880px}
+  .amETA{margin-top:26px;display:flex;gap:28px;flex-wrap:wrap;font-size:14.5px;color:var(--grey);padding-top:24px;border-top:1px solid var(--line)}
+  .amETA span{display:flex;align-items:center;gap:8px}
+
+  /* feature image */
+  .feature{height:480px;border-radius:4px;margin:8px 0 56px;position:relative;overflow:hidden;background:#10242E}
+  .feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  /* article body */
+  .body{font-size:18.5px;line-height:1.75;color:#2b3942}
+  .body .lead{font-family:'Fraunces',serif;font-size:23px;line-height:1.5;color:var(--ink);font-weight:400;margin-bottom:30px}
+  .body p{margin-bottom:24px}
+  .body h2{font-family:'Fraunces',serif;font-weight:500;font-size:30px;margin:46px 0 18px;letter-spacing:-.01em;color:var(--ink)}
+  .body ul{margin:0 0 24px 4px;list-style:none}
+  .body li{padding-left:28px;position:relative;margin-bottom:13px}
+  .body li::before{content:'';position:absolute;left:0;top:12px;width:14px;height:1.5px;background:var(--rose)}
+
+  /* pull image inside */
+  .inline-fig{margin:42px 0}
+  .inline-fig .im{height:380px;border-radius:4px;overflow:hidden;background:#10242E}
+  .inline-fig .im img{width:100%;height:100%;object-fit:cover}
+  .inline-fig figcaption{font-size:14px;color:var(--grey);margin-top:14px;font-style:italic;font-family:'Fraunces',serif}
+
+  /* gallery */
+  .gallery{margin:48px 0}
+  .gallery .lbl{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);font-weight:600;margin-bottom:18px}
+  .ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .ggrid .g{height:150px;border-radius:3px;cursor:pointer;overflow:hidden;background:#10242E}
+  .ggrid .g img{width:100%;height:100%;object-fit:cover;transition:.3s}
+  .ggrid .g:hover img{transform:scale(1.06)}
+
+  /* DOWNLOADS — key dynamic feature */
+  .docs{border:1px solid var(--line);border-radius:4px;padding:30px 32px;margin:48px 0;background:var(--bone-2)}
+  .docs .h{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px}
+  .docs h3{font-family:'Fraunces',serif;font-weight:500;font-size:22px;color:var(--ink)}
+  .docs .cnt{font-size:13px;color:var(--grey);letter-spacing:.04em}
+  .docs .note{font-size:15px;color:var(--grey);margin-bottom:22px}
+  .doc{display:flex;align-items:center;gap:18px;background:var(--bone);border:1px solid var(--line);border-radius:3px;padding:16px 20px;margin-bottom:11px;transition:.2s}
+  .doc:hover{border-color:var(--blue);transform:translateX(3px)}
+  .doc .ic{width:48px;height:48px;border-radius:3px;background:#fff;border:1px solid var(--line);color:var(--rose);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:600;font-size:13px;flex-shrink:0}
+  .doc .info{flex:1}
+  .doc .t{font-weight:500;color:var(--ink);font-size:16px;line-height:1.3}
+  .doc .s{font-size:13px;color:var(--grey);margin-top:3px;letter-spacing:.02em}
+  .doc .dl{font-size:14px;font-weight:500;color:var(--blue);display:flex;align-items:center;gap:7px;white-space:nowrap}
+
+  /* footer of article */
+  .afoot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:30px;margin-top:50px}
+  .share{display:flex;gap:10px;align-items:center}
+  .share .lbl{font-size:13px;color:var(--grey);letter-spacing:.04em;margin-right:4px}
+  .share a{width:40px;height:40px;border:1px solid var(--line);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;transition:.2s}
+  .share a:hover{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+
+  /* related */
+  .related{padding:90px 0;border-top:1px solid var(--line);margin-top:80px}
+  .related .eyebrow{margin-bottom:14px;display:block}
+  .related h2{font-family:'Fraunces',serif;font-weight:500;font-size:34px;margin-bottom:40px;letter-spacing:-.01em}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .rcard{cursor:pointer}
+  .rcard .im{height:190px;border-radius:3px;overflow:hidden;margin-bottom:16px;background:#10242E}
+  .rcard .im img{width:100%;height:100%;object-fit:cover;transition:.5s}.rcard:hover .im img{transform:scale(1.05)}
+  .rcard .date{font-size:13px;color:var(--grey);margin-bottom:7px}
+  .rcard h4{font-family:'Fraunces',serif;font-weight:500;font-size:20px;line-height:1.25;transition:.2s}
+  .rcard:hover h4{color:var(--blue)}
+
+  footer{background:var(--ink);color:rgba(250,248,244,.55);padding:46px 0;text-align:center;font-size:14px}
+  @media(max-width:980px){.wrap{padding:0 24px}.ahead h1{font-size:34px}.feature{height:280px}.ggrid,.rgrid{grid-template-columns:1fr}nav{display:none}.body{font-size:17px}.docs{padding:22px}.doc{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><div class="place"><span class="dot"></span> Duhok · Kurdistan Region of Iraq</div><div class="langs"><span class="on">EN</span><span>عربی</span><span>کوردی</span></div></div></div>
+<header><div class="wrap">
+  <a href="index.html" class="brand"><span class="nm">nu<i>jeen</i></span><span class="tag">Democratizing the Family</span></a>
+  <nav><ul><li><a href="index.html">Home</a></li><li><a href="#">About</a></li><li><a href="activities.html" class="on">Activities</a></li><li><a href="#">Projects</a></li><li><a href="#">Resources</a></li><li><a href="#">Contact</a></li></ul></nav>
+  <a href="#" class="btn" style="padding:12px 24px">Get involved</a>
+</div></header>
+
+<section class="ahead"><div class="wrap read">
+  <div class="crumb"><a href="index.html">Home</a> / <a href="activities.html">Activities</a> / <span style="color:var(--ink)">SRHR Awareness</span></div>
+  <div class="tags"><span class="tag">Awareness</span><span class="tag rose">Domiz 2 Camp</span></div>
+  <h1>Together for Better Understanding our Sexual & Reproductive Health and Rights</h1>
+  <div class="amETA">
+    <span>◷ 22 August 2024</span>
+    <span>⚐ Domiz 2 Syrian Refugee Camp</span>
+    <span>♀ Women & girls, ages 15–49</span>
+  </div>
+</div></section>
+
+<div class="wrap read">
+  <div class="feature"><img src="hero.png" alt="SRHR awareness session at Domiz 2 camp"></div>
+
+  <div class="body">
+    <p class="lead">Under the title "Together for Better Understanding our Sexual and Reproductive Health and Rights," Nujeen held a series of awareness sessions on family planning for women and girls aged 15 to 49.</p>
+
+    <p>The sessions took place inside the Domiz 2 Syrian refugee camp, where Nujeen has maintained an ongoing presence supporting displaced families. Working directly within displacement venues allows the organization to reach women who would otherwise have limited access to reproductive health education and services.</p>
+
+    <h2>What the sessions covered</h2>
+    <p>Each session combined practical family planning guidance with open discussion designed to ease the social stigma that often surrounds reproductive health. Facilitators worked in small groups so that every participant felt comfortable asking questions.</p>
+    <ul>
+      <li>Family planning methods and informed choice</li>
+      <li>Maternal and reproductive health fundamentals</li>
+      <li>A rights-based understanding of reproductive health</li>
+      <li>Clear referral pathways to local health services</li>
+    </ul>
+
+    <figure class="inline-fig">
+      <div class="im"><img src="1.png" alt="Facilitators leading a small-group discussion"></div>
+      <figcaption>Facilitators leading a small-group discussion at Domiz 2.</figcaption>
+    </figure>
+
+    <p>Over the course of the program, participants moved from hesitation toward genuine engagement — asking questions, sharing experiences, and carrying what they learned back to their families. That shift, more than any single statistic, is what the work is for.</p>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <div class="lbl">Photographs from the sessions</div>
+    <div class="ggrid">
+      <div class="g"><img src="1.png" alt="Session photo"></div>
+      <div class="g"><img src="2.png" alt="Session photo"></div>
+      <div class="g"><img src="3.png" alt="Session photo"></div>
+      <div class="g"><img src="4.png" alt="Session photo"></div>
+      <div class="g"><img src="2.png" alt="Session photo"></div>
+      <div class="g"><img src="3.png" alt="Session photo"></div>
+    </div>
+  </div>
+
+  <!-- Downloads -->
+  <div class="docs">
+    <div class="h"><h3>Reports & documents</h3><span class="cnt">2 files</span></div>
+    <p class="note">Attached by the Nujeen team — open or download below.</p>
+    <a class="doc" href="#">
+      <div class="ic">PDF</div>
+      <div class="info"><div class="t">SRHR Awareness Session — Activity Report</div><div class="s">PDF · 2.4 MB · English</div></div>
+      <div class="dl">Download ↓</div>
+    </a>
+    <a class="doc" href="#">
+      <div class="ic">PDF</div>
+      <div class="info"><div class="t">تقرير الجلسة التوعوية — النسخة العربية</div><div class="s">PDF · 1.9 MB · العربية</div></div>
+      <div class="dl">Download ↓</div>
+    </a>
+  </div>
+
+  <div class="afoot">
+    <a href="activities.html" class="btn-line btn">← Back to Activities</a>
+    <div class="share"><span class="lbl">Share</span><a href="#">f</a><a href="#">in</a><a href="#">↗</a></div>
+  </div>
+</div>
+
+<section class="related"><div class="wrap">
+  <span class="eyebrow">Continue reading</span>
+  <h2>Related activities</h2>
+  <div class="rgrid">
+    <a class="rcard" href="activity.html"><div class="im"><img src="2.png" alt="Family planning training"></div><div class="date">10 July 2024</div><h4>Family Planning Training for Health Workers</h4></a>
+    <a class="rcard" href="activity.html"><div class="im"><img src="4.png" alt="Reproductive health education"></div><div class="date">18 May 2024</div><h4>Reproductive Health Education in Displacement</h4></a>
+    <a class="rcard" href="activity.html"><div class="im"><img src="1.png" alt="Student health festival"></div><div class="date">2 April 2024</div><h4>Student Health Festival with IFMSA Kurdistan</h4></a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2025 Nujeen Organization · Duhok, Kurdistan Region — Iraq</div></footer>
+</body>
+</html>
