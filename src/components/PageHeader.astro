@@ -1,0 +1,50 @@
+---
+import { localePath } from '../i18n/utils';
+import { t } from '../i18n/ui';
+import type { Locale } from '../i18n/locales';
+
+interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  locale: Locale;
+  eyebrow?: string;
+  heading: string;
+  intro?: string;
+  crumbs?: Crumb[];
+}
+
+const { locale, eyebrow, heading, intro, crumbs } = Astro.props;
+---
+
+<section class="border-b border-line py-[72px]">
+  <div class="wrap">
+    {
+      crumbs && crumbs.length > 0 && (
+        <div class="mb-[22px] text-[13px] text-grey">
+          <a href={localePath(locale, '/')} class="text-grey hover:text-ink">
+            {t(locale, 'breadcrumb_home')}
+          </a>
+          {crumbs.map((c) => (
+            <>
+              {' '}
+              /{' '}
+              {c.href ? (
+                <a href={c.href} class="text-grey hover:text-ink">
+                  {c.label}
+                </a>
+              ) : (
+                <span class="text-ink">{c.label}</span>
+              )}
+            </>
+          ))}
+        </div>
+      )
+    }
+    {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+    <h1 class="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight md:text-[56px]">{heading}</h1>
+    {intro && <p class="mt-[18px] max-w-xl text-lg text-grey">{intro}</p>}
+  </div>
+</section>

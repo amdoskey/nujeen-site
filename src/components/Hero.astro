@@ -1,0 +1,72 @@
+---
+interface Stat {
+  number: string;
+  label: string;
+}
+
+interface Props {
+  eyebrow: string;
+  headlinePlain: string;
+  headlineEmphasis: string;
+  dek: string;
+  ctaPrimary: { label: string; href: string };
+  ctaSecondary: { label: string; href: string };
+  stats: Stat[];
+  image: string;
+  imageAlt: string;
+  quote: string;
+  quoteAttribution: string;
+}
+
+const {
+  eyebrow,
+  headlinePlain,
+  headlineEmphasis,
+  dek,
+  ctaPrimary,
+  ctaSecondary,
+  stats,
+  image,
+  imageAlt,
+  quote,
+  quoteAttribution,
+} = Astro.props;
+---
+
+<section class="pt-[18px]">
+  <div class="wrap grid grid-cols-1 items-stretch gap-10 md:grid-cols-[1.05fr_.95fr] md:gap-0">
+    <div class="flex flex-col justify-center py-10 md:py-16 md:pe-16">
+      <span class="eyebrow mb-6 block">{eyebrow}</span>
+      <h1 class="font-serif text-[46px] font-medium leading-[1.04] tracking-tight text-ink md:text-[62px]">
+        {headlinePlain} <em class="font-medium italic text-blue">{headlineEmphasis}</em>
+      </h1>
+      <p class="my-7 max-w-[480px] text-[18.5px] leading-relaxed text-grey">{dek}</p>
+      <div class="flex flex-wrap items-center gap-3.5">
+        <a href={ctaPrimary.href} class="btn">
+          {ctaPrimary.label} <span class="arrow rtl-flip">→</span>
+        </a>
+        <a href={ctaSecondary.href} class="btn btn-line">{ctaSecondary.label}</a>
+      </div>
+      <div class="mt-[54px] flex flex-wrap gap-10 border-t border-line pt-[30px]">
+        {
+          stats.map((s) => (
+            <div>
+              <div class="font-serif text-3xl font-semibold leading-none text-blue">{s.number}</div>
+              <div class="mt-2 max-w-[130px] text-[13.5px] leading-snug text-grey">{s.label}</div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="relative min-h-[380px] self-stretch overflow-hidden rounded bg-ink md:min-h-[560px]">
+      <img src={image} alt={imageAlt} class="absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/0 to-ink/[.55]"></div>
+      <div class="absolute inset-x-6 bottom-6 rounded bg-bone/[.94] p-6 backdrop-blur-xs">
+        <div class="font-serif text-[19px] italic leading-snug text-ink">"{quote}"</div>
+        <div class="mt-3 text-[13px] font-semibold uppercase text-grey" style="letter-spacing:.03em">
+          — {quoteAttribution}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

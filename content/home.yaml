@@ -1,0 +1,151 @@
+eyebrow:
+  en: Family health · Women's rights · Community
+  ar: الصحة الأسرية · حقوق المرأة · المجتمع
+  ku: تەندروستی خێزان · مافی ژنان · کۆمەڵگا
+headlinePlain:
+  en: "Standing with women and families,"
+  ar: "الوقوف إلى جانب النساء والأسر،"
+  ku: "لەگەڵ ژنان و خێزانەکاندا ڕاوەستاون،"
+headlineEmphasis:
+  en: where it matters most.
+  ar: حيث تشتد الحاجة.
+  ku: لەوێ کە زۆرترین پێویستیشیانە.
+dek:
+  en: From the neighborhoods of Duhok to the displacement camps, Nujeen advances reproductive health, family planning, and the dignity of every woman and girl.
+  ar: من أحياء دهوك إلى مخيمات النزوح، تعمل نوجين على النهوض بالصحة الإنجابية وتنظيم الأسرة وكرامة كل امرأة وفتاة.
+  ku: لە گەڕەکەکانی دهۆک بۆ کەمپەکانی ئاوارەیی، نوجین کار لەسەر باشترکردنی تەندروستی زاوزێ، خێزان‌دانان و ڕێزی هەموو ژن و کچێک دەکات.
+heroImage: /uploads/home/hero.jpeg
+heroQuote:
+  en: When a woman understands her own health, a whole family grows stronger.
+  ar: عندما تفهم المرأة صحتها، تكبر الأسرة بأكملها قوةً.
+  ku: کاتێک ژنێک لە تەندروستی خۆی تێبگات، هەموو خێزانەکە بەهێزتر دەبێت.
+heroQuoteAttribution:
+  en: Nujeen field team, Duhok
+  ar: فريق نوجين الميداني، دهوك
+  ku: تیمی مەیدانی نوجین، دهۆک
+heroStats:
+  - number: "2016"
+    label:
+      en: Serving the region since
+      ar: تخدم المنطقة منذ
+      ku: خزمەتکردنی ناوچەکە لە ساڵی
+  - number: "11–49"
+    label:
+      en: Ages of women & girls reached
+      ar: أعمار النساء والفتيات المستفيدات
+      ku: تەمەنی ژنان و کچانی بەرەوپێش
+  - number: "Domiz 2"
+    label:
+      en: Ongoing work inside refugee camps
+      ar: عمل مستمر داخل مخيمات اللاجئين
+      ku: کارکردنی بەردەوام لەناو کەمپی پەنابەران
+focusEyebrow:
+  en: What we do
+  ar: ماذا نفعل
+  ku: چیمان دەکەین
+focusHeading:
+  en: Five fields, one commitment to family wellbeing.
+  ar: خمسة مجالات، التزام واحد برفاهية الأسرة.
+  ku: پێنج بواری کار، یەک ئەرکی بەرزکردنەوەی خۆشگوزەرانی خێزان.
+focusIntro:
+  en: Each strand of our work reinforces the others — education leads to access, access builds trust, and trust opens the door to lasting change.
+  ar: يعزز كل جانب من عملنا الجوانب الأخرى — التعليم يقود إلى الوصول، والوصول يبني الثقة، والثقة تفتح الباب أمام تغيير دائم.
+  ku: هەر بەشێک لە کارەکەمان بەشەکانی تر بەهێز دەکات — پەروەردە ڕێگا بۆ دەستگەیشتن دەکاتەوە، دەستگەیشتن متمانە دروست دەکات، و متمانە دەرگا بۆ گۆڕانێکی بەردەوام دەکاتەوە.
+focusAreas:
+  - title:
+      en: Reproductive Health Education
+      ar: التثقيف الصحي الإنجابي
+      ku: پەروەردەی تەندروستی زاوزێ
+    description:
+      en: Community outreach and awareness series on sexual and reproductive health and rights, delivered in plain language and safe spaces.
+      ar: سلسلة توعية وتواصل مجتمعي حول الصحة والحقوق الجنسية والإنجابية، تُقدَّم بلغة بسيطة وفي أماكن آمنة.
+      ku: کۆمەڵگای دەرەکی و زنجیرەی ئاگادارکردنەوە دەربارەی تەندروستی و مافی سێکسی و زاوزێ، بە زمانێکی سادە و لە شوێنی سەلامەت.
+  - title:
+      en: Family Planning
+      ar: تنظيم الأسرة
+      ku: خێزان‌دانان
+    description:
+      en: Targeted sessions for women and youth, focused on girls and women aged 11 to 49, grounded in informed choice.
+      ar: جلسات موجهة للنساء والشباب، تركز على الفتيات والنساء من سن 11 إلى 49 عامًا، وترتكز على الاختيار المستنير.
+      ku: دانیشتنی ئامانجدارکراو بۆ ژنان و گەنجان، تیشک دەخاتە سەر کچان و ژنانی تەمەن 11 تا 49 ساڵ، پشت بە هەڵبژاردنی ئاگادارانە دەبەستێت.
+  - title:
+      en: Refugee & IDP Support
+      ar: دعم اللاجئين والنازحين
+      ku: پشتگیری پەنابەران و ئاوارەکان
+    description:
+      en: Direct operations and education inside displacement venues, including a continuous presence at the Domiz 2 camp.
+      ar: عمليات وتثقيف مباشر داخل مواقع النزوح، بما في ذلك حضور مستمر في مخيم دوميز 2.
+      ku: کاری ڕاستەوخۆ و پەروەردە لەناو شوێنی ئاوارەیی، لەوانە بوونی بەردەوام لە کەمپی دۆمیز 2.
+  - title:
+      en: Legal & Policy Advocacy
+      ar: المناصرة القانونية والسياساتية
+      ku: پاراستنی یاسایی و سیاسەت
+    description:
+      en: Working alongside academic institutions and public health bodies to shape healthcare and legal reform.
+      ar: العمل جنبًا إلى جنب مع المؤسسات الأكاديمية وهيئات الصحة العامة لتشكيل الإصلاح الصحي والقانوني.
+      ku: کارکردن لەگەڵ دامەزراوە ئەکادیمی و دامودەزگای تەندروستی گشتی بۆ شێوەدانی چاکسازی تەندروستی و یاسایی.
+  - title:
+      en: Youth Empowerment
+      ar: تمكين الشباب
+      ku: بەهێزکردنی گەنجان
+    description:
+      en: Partnering with IFMSA Kurdistan on student health festivals that break stigma and open honest conversation.
+      ar: الشراكة مع IFMSA كردستان في مهرجانات صحية طلابية تكسر الوصمة وتفتح حوارًا صادقًا.
+      ku: هاوبەشی لەگەڵ IFMSA کوردستان لە فیستیڤاڵی تەندروستی خوێندکاران کە شەرمەزاری کۆمەڵایەتی دەشکێنێت و گفتوگۆیەکی ڕاستگۆیانە دەکاتەوە.
+recentEyebrow:
+  en: From the field
+  ar: من الميدان
+  ku: لە مەیدانەوە
+recentHeading:
+  en: Recent activities
+  ar: أحدث الأنشطة
+  ku: چالاکییە نوێیەکان
+quoteBand:
+  en: We don't just deliver sessions. We build the *understanding* that lets a community care for its own.
+  ar: نحن لا نكتفي بتقديم الجلسات. نحن نبني *الفهم* الذي يمكّن المجتمع من رعاية أفراده.
+  ku: ئێمە تەنها دانیشتن پێشکەش ناکەین. ئێمە *تێگەیشتن* بنیات دەنێین کە ڕێگا بە کۆمەڵگا دەدات خۆی چاودێری بکات.
+quoteBandSource:
+  en: Nujeen for Family Democratizing Organization
+  ar: منظمة نوجين لدمقرطة الأسرة
+  ku: ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان
+impactEyebrow:
+  en: Our reach
+  ar: أثرنا
+  ku: گەیشتنمان
+impactHeading:
+  en: Work measured in trust, not just numbers.
+  ar: عمل يُقاس بالثقة، لا بالأرقام فقط.
+  ku: کارێک بە متمانە دەپێورێت، نەک تەنها بە ژمارە.
+impactStats:
+  - number: "8"
+    suffix: "+"
+    label:
+      en: Years serving the Duhok community
+      ar: سنوات من خدمة مجتمع دهوك
+      ku: ساڵ خزمەتکردنی کۆمەڵگای دهۆک
+  - number: "20"
+    suffix: "+"
+    label:
+      en: Awareness & training programs delivered
+      ar: برنامج توعية وتدريب تم تنفيذه
+      ku: بەرنامەی ئاگادارکردنەوە و ڕاهێنان بەڕێوەچووە
+  - number: "50"
+    suffix: "+"
+    label:
+      en: Health workers trained with the Directorate
+      ar: عامل صحي تم تدريبهم مع المديرية
+      ku: کارمەندی تەندروستی لەگەڵ بەڕێوەبەرایەتییەکە ڕاهێنراون
+  - number: "10"
+    suffix: "+"
+    label:
+      en: Institutional & academic partners
+      ar: شريك مؤسسي وأكاديمي
+      ku: هاوبەشی دامەزراوەیی و ئەکادیمی
+ctaHeading:
+  en: Partner with us, or lend your support.
+  ar: كن شريكًا معنا، أو قدّم دعمك.
+  ku: بەشداریمان بکە، یان پشتگیری پێشکەش بکە.
+ctaText:
+  en: Health directorates, academic faculties, international partners, and individuals — there's a place for you in this work.
+  ar: مديريات الصحة، الكليات الأكاديمية، الشركاء الدوليون، والأفراد — هناك مكان لكم في هذا العمل.
+  ku: بەڕێوەبەرایەتی تەندروستی، کۆلێژی ئەکادیمی، هاوبەشی نێودەوڵەتی، و تاکەکان — لەم کارەدا شوێنێک بۆ ئێوە هەیە.

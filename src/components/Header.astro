@@ -1,0 +1,73 @@
+---
+import LangSwitcher from './LangSwitcher.astro';
+import { localePath } from '../i18n/utils';
+import { t } from '../i18n/ui';
+import type { Locale } from '../i18n/locales';
+import { pick } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+  activeNav?: 'home' | 'about' | 'activities' | 'projects' | 'contact';
+  siteSettings: {
+    brandName: string;
+    tagline: { en: string; ar: string; ku: string };
+    locationLine: { en: string; ar: string; ku: string };
+  };
+}
+
+const { locale, activeNav, siteSettings } = Astro.props;
+
+const navItems: Array<{ key: Props['activeNav']; label: string; href: string }> = [
+  { key: 'home', label: t(locale, 'nav_home'), href: localePath(locale, '/') },
+  { key: 'about', label: t(locale, 'nav_about'), href: localePath(locale, '/about') },
+  { key: 'activities', label: t(locale, 'nav_activities'), href: localePath(locale, '/activities') },
+  { key: 'projects', label: t(locale, 'nav_projects'), href: localePath(locale, '/projects') },
+  { key: 'contact', label: t(locale, 'nav_contact'), href: localePath(locale, '/contact') },
+];
+---
+
+<div class="border-b border-lineSoft text-[13px] text-grey">
+  <div class="wrap flex h-[46px] items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="h-[5px] w-[5px] rounded-full bg-teal"></span>
+      <span>{pick(siteSettings.locationLine, locale)}</span>
+    </div>
+    <LangSwitcher locale={locale} />
+  </div>
+</div>
+
+<header class="sticky top-0 z-50 border-b border-lineSoft bg-bone/85 backdrop-blur-xs">
+  <div class="wrap flex h-[88px] items-center justify-between">
+    <a href={localePath(locale, '/')} class="flex flex-col leading-none">
+      <span class="font-serif text-3xl font-semibold tracking-tight text-blue"
+        >nu<i class="not-italic text-ink">jeen</i></span
+      >
+      <span class="mt-[5px] text-[10px] font-medium uppercase text-grey" style="letter-spacing:.24em">
+        {pick(siteSettings.tagline, locale)}
+      </span>
+    </a>
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-9">
+        {
+          navItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class:list={[
+                  'relative inline-block py-1 text-[15px] font-medium opacity-[.78] transition hover:opacity-100',
+                  {
+                    'opacity-100 after:absolute after:-bottom-[3px] after:start-0 after:h-[2px] after:w-3.5 after:bg-rose after:content-[""]':
+                      activeNav === item.key,
+                  },
+                ]}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <a href={localePath(locale, '/contact')} class="btn px-6 py-3">{t(locale, 'nav_get_involved')}</a>
+  </div>
+</header>

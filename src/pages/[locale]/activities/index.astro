@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/PageHeader.astro';
+import Card from '../../../components/Card.astro';
+import { locales, type Locale } from '../../../i18n/locales';
+import { pick, localePath } from '../../../i18n/utils';
+import { t } from '../../../i18n/ui';
+import { getPublished, formatDate } from '../../../lib/content';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const activities = await getPublished('activities');
+
+const CATEGORIES = ['awareness', 'training', 'outreach', 'camps', 'youth'] as const;
+const categoryKey = (cat: string) => `category_${cat}` as const;
+
+const items = activities.map(({ slug, entry }) => ({
+  slug,
+  href: localePath(locale, `/activities/${slug}`),
+  image: entry.featuredImage ?? '/uploads/activities/placeholder-1.svg',
+  category: entry.category,
+  categoryLabel: t(locale, categoryKey(entry.category)),
+  date: formatDate(entry.date, locale),
+  title: pick(entry.title, locale),
+  summary: pick(entry.summary, locale),
+  filesCount: entry.documents.length,
+  searchText: `${pick(entry.title, locale)} ${pick(entry.summary, locale)}`.toLowerCase(),
+}));
+---
+
+<BaseLayout
+  locale={locale}
+  activeNav="activities"
+  title={`Nujeen — ${t(locale, 'nav_activities')}`}
+>
+  <PageHeader
+    locale={locale}
+    eyebrow={t(locale, 'activities_eyebrow')}
+    heading={t(locale, 'nav_activities')}
+    intro={t(locale, 'activities_intro')}
+    crumbs={[{ label: t(locale, 'nav_activities') }]}
+  />
+
+  <div class="wrap">
+    <div class="flex flex-wrap items-center justify-between gap-4 py-8" id="toolbar">
+      <div class="flex flex-wrap gap-2" id="chips">
+        <button type="button" class="chip on" data-category="all">{t(locale, 'chip_all')}</button>
+        {
+          CATEGORIES.map((cat) => (
+            <button type="button" class="chip" data-category={cat}>
+              {t(locale, categoryKey(cat))}
+            </button>
+          ))
+        }
+      </div>
+      <div class="flex min-w-[240px] flex-1 items-center gap-2 rounded-sm border border-line bg-bone px-4 py-[11px] md:flex-none">
+        <span class="text-grey">⌕</span>
+        <input
+          id="search-input"
+          type="text"
+          placeholder={t(locale, 'activities_search_placeholder')}
+          class="w-full border-0 bg-transparent text-sm text-ink outline-none"
+        />
+      </div>
+    </div>
+
+    <div id="grid" class="grid grid-cols-1 gap-x-8 gap-y-10 py-3.5 pb-16 md:grid-cols-3">
+      {
+        items.map((item) => (
+          <div class="card-item" data-category={item.category} data-search={item.searchText}>
+            <Card
+              href={item.href}
+              image={item.image}
+              imageAlt={item.title}
+              category={item.categoryLabel}
+              date={item.date}
+              title={item.title}
+              summary={item.summary}
+              filesCount={item.filesCount}
+            />
+          </div>
+        ))
+      }
+    </div>
+
+    <p id="no-results" class="hidden py-16 text-center text-grey">{t(locale, 'no_results')}</p>
+
+    <nav id="pager" class="flex justify-center gap-2 pb-24 pt-4"></nav>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ pageSize: 6 }}>
+  const grid = document.getElementById('grid');
+  const cards = Array.from(grid.querySelectorAll('.card-item'));
+  const chips = document.querySelectorAll('#chips .chip');
+  const searchInput = document.getElementById('search-input');
+  const pager = document.getElementById('pager');
+  const noResults = document.getElementById('no-results');
+
+  let activeCategory = 'all';
+  let currentPage = 1;
+
+  function apply() {
+    const query = searchInput.value.trim().toLowerCase();
+    const visible = cards.filter((card) => {
+      const matchesCategory = activeCategory === 'all' || card.dataset.category === activeCategory;
+      const matchesSearch = !query || card.dataset.search.includes(query);
+      return matchesCategory && matchesSearch;
+    });
+
+    cards.forEach((card) => (card.style.display = 'none'));
+
+    const totalPages = Math.max(1, Math.ceil(visible.length / pageSize));
+    if (currentPage > totalPages) currentPage = totalPages;
+    const start = (currentPage - 1) * pageSize;
+    const pageItems = visible.slice(start, start + pageSize);
+    pageItems.forEach((card) => (card.style.display = ''));
+
+    noResults.classList.toggle('hidden', visible.length > 0);
+
+    pager.innerHTML = '';
+    if (totalPages > 1) {
+      for (let i = 1; i <= totalPages; i++) {
+        const a = document.createElement('button');
+        a.type = 'button';
+        a.textContent = String(i);
+        a.className =
+          'flex h-[46px] min-w-[46px] items-center justify-center rounded-sm border font-medium transition ' +
+          (i === currentPage ? 'bg-ink text-bone border-ink' : 'border-line text-ink hover:border-ink');
+        a.addEventListener('click', () => {
+          currentPage = i;
+          apply();
+          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        pager.appendChild(a);
+      }
+    }
+  }
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      chips.forEach((c) => c.classList.remove('on'));
+      chip.classList.add('on');
+      activeCategory = chip.dataset.category;
+      currentPage = 1;
+      apply();
+    });
+  });
+
+  searchInput.addEventListener('input', () => {
+    currentPage = 1;
+    apply();
+  });
+
+  apply();
+</script>

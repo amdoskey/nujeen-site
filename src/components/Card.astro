@@ -1,0 +1,50 @@
+---
+interface Props {
+  href: string;
+  image: string;
+  imageAlt: string;
+  category?: string;
+  date: string;
+  title: string;
+  summary: string;
+  filesCount?: number;
+  variant?: 'light' | 'dark';
+}
+
+const { href, image, imageAlt, category, date, title, summary, filesCount, variant = 'light' } = Astro.props;
+const isDark = variant === 'dark';
+---
+
+<a href={href} class="group flex flex-col">
+  <div class="relative mb-5 h-[240px] overflow-hidden rounded bg-ink">
+    <img
+      src={image}
+      alt={imageAlt}
+      class="absolute inset-0 h-full w-full object-cover transition duration-500 ease-out group-hover:scale-105"
+    />
+    {
+      category && (
+        <span class="absolute start-4 top-4 z-10 rounded-sm bg-bone/[.92] px-[13px] py-[6px] text-[11px] font-semibold uppercase text-ink" style="letter-spacing:.14em">
+          {category}
+        </span>
+      )
+    }
+    {
+      typeof filesCount === 'number' && filesCount > 0 && (
+        <span class="absolute bottom-4 end-4 z-10 flex items-center gap-1.5 rounded-sm bg-ink/[.78] px-[11px] py-[5px] text-xs text-bone">
+          ▤ {filesCount}
+        </span>
+      )
+    }
+  </div>
+  <div class:list={['text-[13px] mb-2', isDark ? 'text-bone/60' : 'text-grey']}>{date}</div>
+  <h3
+    class:list={[
+      'font-serif text-[23px] font-medium leading-tight transition',
+      isDark ? 'text-bone group-hover:text-[#9FD4C4]' : 'text-ink group-hover:text-blue',
+    ]}
+  >
+    {title}
+  </h3>
+  <p class:list={['mt-3 text-[15px] leading-relaxed', isDark ? 'text-bone/[.66]' : 'text-grey']}>{summary}</p>
+</a>

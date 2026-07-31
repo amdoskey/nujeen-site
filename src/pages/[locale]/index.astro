@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Card from '../../components/Card.astro';
+import { locales, type Locale } from '../../i18n/locales';
+import { pick, localePath, emphasize } from '../../i18n/utils';
+import { t } from '../../i18n/ui';
+import { reader } from '../../lib/reader';
+import { getPublished, formatDate } from '../../lib/content';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const home = await reader.singletons.home.read();
+if (!home) throw new Error('Home singleton content is missing — run the Keystatic admin (npm run dev) to create it.');
+
+const recentActivities = (await getPublished('activities')).slice(0, 3);
+
+const categoryKey = (cat: string) => `category_${cat}` as const;
+---
+
+<BaseLayout
+  locale={locale}
+  activeNav="home"
+  title={`Nujeen — ${pick(home.eyebrow, locale)}`}
+  description={pick(home.dek, locale)}
+>
+  <Hero
+    eyebrow={pick(home.eyebrow, locale)}
+    headlinePlain={pick(home.headlinePlain, locale)}
+    headlineEmphasis={pick(home.headlineEmphasis, locale)}
+    dek={pick(home.dek, locale)}
+    ctaPrimary={{ label: t(locale, 'hero_see_work'), href: localePath(locale, '/activities') }}
+    ctaSecondary={{ label: t(locale, 'hero_our_story'), href: localePath(locale, '/about') }}
+    stats={home.heroStats.map((s) => ({ number: s.number, label: pick(s.label, locale) }))}
+    image={home.heroImage ?? '/uploads/home/hero.jpeg'}
+    imageAlt={t(locale, 'hero_image_alt')}
+    quote={pick(home.heroQuote, locale)}
+    quoteAttribution={pick(home.heroQuoteAttribution, locale)}
+  />
+
+  <!-- FOCUS -->
+  <section class="section py-20 md:py-[110px]">
+    <div class="wrap">
+      <div class="mb-16 max-w-xl">
+        <span class="eyebrow mb-[18px] block">{pick(home.focusEyebrow, locale)}</span>
+        <h2 class="font-serif text-[32px] font-medium leading-[1.1] tracking-tight text-ink md:text-[42px]">
+          {pick(home.focusHeading, locale)}
+        </h2>
+        <p class="mt-[18px] text-lg text-grey">{pick(home.focusIntro, locale)}</p>
+      </div>
+      <div class="border-t border-line">
+        {
+          home.focusAreas.map((area, i) => (
+            <div class="grid grid-cols-[40px_1fr] items-start gap-4 border-b border-line py-9 transition hover:rounded hover:bg-bone2 md:grid-cols-[64px_1fr_1.3fr_auto] md:gap-8 md:hover:px-[18px]">
+              <span class="pt-1 font-serif text-lg font-semibold text-rose">{String(i + 1).padStart(2, '0')}</span>
+              <h3 class="font-serif text-2xl font-medium leading-tight text-ink">{pick(area.title, locale)}</h3>
+              <p class="hidden text-base leading-relaxed text-grey md:block">{pick(area.description, locale)}</p>
+              <span class="rtl-flip hidden pt-0.5 text-xl text-ink opacity-0 transition group-hover:opacity-50 md:block">→</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT ACTIVITIES -->
+  <section class="bg-ink py-20 text-bone md:py-[110px]">
+    <div class="wrap">
+      <div class="mb-14 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <span class="eyebrow mb-[18px] block">{pick(home.recentEyebrow, locale)}</span>
+          <h2 class="font-serif text-[32px] font-medium leading-[1.1] tracking-tight text-bone md:text-[42px]">
+            {pick(home.recentHeading, locale)}
+          </h2>
+        </div>
+        <a href={localePath(locale, '/activities')} class="btn btn-line !border-bone/25 !text-bone hover:!bg-bone hover:!text-ink">
+          {t(locale, 'recent_all')} <span class="rtl-flip">→</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        {
+          recentActivities.map(({ entry, slug }) => (
+            <Card
+              variant="dark"
+              href={localePath(locale, `/activities/${slug}`)}
+              image={entry.featuredImage ?? '/uploads/activities/placeholder-1.svg'}
+              imageAlt={pick(entry.title, locale)}
+              category={t(locale, categoryKey(entry.category))}
+              date={`${formatDate(entry.date, locale)}`}
+              title={pick(entry.title, locale)}
+              summary={pick(entry.summary, locale)}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="py-20 text-center md:py-[120px]">
+    <div class="wrap mx-auto max-w-[920px]">
+      <div class="mx-auto mb-10 h-0.5 w-12 bg-rose"></div>
+      <blockquote
+        class="font-serif text-[26px] leading-snug tracking-tight text-ink md:text-[38px]"
+        set:html={emphasize(pick(home.quoteBand, locale))}
+      />
+      <div class="mt-8 text-sm font-semibold uppercase text-grey" style="letter-spacing:.16em">
+        {pick(home.quoteBandSource, locale)}
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="bg-bone2 py-20 md:py-[110px]">
+    <div class="wrap">
+      <div class="mb-16 max-w-xl">
+        <span class="eyebrow mb-[18px] block">{pick(home.impactEyebrow, locale)}</span>
+        <h2 class="font-serif text-[32px] font-medium leading-[1.1] tracking-tight text-ink md:text-[42px]">
+          {pick(home.impactHeading, locale)}
+        </h2>
+      </div>
+      <div class="grid grid-cols-2 gap-px overflow-hidden rounded border border-line bg-line md:grid-cols-4">
+        {
+          home.impactStats.map((stat) => (
+            <div class="bg-bone p-8 md:p-[44px_34px]">
+              <div class="font-serif text-4xl font-semibold leading-none tracking-tight text-blue md:text-[48px]">
+                {stat.number}
+                <span class="text-[28px]">{stat.suffix}</span>
+              </div>
+              <div class="mt-3.5 text-[15px] leading-snug text-grey">{pick(stat.label, locale)}</div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 md:py-[120px]">
+    <div class="wrap">
+      <div class="relative grid grid-cols-1 gap-8 overflow-hidden rounded-md bg-blue p-9 md:grid-cols-[1.3fr_auto] md:items-center md:gap-12 md:p-20">
+        <div class="relative">
+          <h2 class="font-serif text-3xl font-medium leading-tight tracking-tight text-bone md:text-[40px]">
+            {pick(home.ctaHeading, locale)}
+          </h2>
+          <p class="mt-4 max-w-[420px] text-[17px] text-bone/[.78]">{pick(home.ctaText, locale)}</p>
+        </div>
+        <a href={localePath(locale, '/contact')} class="btn relative !bg-bone !text-ink hover:!bg-roseSoft">
+          {t(locale, 'cta_get_in_touch')} <span class="rtl-flip">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

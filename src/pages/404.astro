@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found — Nujeen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="flex min-h-screen flex-col items-center justify-center px-6 text-center">
+      <span class="font-serif text-3xl font-semibold text-blue">nu<i class="not-italic text-ink">jeen</i></span>
+      <h1 class="mt-10 font-serif text-6xl font-medium tracking-tight text-ink">404</h1>
+      <p id="nf-message" class="mt-4 max-w-md text-lg text-grey">
+        This page couldn't be found. It may have moved, or the link may be out of date.
+      </p>
+      <div class="mt-9 flex flex-wrap justify-center gap-3">
+        <a id="nf-home" href="/en/" class="btn"
+          ><span id="nf-home-label">Go to homepage</span> <span class="rtl-flip">→</span></a
+        >
+        <a id="nf-browse" href="/en/activities" class="btn btn-line">Browse activities</a>
+      </div>
+    </div>
+
+    <script>
+      // The static host always serves this same file for any unmatched URL
+      // (there's no server to route a localized 404 per-locale). The browser
+      // still has the originally-requested path in location.pathname, so we
+      // detect /ar/... or /ku/... from it and localize client-side.
+      import { ui } from '../i18n/ui';
+      import type { Locale } from '../i18n/locales';
+
+      const seg = location.pathname.split('/').filter(Boolean)[0];
+      const locale: Locale = seg === 'ar' || seg === 'ku' ? seg : 'en';
+      const isRtl = locale !== 'en';
+
+      document.documentElement.lang = locale;
+      document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
+
+      const dict = ui[locale];
+      const message = document.getElementById('nf-message');
+      const homeLabel = document.getElementById('nf-home-label');
+      const browse = document.getElementById('nf-browse');
+      const home = document.getElementById('nf-home') as HTMLAnchorElement;
+
+      if (message) message.textContent = dict.not_found_message;
+      if (homeLabel) homeLabel.textContent = dict.go_home;
+      if (browse) {
+        browse.textContent = dict.browse_activities;
+        browse.setAttribute('href', `/${locale}/activities`);
+      }
+      if (home) home.setAttribute('href', `/${locale}/`);
+    </script>
+  </body>
+</html>

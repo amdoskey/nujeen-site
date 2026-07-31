@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { locales, type Locale } from '../../i18n/locales';
+import { pick } from '../../i18n/utils';
+import { t } from '../../i18n/ui';
+import { reader } from '../../lib/reader';
+import Bdi from '../../components/Bdi.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const contact = await reader.singletons.contact.read();
+const siteSettings = await reader.singletons.siteSettings.read();
+if (!contact || !siteSettings) {
+  throw new Error('Contact/SiteSettings content is missing — run the Keystatic admin (npm run dev) to create it.');
+}
+---
+
+<BaseLayout
+  locale={locale}
+  activeNav="contact"
+  title={`Nujeen — ${pick(contact.heading, locale)}`}
+  description={pick(contact.intro, locale)}
+>
+  <PageHeader
+    locale={locale}
+    eyebrow={pick(contact.eyebrow, locale)}
+    heading={pick(contact.heading, locale)}
+    intro={pick(contact.intro, locale)}
+    crumbs={[{ label: t(locale, 'nav_contact') }]}
+  />
+
+  <div class="wrap py-16">
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+      <div>
+        <h2 class="mb-6 font-serif text-2xl font-medium text-ink">{t(locale, 'footer_contact')}</h2>
+        <ul class="space-y-4 text-[17px] text-grey">
+          <li>
+            <a href={`tel:${siteSettings.phone1.replace(/\s+/g, '')}`} class="hover:text-ink"><Bdi>{siteSettings.phone1}</Bdi></a>
+          </li>
+          <li>
+            <a href={`tel:${siteSettings.phone2.replace(/\s+/g, '')}`} class="hover:text-ink"><Bdi>{siteSettings.phone2}</Bdi></a>
+          </li>
+          <li>
+            <a href={`mailto:${siteSettings.email}`} class="hover:text-ink"><Bdi>{siteSettings.email}</Bdi></a>
+          </li>
+          <li>{pick(siteSettings.addressLine, locale)}</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="mb-6 font-serif text-2xl font-medium text-ink">{t(locale, 'footer_office_hours')}</h2>
+        <ul class="space-y-4 text-[17px] text-grey">
+          <li>{pick(siteSettings.officeHoursDays, locale)}</li>
+          <li>{siteSettings.officeHoursTime}</li>
+          <li class="text-grey/70">{pick(siteSettings.officeHoursClosedNote, locale)}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 rounded-md border border-line bg-bone2 p-8 md:p-12">
+      <ContactForm locale={locale} />
+      <p class="mt-6 text-sm text-grey">
+        {t(locale, 'contact_form_or_email')}{' '}
+        <a href={`mailto:${siteSettings.email}`} class="font-medium text-blue hover:underline">
+          <Bdi>{siteSettings.email}</Bdi>
+        </a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>

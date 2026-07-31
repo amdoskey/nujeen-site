@@ -1,0 +1,51 @@
+---
+interface DocItem {
+  href: string;
+  title: string;
+  meta: string;
+  badge?: string;
+}
+
+interface Props {
+  heading: string;
+  note: string;
+  countLabel: string;
+  downloadLabel: string;
+  documents: DocItem[];
+}
+
+const { heading, note, countLabel, downloadLabel, documents } = Astro.props;
+---
+
+{
+  documents.length > 0 && (
+    <div class="my-12 rounded-md border border-line bg-bone2 p-6 md:p-[30px_32px]">
+      <div class="mb-1.5 flex items-baseline justify-between">
+        <h3 class="font-serif text-[22px] font-medium text-ink">{heading}</h3>
+        <span class="text-[13px] text-grey" style="letter-spacing:.04em">
+          {documents.length} {countLabel}
+        </span>
+      </div>
+      <p class="mb-[22px] text-[15px] text-grey">{note}</p>
+      {documents.map((doc) => (
+        <a
+          href={doc.href}
+          class="mb-[11px] flex flex-wrap items-center gap-[18px] rounded border border-line bg-bone p-4 px-5 transition hover:translate-x-1 hover:border-blue rtl:hover:-translate-x-1"
+        >
+          <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-sm border border-line bg-white font-serif text-[13px] font-semibold text-rose">
+            {doc.badge ?? 'PDF'}
+          </div>
+          <div class="flex-1">
+            <div class="text-base font-medium leading-tight text-ink">{doc.title}</div>
+            <div class="mt-[3px] text-[13px] text-grey" style="letter-spacing:.02em">
+              {doc.meta}
+            </div>
+          </div>
+          <div class="flex items-center gap-[7px] whitespace-nowrap text-sm font-medium text-blue">
+            {downloadLabel} ↓
+          </div>
+        </a>
+      ))}
+    </div>
+  )
+}

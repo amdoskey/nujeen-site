@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { locales, type Locale } from '../../i18n/locales';
+import { pick } from '../../i18n/utils';
+import { t } from '../../i18n/ui';
+import { reader } from '../../lib/reader';
+import { renderMarkdown } from '../../lib/markdown';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const about = await reader.singletons.about.read();
+if (!about) throw new Error('About singleton content is missing — run the Keystatic admin (npm run dev) to create it.');
+
+const bodyHtml = renderMarkdown(pick(about.body, locale));
+---
+
+<BaseLayout locale={locale} activeNav="about" title={`Nujeen — ${pick(about.heading, locale)}`} description={pick(about.intro, locale)}>
+  <PageHeader
+    locale={locale}
+    eyebrow={pick(about.eyebrow, locale)}
+    heading={pick(about.heading, locale)}
+    intro={pick(about.intro, locale)}
+    crumbs={[{ label: t(locale, 'nav_about') }]}
+  />
+  <div class="wrap py-16">
+    <div class="article-body read mx-auto" set:html={bodyHtml} />
+  </div>
+</BaseLayout>

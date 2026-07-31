@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Gallery from '../../../components/Gallery.astro';
+import DocumentList from '../../../components/DocumentList.astro';
+import { locales, localeNames, type Locale } from '../../../i18n/locales';
+import { pick, localePath } from '../../../i18n/utils';
+import { t } from '../../../i18n/ui';
+import { getPublished, formatDate } from '../../../lib/content';
+import { renderMarkdown } from '../../../lib/markdown';
+
+export async function getStaticPaths() {
+  const projects = await getPublished('projects');
+  return locales.flatMap((locale) =>
+    projects.map(({ slug, entry }) => ({
+      params: { locale, slug },
+      props: { entry, slug, allProjects: projects },
+    }))
+  );
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const { entry, slug, allProjects } = Astro.props;
+
+const categoryKey = `category_${entry.category}` as const;
+const bodyHtml = renderMarkdown(pick(entry.body, locale));
+
+const related = allProjects.filter((p) => p.slug !== slug).slice(0, 3);
+
+const documents = entry.documents.map((doc: any) => ({
+  href: doc.file,
+  title: pick(doc.label, locale),
+  meta: `PDF · ${localeNames[doc.language as Locale] ?? doc.language}`,
+  badge: 'PDF',
+}));
+---
+
+<BaseLayout
+  locale={locale}
+  activeNav="projects"
+  title={pick(entry.seoTitle, locale) || `${pick(entry.title, locale)} — Nujeen`}
+  description={pick(entry.seoDescription, locale) || pick(entry.summary, locale)}
+>
+  <section class="py-14">
+    <div class="wrap read mx-auto">
+      <div class="mb-[26px] text-[13px] text-grey">
+        <a href={localePath(locale, '/')} class="hover:text-ink">{t(locale, 'breadcrumb_home')}</a>
+        {' / '}
+        <a href={localePath(locale, '/projects')} class="hover:text-ink">{t(locale, 'nav_projects')}</a>
+        {' / '}
+        <span class="text-ink">{pick(entry.title, locale)}</span>
+      </div>
+      <div class="mb-[22px] flex flex-wrap gap-2">
+        <span class="tag-pill">{t(locale, categoryKey)}</span>
+      </div>
+      <h1 class="max-w-[880px] font-serif text-[32px] font-medium leading-tight tracking-tight md:text-[50px]">
+        {pick(entry.title, locale)}
+      </h1>
+      <div class="mt-[26px] flex flex-wrap gap-7 border-t border-line pt-6 text-[14.5px] text-grey">
+        <span class="flex items-center gap-2">◷ {formatDate(entry.date, locale)}</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap read mx-auto">
+    <div class="relative mb-14 mt-2 h-[280px] overflow-hidden rounded-md bg-ink md:h-[480px]">
+      <img src={entry.featuredImage} alt={pick(entry.title, locale)} class="absolute inset-0 h-full w-full object-cover" />
+    </div>
+
+    <div class="article-body" set:html={bodyHtml} />
+
+    <Gallery
+      label={t(locale, 'gallery_label')}
+      images={entry.gallery.map((src: string) => ({ src, alt: pick(entry.title, locale) }))}
+    />
+
+    <DocumentList
+      heading={t(locale, 'documents_heading')}
+      note={t(locale, 'documents_note')}
+      countLabel={t(locale, 'documents_count')}
+      downloadLabel={t(locale, 'download')}
+      documents={documents}
+    />
+
+    <div class="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-8">
+      <a href={localePath(locale, '/projects')} class="btn btn-line"><span class="rtl-flip">←</span> {t(locale, 'back_to_projects')}</a>
+      <div class="flex items-center gap-2.5">
+        <span class="me-1 text-[13px] text-grey">{t(locale, 'share')}</span>
+        <a href="#" aria-label={t(locale, 'share_facebook')} class="flex h-10 w-10 items-center justify-center rounded-sm border border-line text-[13px] font-semibold transition hover:bg-ink hover:text-bone">f</a>
+        <a href="#" aria-label={t(locale, 'share_linkedin')} class="flex h-10 w-10 items-center justify-center rounded-sm border border-line text-[13px] font-semibold transition hover:bg-ink hover:text-bone">in</a>
+        <a href="#" aria-label={t(locale, 'share_copy_link')} class="flex h-10 w-10 items-center justify-center rounded-sm border border-line text-[13px] font-semibold transition hover:bg-ink hover:text-bone">↗</a>
+      </div>
+    </div>
+  </div>
+
+  {
+    related.length > 0 && (
+      <section class="mt-20 border-t border-line py-[90px]">
+        <div class="wrap">
+          <span class="eyebrow mb-3.5 block">{t(locale, 'continue_reading')}</span>
+          <h2 class="mb-10 font-serif text-[28px] font-medium tracking-tight md:text-[34px]">
+            {t(locale, 'related_projects')}
+          </h2>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            {related.map(({ slug: rSlug, entry: rEntry }) => (
+              <a href={localePath(locale, `/projects/${rSlug}`)} class="group cursor-pointer">
+                <div class="mb-4 h-[190px] overflow-hidden rounded bg-ink">
+                  <img
+                    src={rEntry.featuredImage}
+                    alt={pick(rEntry.title, locale)}
+                    class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div class="mb-1.5 text-[13px] text-grey">{formatDate(rEntry.date, locale)}</div>
+                <h4 class="font-serif text-xl font-medium leading-tight transition group-hover:text-blue">
+                  {pick(rEntry.title, locale)}
+                </h4>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>

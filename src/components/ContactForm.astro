@@ -1,0 +1,127 @@
+---
+// Static-site-friendly contact form via Web3Forms (https://web3forms.com) —
+// a plain client-side fetch() POST, no server/API route required. The
+// access key is intentionally public (Web3Forms' own design, same idea as
+// a reCAPTCHA site key) and comes from the PUBLIC_WEB3FORMS_ACCESS_KEY env
+// var, never hardcoded. See README "Contact form" section for setup.
+import { t } from '../i18n/ui';
+import type { Locale } from '../i18n/locales';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY ?? '';
+
+const strings = {
+  sending: t(locale, 'contact_form_sending'),
+  submit: t(locale, 'contact_form_submit'),
+  success: t(locale, 'contact_form_success'),
+  error: t(locale, 'contact_form_error'),
+};
+---
+
+<div>
+  <h2 class="mb-6 font-serif text-2xl font-medium text-ink">{t(locale, 'contact_form_heading')}</h2>
+
+  {
+    !accessKey && (
+      <p class="mb-5 rounded-sm border border-roseSoft bg-roseSoft/40 px-4 py-3 text-sm text-roseDark">
+        PUBLIC_WEB3FORMS_ACCESS_KEY is not set — this form will not send until it's configured (see README).
+      </p>
+    )
+  }
+
+  <form id="contact-form" class="space-y-4">
+    <input type="hidden" name="access_key" value={accessKey} />
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+
+    <div>
+      <label for="cf-name" class="mb-1.5 block text-sm font-medium text-ink">{t(locale, 'contact_form_name')}</label>
+      <input
+        id="cf-name"
+        name="name"
+        type="text"
+        required
+        class="w-full rounded-sm border border-line bg-bone px-4 py-3 text-ink outline-none transition focus:border-blue"
+      />
+    </div>
+    <div>
+      <label for="cf-email" class="mb-1.5 block text-sm font-medium text-ink">{t(locale, 'contact_form_email')}</label>
+      <input
+        id="cf-email"
+        name="email"
+        type="email"
+        required
+        class="w-full rounded-sm border border-line bg-bone px-4 py-3 text-ink outline-none transition focus:border-blue"
+      />
+    </div>
+    <div>
+      <label for="cf-subject" class="mb-1.5 block text-sm font-medium text-ink">{t(locale, 'contact_form_subject')}</label>
+      <input
+        id="cf-subject"
+        name="subject"
+        type="text"
+        required
+        class="w-full rounded-sm border border-line bg-bone px-4 py-3 text-ink outline-none transition focus:border-blue"
+      />
+    </div>
+    <div>
+      <label for="cf-message" class="mb-1.5 block text-sm font-medium text-ink">{t(locale, 'contact_form_message')}</label>
+      <textarea
+        id="cf-message"
+        name="message"
+        rows="5"
+        required
+        class="w-full rounded-sm border border-line bg-bone px-4 py-3 text-ink outline-none transition focus:border-blue"
+      ></textarea>
+    </div>
+
+    <button type="submit" id="cf-submit" class="btn">{strings.submit}</button>
+
+    <p id="cf-success" role="status" class="hidden rounded-sm border border-teal/30 bg-teal/10 px-4 py-3 text-teal">
+      {strings.success}
+    </p>
+    <p id="cf-error" role="alert" class="hidden rounded-sm border border-roseSoft bg-roseSoft/40 px-4 py-3 text-roseDark">
+      {strings.error}
+    </p>
+  </form>
+</div>
+
+<script define:vars={{ sendingLabel: strings.sending, submitLabel: strings.submit }}>
+  const form = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('cf-submit');
+  const successEl = document.getElementById('cf-success');
+  const errorEl = document.getElementById('cf-error');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    successEl.classList.add('hidden');
+    errorEl.classList.add('hidden');
+    submitBtn.disabled = true;
+    submitBtn.textContent = sendingLabel;
+
+    try {
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (data.success) {
+        successEl.classList.remove('hidden');
+        form.reset();
+      } else {
+        errorEl.classList.remove('hidden');
+      }
+    } catch {
+      errorEl.classList.remove('hidden');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = submitLabel;
+    }
+  });
+</script>

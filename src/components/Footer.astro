@@ -1,0 +1,73 @@
+---
+import { localePath, pick } from '../i18n/utils';
+import { t } from '../i18n/ui';
+import type { Locale } from '../i18n/locales';
+import Bdi from './Bdi.astro';
+
+interface Props {
+  locale: Locale;
+  siteSettings: {
+    brandName: string;
+    phone1: string;
+    phone2: string;
+    email: string;
+    addressLine: { en: string; ar: string; ku: string };
+    officeHoursDays: { en: string; ar: string; ku: string };
+    officeHoursTime: string;
+    officeHoursClosedNote: { en: string; ar: string; ku: string };
+    footerBlurb: { en: string; ar: string; ku: string };
+    copyrightLine: { en: string; ar: string; ku: string };
+  };
+}
+
+const { locale, siteSettings } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-ink py-20 pb-8 text-[15px] text-bone/60">
+  <div class="wrap">
+    <div class="grid grid-cols-1 gap-12 border-b border-bone/10 pb-14 md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
+      <div>
+        <a href={localePath(locale, '/')} class="font-serif text-3xl font-semibold leading-none text-bone">
+          nu<i class="not-italic text-[#9FD4C4]">jeen</i>
+        </a>
+        <p class="mt-5 max-w-[300px] leading-relaxed text-bone/60">{pick(siteSettings.footerBlurb, locale)}</p>
+      </div>
+      <div>
+        <h5 class="mb-5 text-[13px] font-semibold uppercase text-bone" style="letter-spacing:.14em">
+          {t(locale, 'footer_explore')}
+        </h5>
+        <ul class="space-y-[13px]">
+          <li><a href={localePath(locale, '/about')} class="hover:text-bone">{t(locale, 'nav_about')}</a></li>
+          <li><a href={localePath(locale, '/activities')} class="hover:text-bone">{t(locale, 'nav_activities')}</a></li>
+          <li><a href={localePath(locale, '/projects')} class="hover:text-bone">{t(locale, 'nav_projects')}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="mb-5 text-[13px] font-semibold uppercase text-bone" style="letter-spacing:.14em">
+          {t(locale, 'footer_contact')}
+        </h5>
+        <ul class="space-y-[13px]">
+          <li><Bdi>{siteSettings.phone1}</Bdi></li>
+          <li><Bdi>{siteSettings.phone2}</Bdi></li>
+          <li><Bdi>{siteSettings.email}</Bdi></li>
+          <li>{pick(siteSettings.addressLine, locale)}</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="mb-5 text-[13px] font-semibold uppercase text-bone" style="letter-spacing:.14em">
+          {t(locale, 'footer_office_hours')}
+        </h5>
+        <ul class="space-y-[13px]">
+          <li>{pick(siteSettings.officeHoursDays, locale)}</li>
+          <li>{siteSettings.officeHoursTime}</li>
+          <li class="mt-2 text-bone/40">{pick(siteSettings.officeHoursClosedNote, locale)}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-between gap-3 pt-7 text-[13px] text-bone/45">
+      <span>© {year} {pick(siteSettings.copyrightLine, locale)}</span>
+      <span>{t(locale, 'footer_legal')}</span>
+    </div>
+  </div>
+</footer>

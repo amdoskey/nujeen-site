@@ -1,0 +1,25 @@
+---
+interface Props {
+  label: string;
+  images: Array<{ src: string; alt: string }>;
+}
+
+const { label, images } = Astro.props;
+---
+
+{
+  images.length > 0 && (
+    <div class="my-12">
+      <div class="mb-[18px] text-xs font-semibold uppercase text-grey" style="letter-spacing:.18em">
+        {label}
+      </div>
+      <div class="grid grid-cols-2 gap-3 md:grid-cols-3">
+        {images.map((img) => (
+          <div class="group h-[150px] cursor-pointer overflow-hidden rounded-sm bg-ink">
+            <img src={img.src} alt={img.alt} class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.06]" />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}

@@ -1,0 +1,743 @@
+{
+  "_meta": {
+    "description": "Every translatable string on nujeen.org, keyed by a stable dotted path. English is the source of truth (source column); fill in / correct ar and ku.",
+    "dialectNote": "ku values must be Kurmanji/Badini written in Arabic script (Duhok is a Badini-speaking area) — NOT Sorani. The seed content currently in this file is Sorani and needs re-translating.",
+    "doNotTranslate": "Proper nouns and technical tokens embedded inside a string (e.g. \"IFMSA\", \"SRHR\", \"Domiz 2\", \"PDF\") should be left as-is by the translator. Phone numbers, emails, dates, slugs, and file paths are not included in this export at all — they are not localized fields.",
+    "keyFormat": "Dotted path: \"<collection/singleton>.<slug-if-any>.<field>[.<arrayIndex>.<subfield>]\". \"ui.*\" keys map 1:1 to src/i18n/ui.ts. Everything else maps to a field in the matching content/*.yaml file (title/titleAr/titleKu are the one exception — see keystatic.config.ts comment).",
+    "roundTrip": "Do not add, remove, or rename keys — the import step matches purely by key. See README.md \"Translation export / import\" for the full workflow.",
+    "generatedBy": "scripts/export-translations.mjs",
+    "generatedAt": "2026-07-31"
+  },
+  "strings": {
+    "ui.nav_home": {
+      "en": "Home",
+      "ar": "الرئيسية",
+      "ku": "سەرەکی"
+    },
+    "ui.nav_about": {
+      "en": "About",
+      "ar": "من نحن",
+      "ku": "دەربارەمان"
+    },
+    "ui.nav_activities": {
+      "en": "Activities",
+      "ar": "الأنشطة",
+      "ku": "چالاکییەکان"
+    },
+    "ui.nav_projects": {
+      "en": "Projects",
+      "ar": "المشاريع",
+      "ku": "پڕۆژەکان"
+    },
+    "ui.nav_contact": {
+      "en": "Contact",
+      "ar": "اتصل بنا",
+      "ku": "پەیوەندی"
+    },
+    "ui.nav_get_involved": {
+      "en": "Get involved",
+      "ar": "شارك معنا",
+      "ku": "بەشداربە"
+    },
+    "ui.activities_eyebrow": {
+      "en": "From the field",
+      "ar": "من الميدان",
+      "ku": "لە مەیدانەوە"
+    },
+    "ui.projects_eyebrow": {
+      "en": "Our programs",
+      "ar": "برامجنا",
+      "ku": "بەرنامەکانمان"
+    },
+    "ui.activities_intro": {
+      "en": "Awareness sessions, training workshops, and community programs advancing reproductive health and women's rights across the Duhok region.",
+      "ar": "جلسات توعوية، وورش تدريبية، وبرامج مجتمعية تعزز الصحة الإنجابية وحقوق المرأة في منطقة دهوك.",
+      "ku": "دانیشتنی ئاگادارکردنەوە، وۆرکشۆپی ڕاهێنان، و بەرنامەی کۆمەڵایەتی کە تەندروستی زاوزێ و مافی ژنان لە ناوچەی دهۆک بەرەو پێش دەبات."
+    },
+    "ui.projects_intro": {
+      "en": "Longer-running programs and initiatives that carry our work forward across the region.",
+      "ar": "برامج ومبادرات طويلة الأمد تُكمل أنشطتنا في جميع أنحاء المنطقة.",
+      "ku": "بەرنامە و دەستپێشخەری درێژخایەن کە کارەکانمان لە پانتایی ناوچەکەدا بەردەوام دەکەن."
+    },
+    "ui.hero_see_work": {
+      "en": "See our work",
+      "ar": "شاهد عملنا",
+      "ku": "کارەکانمان ببینە"
+    },
+    "ui.hero_our_story": {
+      "en": "Our story",
+      "ar": "قصتنا",
+      "ku": "چیرۆکمان"
+    },
+    "ui.focus_eyebrow": {
+      "en": "What we do",
+      "ar": "ماذا نفعل",
+      "ku": "چیمان دەکەین"
+    },
+    "ui.recent_all": {
+      "en": "All activities",
+      "ar": "جميع الأنشطة",
+      "ku": "هەموو چالاکییەکان"
+    },
+    "ui.recent_all_projects": {
+      "en": "All projects",
+      "ar": "جميع المشاريع",
+      "ku": "هەموو پڕۆژەکان"
+    },
+    "ui.cta_get_in_touch": {
+      "en": "Get in touch",
+      "ar": "تواصل معنا",
+      "ku": "پەیوەندیمان پێوە بکە"
+    },
+    "ui.footer_explore": {
+      "en": "Explore",
+      "ar": "استكشف",
+      "ku": "گەڕان"
+    },
+    "ui.footer_about": {
+      "en": "About us",
+      "ar": "من نحن",
+      "ku": "دەربارەمان"
+    },
+    "ui.footer_contact": {
+      "en": "Contact",
+      "ar": "اتصل بنا",
+      "ku": "پەیوەندی"
+    },
+    "ui.footer_office_hours": {
+      "en": "Office hours",
+      "ar": "ساعات العمل",
+      "ku": "کاتی کارکردن"
+    },
+    "ui.footer_closed": {
+      "en": "Thu & Fri — Closed",
+      "ar": "الخميس والجمعة — مغلق",
+      "ku": "پێنجشەممە و هەینی — داخراوە"
+    },
+    "ui.footer_rights": {
+      "en": "All rights reserved",
+      "ar": "جميع الحقوق محفوظة",
+      "ku": "هەموو مافەکان پارێزراون"
+    },
+    "ui.footer_legal": {
+      "en": "Privacy · Terms · Contact",
+      "ar": "الخصوصية · الشروط · اتصل بنا",
+      "ku": "تایبەتمەندی · مەرجەکان · پەیوەندی"
+    },
+    "ui.breadcrumb_home": {
+      "en": "Home",
+      "ar": "الرئيسية",
+      "ku": "سەرەکی"
+    },
+    "ui.activities_search_placeholder": {
+      "en": "Search activities…",
+      "ar": "البحث في الأنشطة…",
+      "ku": "گەڕان لە چالاکییەکان…"
+    },
+    "ui.projects_search_placeholder": {
+      "en": "Search projects…",
+      "ar": "البحث في المشاريع…",
+      "ku": "گەڕان لە پڕۆژەکان…"
+    },
+    "ui.chip_all": {
+      "en": "All",
+      "ar": "الكل",
+      "ku": "هەموو"
+    },
+    "ui.category_awareness": {
+      "en": "Awareness",
+      "ar": "توعية",
+      "ku": "ئاگاداری"
+    },
+    "ui.category_training": {
+      "en": "Training",
+      "ar": "تدريب",
+      "ku": "ڕاهێنان"
+    },
+    "ui.category_outreach": {
+      "en": "Outreach",
+      "ar": "توعية ميدانية",
+      "ku": "دەرەکی"
+    },
+    "ui.category_camps": {
+      "en": "Camps",
+      "ar": "المخيمات",
+      "ku": "کەمپەکان"
+    },
+    "ui.category_youth": {
+      "en": "Youth",
+      "ar": "الشباب",
+      "ku": "گەنجان"
+    },
+    "ui.read_more": {
+      "en": "Read more",
+      "ar": "اقرأ المزيد",
+      "ku": "زیاتر بخوێنەرەوە"
+    },
+    "ui.back_to_activities": {
+      "en": "Back to Activities",
+      "ar": "العودة إلى الأنشطة",
+      "ku": "گەڕانەوە بۆ چالاکییەکان"
+    },
+    "ui.back_to_projects": {
+      "en": "Back to Projects",
+      "ar": "العودة إلى المشاريع",
+      "ku": "گەڕانەوە بۆ پڕۆژەکان"
+    },
+    "ui.share": {
+      "en": "Share",
+      "ar": "مشاركة",
+      "ku": "هاوبەشکردن"
+    },
+    "ui.continue_reading": {
+      "en": "Continue reading",
+      "ar": "تابع القراءة",
+      "ku": "بەردەوامبوون لە خوێندنەوە"
+    },
+    "ui.related_activities": {
+      "en": "Related activities",
+      "ar": "أنشطة ذات صلة",
+      "ku": "چالاکی پەیوەندیدار"
+    },
+    "ui.related_projects": {
+      "en": "Related projects",
+      "ar": "مشاريع ذات صلة",
+      "ku": "پڕۆژەی پەیوەندیدار"
+    },
+    "ui.documents_heading": {
+      "en": "Reports & documents",
+      "ar": "التقارير والمستندات",
+      "ku": "ڕاپۆرت و بەڵگەنامەکان"
+    },
+    "ui.documents_note": {
+      "en": "Attached by the Nujeen team — open or download below.",
+      "ar": "مرفقة من فريق نوجين — افتح أو حمّل أدناه.",
+      "ku": "لەلایەن تیمی نوجین هاوپێچ کراوە — لە خوارەوە بیکەرەوە یان داابەزێنە."
+    },
+    "ui.documents_count": {
+      "en": "files",
+      "ar": "ملفات",
+      "ku": "فایل"
+    },
+    "ui.download": {
+      "en": "Download",
+      "ar": "تحميل",
+      "ku": "داابەزاندن"
+    },
+    "ui.gallery_label": {
+      "en": "Photographs",
+      "ar": "صور",
+      "ku": "وێنەکان"
+    },
+    "ui.no_results": {
+      "en": "No activities match your search.",
+      "ar": "لا توجد أنشطة مطابقة لبحثك.",
+      "ku": "هیچ چالاکییەک لەگەڵ گەڕانەکەت ناگونجێت."
+    },
+    "ui.no_results_projects": {
+      "en": "No projects match your search.",
+      "ar": "لا توجد مشاريع مطابقة لبحثك.",
+      "ku": "هیچ پڕۆژەیەک لەگەڵ گەڕانەکەت ناگونجێت."
+    },
+    "ui.no_projects_yet": {
+      "en": "No projects published yet — check back soon.",
+      "ar": "لم يتم نشر أي مشاريع بعد — تابعونا قريبًا.",
+      "ku": "هێشتا هیچ پڕۆژەیەک بڵاو نەکراوەتەوە — بەم زووانە سەردانمان بکە."
+    },
+    "ui.status_draft_notice": {
+      "en": "Draft — not yet published",
+      "ar": "مسودة — لم يتم نشرها بعد",
+      "ku": "ڕەشنووس — هێشتا بڵاو نەکراوەتەوە"
+    },
+    "ui.lang_switch": {
+      "en": "Language",
+      "ar": "اللغة",
+      "ku": "زمان"
+    },
+    "ui.hero_image_alt": {
+      "en": "Nujeen field team working with women in the community",
+      "ar": "فريق نوجين الميداني يعمل مع النساء في المجتمع",
+      "ku": "تیمی مەیدانی نوجین لەگەڵ ژنان لە کۆمەڵگا کار دەکات"
+    },
+    "ui.share_facebook": {
+      "en": "Share on Facebook",
+      "ar": "مشاركة عبر فيسبوك",
+      "ku": "هاوبەشکردن لە فەیسبووک"
+    },
+    "ui.share_linkedin": {
+      "en": "Share on LinkedIn",
+      "ar": "مشاركة عبر لينكدإن",
+      "ku": "هاوبەشکردن لە لینکدئین"
+    },
+    "ui.share_copy_link": {
+      "en": "Copy link",
+      "ar": "نسخ الرابط",
+      "ku": "کۆپیکردنی لینک"
+    },
+    "ui.not_found_message": {
+      "en": "This page couldn't be found. It may have moved, or the link may be out of date.",
+      "ar": "لم يتم العثور على هذه الصفحة. ربما تم نقلها، أو أن الرابط قديم.",
+      "ku": "ئەم لاپەڕە نەدۆزرایەوە. لەوانەیە گواستراوەتەوە، یان لینکەکە کۆن بێت."
+    },
+    "ui.go_home": {
+      "en": "Go to homepage",
+      "ar": "الذهاب إلى الصفحة الرئيسية",
+      "ku": "چوونە لاپەڕەی سەرەکی"
+    },
+    "ui.browse_activities": {
+      "en": "Browse activities",
+      "ar": "تصفح الأنشطة",
+      "ku": "چالاکییەکان ببینە"
+    },
+    "ui.contact_form_heading": {
+      "en": "Send us a message",
+      "ar": "أرسل لنا رسالة",
+      "ku": "پەیامێکمان بۆ بنێرە"
+    },
+    "ui.contact_form_name": {
+      "en": "Name",
+      "ar": "الاسم",
+      "ku": "ناو"
+    },
+    "ui.contact_form_email": {
+      "en": "Email",
+      "ar": "البريد الإلكتروني",
+      "ku": "ئیمەیل"
+    },
+    "ui.contact_form_subject": {
+      "en": "Subject",
+      "ar": "الموضوع",
+      "ku": "بابەت"
+    },
+    "ui.contact_form_message": {
+      "en": "Message",
+      "ar": "الرسالة",
+      "ku": "پەیام"
+    },
+    "ui.contact_form_submit": {
+      "en": "Send message",
+      "ar": "إرسال الرسالة",
+      "ku": "ناردنی پەیام"
+    },
+    "ui.contact_form_sending": {
+      "en": "Sending…",
+      "ar": "جارٍ الإرسال…",
+      "ku": "دەنێردرێت…"
+    },
+    "ui.contact_form_success": {
+      "en": "Thank you — your message has been sent. We'll get back to you soon.",
+      "ar": "شكرًا لك — تم إرسال رسالتك. سنتواصل معك قريبًا.",
+      "ku": "سوپاس — پەیامەکەت نێردرا. بەم زووانە پەیوەندیت پێوە دەکەین."
+    },
+    "ui.contact_form_error": {
+      "en": "Something went wrong sending your message. Please try again, or email us directly.",
+      "ar": "حدث خطأ أثناء إرسال رسالتك. حاول مرة أخرى، أو راسلنا مباشرة عبر البريد الإلكتروني.",
+      "ku": "هەڵەیەک ڕوویدا لە ناردنی پەیامەکەت. تکایە دووبارە هەوڵبدەرەوە، یان ڕاستەوخۆ ئیمەیلمان بۆ بنێرە."
+    },
+    "ui.contact_form_or_email": {
+      "en": "Or reach us directly:",
+      "ar": "أو تواصل معنا مباشرة:",
+      "ku": "یان ڕاستەوخۆ پەیوەندیمان پێوە بکە:"
+    },
+    "home.eyebrow": {
+      "en": "Family health · Women's rights · Community",
+      "ar": "الصحة الأسرية · حقوق المرأة · المجتمع",
+      "ku": "تەندروستی خێزان · مافی ژنان · کۆمەڵگا"
+    },
+    "home.headlinePlain": {
+      "en": "Standing with women and families,",
+      "ar": "الوقوف إلى جانب النساء والأسر،",
+      "ku": "لەگەڵ ژنان و خێزانەکاندا ڕاوەستاون،"
+    },
+    "home.headlineEmphasis": {
+      "en": "where it matters most.",
+      "ar": "حيث تشتد الحاجة.",
+      "ku": "لەوێ کە زۆرترین پێویستیشیانە."
+    },
+    "home.dek": {
+      "en": "From the neighborhoods of Duhok to the displacement camps, Nujeen advances reproductive health, family planning, and the dignity of every woman and girl.",
+      "ar": "من أحياء دهوك إلى مخيمات النزوح، تعمل نوجين على النهوض بالصحة الإنجابية وتنظيم الأسرة وكرامة كل امرأة وفتاة.",
+      "ku": "لە گەڕەکەکانی دهۆک بۆ کەمپەکانی ئاوارەیی، نوجین کار لەسەر باشترکردنی تەندروستی زاوزێ، خێزان‌دانان و ڕێزی هەموو ژن و کچێک دەکات."
+    },
+    "home.heroQuote": {
+      "en": "When a woman understands her own health, a whole family grows stronger.",
+      "ar": "عندما تفهم المرأة صحتها، تكبر الأسرة بأكملها قوةً.",
+      "ku": "کاتێک ژنێک لە تەندروستی خۆی تێبگات، هەموو خێزانەکە بەهێزتر دەبێت."
+    },
+    "home.heroQuoteAttribution": {
+      "en": "Nujeen field team, Duhok",
+      "ar": "فريق نوجين الميداني، دهوك",
+      "ku": "تیمی مەیدانی نوجین، دهۆک"
+    },
+    "home.focusEyebrow": {
+      "en": "What we do",
+      "ar": "ماذا نفعل",
+      "ku": "چیمان دەکەین"
+    },
+    "home.focusHeading": {
+      "en": "Five fields, one commitment to family wellbeing.",
+      "ar": "خمسة مجالات، التزام واحد برفاهية الأسرة.",
+      "ku": "پێنج بواری کار، یەک ئەرکی بەرزکردنەوەی خۆشگوزەرانی خێزان."
+    },
+    "home.focusIntro": {
+      "en": "Each strand of our work reinforces the others — education leads to access, access builds trust, and trust opens the door to lasting change.",
+      "ar": "يعزز كل جانب من عملنا الجوانب الأخرى — التعليم يقود إلى الوصول، والوصول يبني الثقة، والثقة تفتح الباب أمام تغيير دائم.",
+      "ku": "هەر بەشێک لە کارەکەمان بەشەکانی تر بەهێز دەکات — پەروەردە ڕێگا بۆ دەستگەیشتن دەکاتەوە، دەستگەیشتن متمانە دروست دەکات، و متمانە دەرگا بۆ گۆڕانێکی بەردەوام دەکاتەوە."
+    },
+    "home.recentEyebrow": {
+      "en": "From the field",
+      "ar": "من الميدان",
+      "ku": "لە مەیدانەوە"
+    },
+    "home.recentHeading": {
+      "en": "Recent activities",
+      "ar": "أحدث الأنشطة",
+      "ku": "چالاکییە نوێیەکان"
+    },
+    "home.quoteBand": {
+      "en": "We don't just deliver sessions. We build the *understanding* that lets a community care for its own.",
+      "ar": "نحن لا نكتفي بتقديم الجلسات. نحن نبني *الفهم* الذي يمكّن المجتمع من رعاية أفراده.",
+      "ku": "ئێمە تەنها دانیشتن پێشکەش ناکەین. ئێمە *تێگەیشتن* بنیات دەنێین کە ڕێگا بە کۆمەڵگا دەدات خۆی چاودێری بکات."
+    },
+    "home.quoteBandSource": {
+      "en": "Nujeen for Family Democratizing Organization",
+      "ar": "منظمة نوجين لدمقرطة الأسرة",
+      "ku": "ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان"
+    },
+    "home.impactEyebrow": {
+      "en": "Our reach",
+      "ar": "أثرنا",
+      "ku": "گەیشتنمان"
+    },
+    "home.impactHeading": {
+      "en": "Work measured in trust, not just numbers.",
+      "ar": "عمل يُقاس بالثقة، لا بالأرقام فقط.",
+      "ku": "کارێک بە متمانە دەپێورێت، نەک تەنها بە ژمارە."
+    },
+    "home.ctaHeading": {
+      "en": "Partner with us, or lend your support.",
+      "ar": "كن شريكًا معنا، أو قدّم دعمك.",
+      "ku": "بەشداریمان بکە، یان پشتگیری پێشکەش بکە."
+    },
+    "home.ctaText": {
+      "en": "Health directorates, academic faculties, international partners, and individuals — there's a place for you in this work.",
+      "ar": "مديريات الصحة، الكليات الأكاديمية، الشركاء الدوليون، والأفراد — هناك مكان لكم في هذا العمل.",
+      "ku": "بەڕێوەبەرایەتی تەندروستی، کۆلێژی ئەکادیمی، هاوبەشی نێودەوڵەتی، و تاکەکان — لەم کارەدا شوێنێک بۆ ئێوە هەیە."
+    },
+    "home.heroStats.0.label": {
+      "en": "Serving the region since",
+      "ar": "تخدم المنطقة منذ",
+      "ku": "خزمەتکردنی ناوچەکە لە ساڵی"
+    },
+    "home.heroStats.1.label": {
+      "en": "Ages of women & girls reached",
+      "ar": "أعمار النساء والفتيات المستفيدات",
+      "ku": "تەمەنی ژنان و کچانی بەرەوپێش"
+    },
+    "home.heroStats.2.label": {
+      "en": "Ongoing work inside refugee camps",
+      "ar": "عمل مستمر داخل مخيمات اللاجئين",
+      "ku": "کارکردنی بەردەوام لەناو کەمپی پەنابەران"
+    },
+    "home.focusAreas.0.title": {
+      "en": "Reproductive Health Education",
+      "ar": "التثقيف الصحي الإنجابي",
+      "ku": "پەروەردەی تەندروستی زاوزێ"
+    },
+    "home.focusAreas.0.description": {
+      "en": "Community outreach and awareness series on sexual and reproductive health and rights, delivered in plain language and safe spaces.",
+      "ar": "سلسلة توعية وتواصل مجتمعي حول الصحة والحقوق الجنسية والإنجابية، تُقدَّم بلغة بسيطة وفي أماكن آمنة.",
+      "ku": "کۆمەڵگای دەرەکی و زنجیرەی ئاگادارکردنەوە دەربارەی تەندروستی و مافی سێکسی و زاوزێ، بە زمانێکی سادە و لە شوێنی سەلامەت."
+    },
+    "home.focusAreas.1.title": {
+      "en": "Family Planning",
+      "ar": "تنظيم الأسرة",
+      "ku": "خێزان‌دانان"
+    },
+    "home.focusAreas.1.description": {
+      "en": "Targeted sessions for women and youth, focused on girls and women aged 11 to 49, grounded in informed choice.",
+      "ar": "جلسات موجهة للنساء والشباب، تركز على الفتيات والنساء من سن 11 إلى 49 عامًا، وترتكز على الاختيار المستنير.",
+      "ku": "دانیشتنی ئامانجدارکراو بۆ ژنان و گەنجان، تیشک دەخاتە سەر کچان و ژنانی تەمەن 11 تا 49 ساڵ، پشت بە هەڵبژاردنی ئاگادارانە دەبەستێت."
+    },
+    "home.focusAreas.2.title": {
+      "en": "Refugee & IDP Support",
+      "ar": "دعم اللاجئين والنازحين",
+      "ku": "پشتگیری پەنابەران و ئاوارەکان"
+    },
+    "home.focusAreas.2.description": {
+      "en": "Direct operations and education inside displacement venues, including a continuous presence at the Domiz 2 camp.",
+      "ar": "عمليات وتثقيف مباشر داخل مواقع النزوح، بما في ذلك حضور مستمر في مخيم دوميز 2.",
+      "ku": "کاری ڕاستەوخۆ و پەروەردە لەناو شوێنی ئاوارەیی، لەوانە بوونی بەردەوام لە کەمپی دۆمیز 2."
+    },
+    "home.focusAreas.3.title": {
+      "en": "Legal & Policy Advocacy",
+      "ar": "المناصرة القانونية والسياساتية",
+      "ku": "پاراستنی یاسایی و سیاسەت"
+    },
+    "home.focusAreas.3.description": {
+      "en": "Working alongside academic institutions and public health bodies to shape healthcare and legal reform.",
+      "ar": "العمل جنبًا إلى جنب مع المؤسسات الأكاديمية وهيئات الصحة العامة لتشكيل الإصلاح الصحي والقانوني.",
+      "ku": "کارکردن لەگەڵ دامەزراوە ئەکادیمی و دامودەزگای تەندروستی گشتی بۆ شێوەدانی چاکسازی تەندروستی و یاسایی."
+    },
+    "home.focusAreas.4.title": {
+      "en": "Youth Empowerment",
+      "ar": "تمكين الشباب",
+      "ku": "بەهێزکردنی گەنجان"
+    },
+    "home.focusAreas.4.description": {
+      "en": "Partnering with IFMSA Kurdistan on student health festivals that break stigma and open honest conversation.",
+      "ar": "الشراكة مع IFMSA كردستان في مهرجانات صحية طلابية تكسر الوصمة وتفتح حوارًا صادقًا.",
+      "ku": "هاوبەشی لەگەڵ IFMSA کوردستان لە فیستیڤاڵی تەندروستی خوێندکاران کە شەرمەزاری کۆمەڵایەتی دەشکێنێت و گفتوگۆیەکی ڕاستگۆیانە دەکاتەوە."
+    },
+    "home.impactStats.0.label": {
+      "en": "Years serving the Duhok community",
+      "ar": "سنوات من خدمة مجتمع دهوك",
+      "ku": "ساڵ خزمەتکردنی کۆمەڵگای دهۆک"
+    },
+    "home.impactStats.1.label": {
+      "en": "Awareness & training programs delivered",
+      "ar": "برنامج توعية وتدريب تم تنفيذه",
+      "ku": "بەرنامەی ئاگادارکردنەوە و ڕاهێنان بەڕێوەچووە"
+    },
+    "home.impactStats.2.label": {
+      "en": "Health workers trained with the Directorate",
+      "ar": "عامل صحي تم تدريبهم مع المديرية",
+      "ku": "کارمەندی تەندروستی لەگەڵ بەڕێوەبەرایەتییەکە ڕاهێنراون"
+    },
+    "home.impactStats.3.label": {
+      "en": "Institutional & academic partners",
+      "ar": "شريك مؤسسي وأكاديمي",
+      "ku": "هاوبەشی دامەزراوەیی و ئەکادیمی"
+    },
+    "siteSettings.tagline": {
+      "en": "Democratizing the Family",
+      "ar": "نحو أسرة أكثر ديمقراطية",
+      "ku": "دیموکراتیزەکردنی خێزان"
+    },
+    "siteSettings.locationLine": {
+      "en": "Duhok · Kurdistan Region of Iraq",
+      "ar": "دهوك · إقليم كردستان العراق",
+      "ku": "دهۆک · هەرێمی کوردستان"
+    },
+    "siteSettings.addressLine": {
+      "en": "Duhok, KRI — Iraq",
+      "ar": "دهوك، إقليم كردستان — العراق",
+      "ku": "دهۆک، هەرێمی کوردستان — عێراق"
+    },
+    "siteSettings.officeHoursDays": {
+      "en": "Saturday – Wednesday",
+      "ar": "السبت – الأربعاء",
+      "ku": "شەممە – چوارشەممە"
+    },
+    "siteSettings.officeHoursClosedNote": {
+      "en": "Thu & Fri — Closed",
+      "ar": "الخميس والجمعة — مغلق",
+      "ku": "پێنجشەممە و هەینی — داخراوە"
+    },
+    "siteSettings.footerBlurb": {
+      "en": "Nujeen for Family Democratizing Organization — a non-governmental organization based in Duhok, advancing women's rights, family planning, and reproductive health.",
+      "ar": "منظمة نوجين لدمقرطة الأسرة — منظمة غير حكومية مقرها دهوك، تعمل على النهوض بحقوق المرأة وتنظيم الأسرة والصحة الإنجابية.",
+      "ku": "ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان — ڕێکخراوێکی ناحکومییە لە دهۆک، کار لەسەر مافی ژنان، خێزان‌دانان و تەندروستی زاوزێ دەکات."
+    },
+    "siteSettings.copyrightLine": {
+      "en": "Nujeen Organization. All rights reserved.",
+      "ar": "منظمة نوجين. جميع الحقوق محفوظة.",
+      "ku": "ڕێکخراوی نوجین. هەموو مافەکان پارێزراون."
+    },
+    "about.eyebrow": {
+      "en": "Who we are",
+      "ar": "من نحن",
+      "ku": "ئێمە کێین"
+    },
+    "about.heading": {
+      "en": "About Nujeen",
+      "ar": "عن نوجين",
+      "ku": "دەربارەی نوجین"
+    },
+    "about.intro": {
+      "en": "Nujeen for Family Democratizing Organization is a non-governmental organization based in Duhok, Kurdistan Region of Iraq, serving the region since 2016.",
+      "ar": "منظمة نوجين لدمقرطة الأسرة هي منظمة غير حكومية مقرها دهوك، إقليم كردستان العراق، تخدم المنطقة منذ عام 2016.",
+      "ku": "ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان ڕێکخراوێکی ناحکومییە لە دهۆک، هەرێمی کوردستانی عێراق، کە لە ساڵی 2016ەوە خزمەتی ناوچەکە دەکات."
+    },
+    "about.body": {
+      "en": "Nujeen advances women's rights, family planning, and sexual and reproductive health and rights (SRHR) — reaching women and girls aged 11 to 49 across Duhok and inside displacement camps, including an ongoing presence at Domiz 2.\n\n## What we do\n\nOur work spans five connected fields: reproductive health education, family planning, refugee and IDP support, legal and policy advocacy, and youth empowerment — each one reinforcing the others.\n\n## Our approach\n\nWe don't just deliver sessions. We build the understanding that lets a community care for its own — working directly inside the neighborhoods and camps where it matters most.\n",
+      "ar": "تعمل نوجين على النهوض بحقوق المرأة وتنظيم الأسرة والصحة والحقوق الجنسية والإنجابية — لتصل إلى النساء والفتيات من سن 11 إلى 49 عامًا في جميع أنحاء دهوك وداخل مخيمات النزوح، بما في ذلك حضور مستمر في مخيم دوميز 2.\n\n## ماذا نفعل\n\nيمتد عملنا عبر خمسة مجالات مترابطة: التثقيف الصحي الإنجابي، وتنظيم الأسرة، ودعم اللاجئين والنازحين، والمناصرة القانونية والسياساتية، وتمكين الشباب — يعزز كل منها الآخر.\n\n## نهجنا\n\nنحن لا نكتفي بتقديم الجلسات. نحن نبني الفهم الذي يمكّن المجتمع من رعاية أفراده — من خلال العمل مباشرة داخل الأحياء والمخيمات حيث تشتد الحاجة.\n",
+      "ku": "نوجین کار لەسەر باشترکردنی مافی ژنان، خێزان‌دانان و تەندروستی و مافەکانی سێکسی و زاوزێ (SRHR) دەکات — گەیشتن بە ژنان و کچانی تەمەن 11 تا 49 ساڵ لە دهۆک و لەناو کەمپەکانی ئاوارەیی، لەوانە بوونی بەردەوام لە کەمپی دۆمیز 2.\n\n## چیمان دەکەین\n\nکارەکەمان پێنج بواری پەیوەستی دەگرێتەوە: پەروەردەی تەندروستی زاوزێ، خێزان‌دانان، پشتگیری پەنابەران و ئاوارەکان، پاراستنی یاسایی و سیاسەت، و بەهێزکردنی گەنجان — هەریەکەیان یەکەی تر بەهێز دەکات.\n\n## ڕێبازمان\n\nئێمە تەنها دانیشتن پێشکەش ناکەین. ئێمە تێگەیشتن بنیات دەنێین کە ڕێگا بە کۆمەڵگا دەدات خۆی چاودێری بکات — بە کارکردنی ڕاستەوخۆ لەناو گەڕەک و کەمپەکان لەوێ کە زۆرترین پێویستیشیانە.\n"
+    },
+    "contact.eyebrow": {
+      "en": "Get in touch",
+      "ar": "تواصل معنا",
+      "ku": "پەیوەندی"
+    },
+    "contact.heading": {
+      "en": "Contact us",
+      "ar": "تواصل معنا",
+      "ku": "پەیوەندیمان پێوە بکە"
+    },
+    "contact.intro": {
+      "en": "Health directorates, academic faculties, international partners, and individuals — reach us using the details below.",
+      "ar": "مديريات الصحة، الكليات الأكاديمية، الشركاء الدوليون، والأفراد — تواصلوا معنا عبر البيانات أدناه.",
+      "ku": "بەڕێوەبەرایەتی تەندروستی، کۆلێژی ئەکادیمی، هاوبەشی نێودەوڵەتی، و تاکەکان — لە ڕێگەی زانیارییەکانی خوارەوە پەیوەندیمان پێوە بکەن."
+    },
+    "activities.early-detection-awareness-sessions.title": {
+      "en": "Early Detection Awareness Sessions",
+      "ar": "جلسات توعية حول الكشف المبكر",
+      "ku": "دانیشتنی ئاگادارکردنەوە دەربارەی دۆزینەوەی زوو"
+    },
+    "activities.early-detection-awareness-sessions.summary": {
+      "en": "Awareness raising on early detection and women's health in schools.",
+      "ar": "رفع الوعي حول الكشف المبكر وصحة المرأة في المدارس.",
+      "ku": "بەرزکردنەوەی ئاگاداری دەربارەی دۆزینەوەی زوو و تەندروستی ژنان لە قوتابخانەکان."
+    },
+    "activities.early-detection-awareness-sessions.body": {
+      "en": "Nujeen ran a series of awareness sessions in schools around Mosul focused on early detection and women's health, reaching students and staff with practical, plain-language guidance.\n",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.early-detection-awareness-sessions.seoTitle": {
+      "en": "Early Detection Awareness Sessions — Nujeen",
+      "ar": "جلسات توعية حول الكشف المبكر — نوجين",
+      "ku": "دانیشتنی ئاگادارکردنەوە دەربارەی دۆزینەوەی زوو — نوجین"
+    },
+    "activities.early-detection-awareness-sessions.seoDescription": {
+      "en": "Awareness raising on early detection and women's health in schools.",
+      "ar": "رفع الوعي حول الكشف المبكر وصحة المرأة في المدارس.",
+      "ku": "بەرزکردنەوەی ئاگاداری دەربارەی دۆزینەوەی زوو و تەندروستی ژنان لە قوتابخانەکان."
+    },
+    "activities.family-planning-training-health-workers.title": {
+      "en": "Family Planning Training for Health Workers",
+      "ar": "تدريب تنظيم الأسرة للعاملين الصحيين",
+      "ku": "ڕاهێنانی خێزان‌دانان بۆ کارمەندانی تەندروستی"
+    },
+    "activities.family-planning-training-health-workers.summary": {
+      "en": "Two one-day workshops with the Directorate of Preventive Health Affairs for 50 staff.",
+      "ar": "ورشتا عمل ليوم واحد بالتعاون مع مديرية الشؤون الصحية الوقائية لـ 50 موظفًا.",
+      "ku": "دوو ڕاهێنانی یەک ڕۆژە لەگەڵ بەڕێوەبەرایەتی کاروباری تەندروستی پێشگیرکەرەوە بۆ 50 کارمەند."
+    },
+    "activities.family-planning-training-health-workers.body": {
+      "en": "Nujeen delivered two one-day training workshops in partnership with the Directorate of Preventive Health Affairs, reaching 50 health workers across Duhok.\n\nThe sessions focused on practical family planning counselling skills so that participating staff can better support patients across the region's clinics and health centres.\n",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.family-planning-training-health-workers.seoTitle": {
+      "en": "Family Planning Training for Health Workers — Nujeen",
+      "ar": "تدريب تنظيم الأسرة للعاملين الصحيين — نوجين",
+      "ku": "ڕاهێنانی خێزان‌دانان بۆ کارمەندانی تەندروستی — نوجین"
+    },
+    "activities.family-planning-training-health-workers.seoDescription": {
+      "en": "Two one-day workshops with the Directorate of Preventive Health Affairs for 50 staff.",
+      "ar": "ورشتا عمل ليوم واحد بالتعاون مع مديرية الشؤون الصحية الوقائية لـ 50 موظفًا.",
+      "ku": "دوو ڕاهێنانی یەک ڕۆژە لەگەڵ بەڕێوەبەرایەتی کاروباری تەندروستی پێشگیرکەرەوە بۆ 50 کارمەند."
+    },
+    "activities.reproductive-health-education-displacement.title": {
+      "en": "Reproductive Health Education in Displacement",
+      "ar": "التثقيف الصحي الإنجابي في أماكن النزوح",
+      "ku": "پەروەردەی تەندروستی زاوزێ لە شوێنی ئاوارەیی"
+    },
+    "activities.reproductive-health-education-displacement.summary": {
+      "en": "Ongoing educational sessions inside the Domiz 2 Syrian refugee camp.",
+      "ar": "جلسات تثقيفية مستمرة داخل مخيم دوميز 2 للاجئين السوريين.",
+      "ku": "دانیشتنی پەروەردەیی بەردەوام لەناو کەمپی پەنابەرانی سووری دۆمیز 2."
+    },
+    "activities.reproductive-health-education-displacement.body": {
+      "en": "Nujeen maintains an ongoing programme of reproductive health education sessions inside the Domiz 2 Syrian refugee camp, supporting displaced women and girls with consistent access to information and services.\n",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.reproductive-health-education-displacement.seoTitle": {
+      "en": "Reproductive Health Education in Displacement — Nujeen",
+      "ar": "التثقيف الصحي الإنجابي في أماكن النزوح — نوجين",
+      "ku": "پەروەردەی تەندروستی زاوزێ لە شوێنی ئاوارەیی — نوجین"
+    },
+    "activities.reproductive-health-education-displacement.seoDescription": {
+      "en": "Ongoing educational sessions inside the Domiz 2 Syrian refugee camp.",
+      "ar": "جلسات تثقيفية مستمرة داخل مخيم دوميز 2 للاجئين السوريين.",
+      "ku": "دانیشتنی پەروەردەیی بەردەوام لەناو کەمپی پەنابەرانی سووری دۆمیز 2."
+    },
+    "activities.srhr-awareness-domiz-2.title": {
+      "en": "Together for Better Understanding our Sexual & Reproductive Health and Rights",
+      "ar": "معًا من أجل فهم أفضل لصحتنا وحقوقنا الجنسية والإنجابية",
+      "ku": "پێکەوە بۆ تێگەیشتنێکی باشتر لە تەندروستی و مافەکانی سێکسی و زاوزێمان"
+    },
+    "activities.srhr-awareness-domiz-2.summary": {
+      "en": "A series of awareness sessions on family planning for women and girls aged 15 to 49, held inside the Domiz 2 Syrian refugee camp.",
+      "ar": "سلسلة من الجلسات التوعوية حول تنظيم الأسرة للنساء والفتيات من سن 15 إلى 49 عامًا، أُقيمت داخل مخيم دوميز 2 للاجئين السوريين.",
+      "ku": "کۆمەڵێک دانیشتنی ئاگادارکردنەوە دەربارەی خێزان‌دانان بۆ ژنان و کچان لە تەمەنی 15 تا 49 ساڵدا، لەناو کەمپی پەنابەرانی سووری دۆمیز 2 بەڕێوەچوو."
+    },
+    "activities.srhr-awareness-domiz-2.body": {
+      "en": "Under the title \"Together for Better Understanding our Sexual and Reproductive Health and Rights,\" Nujeen held a series of awareness sessions on family planning for women and girls aged 15 to 49.\n\nThe sessions took place inside the Domiz 2 Syrian refugee camp, where Nujeen has maintained an ongoing presence supporting displaced families. Working directly within displacement venues allows the organization to reach women who would otherwise have limited access to reproductive health education and services.\n\n## What the sessions covered\n\nEach session combined practical family planning guidance with open discussion designed to ease the social stigma that often surrounds reproductive health. Facilitators worked in small groups so that every participant felt comfortable asking questions.\n\n- Family planning methods and informed choice\n- Maternal and reproductive health fundamentals\n- A rights-based understanding of reproductive health\n- Clear referral pathways to local health services\n\n![Facilitators leading a small-group discussion at Domiz 2.](/uploads/activities/placeholder-1.svg)\n\nOver the course of the program, participants moved from hesitation toward genuine engagement — asking questions, sharing experiences, and carrying what they learned back to their families. That shift, more than any single statistic, is what the work is for.\n",
+      "ar": "تحت عنوان \"معًا من أجل فهم أفضل لصحتنا وحقوقنا الجنسية والإنجابية\"، أقامت نوجين سلسلة من الجلسات التوعوية حول تنظيم الأسرة للنساء والفتيات من سن 15 إلى 49 عامًا.\n\nأُقيمت الجلسات داخل مخيم دوميز 2 للاجئين السوريين، حيث حافظت نوجين على حضور مستمر لدعم الأسر النازحة. يتيح العمل المباشر داخل مواقع النزوح للمنظمة الوصول إلى النساء اللواتي قد يكون وصولهن محدودًا إلى التثقيف والخدمات الصحية الإنجابية.\n\n## ما تناولته الجلسات\n\nجمعت كل جلسة بين إرشادات عملية حول تنظيم الأسرة ونقاش مفتوح مصمم لتخفيف الوصمة الاجتماعية التي كثيرًا ما تحيط بالصحة الإنجابية. عمل الميسرون في مجموعات صغيرة حتى يشعر كل مشارك بالراحة في طرح الأسئلة.\n\n- طرق تنظيم الأسرة والاختيار المستنير\n- أساسيات صحة الأمومة والصحة الإنجابية\n- فهم قائم على الحقوق للصحة الإنجابية\n- مسارات إحالة واضحة إلى الخدمات الصحية المحلية\n\n![الميسرون يقودون نقاشًا لمجموعة صغيرة في دوميز 2.](/uploads/activities/placeholder-1.svg)\n\nعلى مدار البرنامج، انتقل المشاركون من التردد إلى مشاركة حقيقية — طرحوا الأسئلة، وتبادلوا التجارب، ونقلوا ما تعلموه إلى أسرهم. هذا التحول، أكثر من أي إحصائية، هو ما يجعل هذا العمل ذا قيمة.\n",
+      "ku": "لەژێر ناونیشانی \"پێکەوە بۆ تێگەیشتنێکی باشتر لە تەندروستی و مافەکانی سێکسی و زاوزێمان\"، نوجین کۆمەڵێک دانیشتنی ئاگادارکردنەوەی دەربارەی خێزان‌دانانی بۆ ژنان و کچانی تەمەن 15 تا 49 ساڵ بەڕێوەبرد.\n\nدانیشتنەکان لەناو کەمپی پەنابەرانی سووری دۆمیز 2 بەڕێوەچوون، لەوێ نوجین بوونی بەردەوامی هەبووە بۆ پشتگیریکردنی خێزانە ئاوارەکان. کارکردنی ڕاستەوخۆ لەناو شوێنی ئاوارەیی ڕێگا بە ڕێکخراوەکە دەدات بگاتە ژنانێک کە بەشێوەیەکی تر دەستگەیشتنیان بە پەروەردە و خزمەتگوزاری تەندروستی زاوزێ کەمە.\n\n## دانیشتنەکان چییان لەخۆگرت\n\nهەر دانیشتنێک ڕێنمایی کرداری خێزان‌دانانی لەگەڵ گفتوگۆیەکی کراوە کە بۆ کەمکردنەوەی شەرمەزاری کۆمەڵایەتی دەوروبەری تەندروستی زاوزێ دیزاین کرابوو تێکەڵ دەکرد. ڕێنماییکاران لە گروپی بچووکدا کاریان دەکرد بۆ ئەوەی هەموو بەشدارێک هەست بە ئاسوودەیی بکات لە پرسیارکردن.\n\n- ڕێگاکانی خێزان‌دانان و هەڵبژاردنی ئاگادارانە\n- بنەماکانی تەندروستی دایکبوون و زاوزێ\n- تێگەیشتنێکی مافناسانە لە تەندروستی زاوزێ\n- ڕێگای ڕاگەیاندنی ڕوون بۆ خزمەتگوزاریی تەندروستی ناوخۆیی\n\n![ڕێنماییکاران گفتوگۆیەکی گروپی بچووک لە دۆمیز 2 ڕابەرایەتی دەکەن.](/uploads/activities/placeholder-1.svg)\n\nلە ماوەی بەرنامەکەدا، بەشداربووان لە دوودڵی بەرەو بەشداریکردنی ڕاستەقینە گواستنەوە — پرسیاریان کرد، ئەزموونیان هاوبەش کرد، و ئەوەی فێربوون گەڕاندیانەوە بۆ خێزانەکانیان. ئەم گۆڕانە، زیاتر لە هەر ئامارێک، ئەوەیە کە ئەم کارە بۆی دەکرێت.\n"
+    },
+    "activities.srhr-awareness-domiz-2.seoTitle": {
+      "en": "Together for Better Understanding our SRHR — Nujeen",
+      "ar": "معًا من أجل فهم أفضل لصحتنا الإنجابية — نوجين",
+      "ku": "پێکەوە بۆ تێگەیشتنی باشتر لە SRHR — نوجین"
+    },
+    "activities.srhr-awareness-domiz-2.seoDescription": {
+      "en": "A series of awareness sessions on family planning for women and girls aged 15–49 inside the Domiz 2 Syrian refugee camp.",
+      "ar": "سلسلة من الجلسات التوعوية حول تنظيم الأسرة للنساء والفتيات من سن 15 إلى 49 عامًا داخل مخيم دوميز 2.",
+      "ku": "کۆمەڵێک دانیشتنی ئاگادارکردنەوە دەربارەی خێزان‌دانان بۆ ژنان و کچان لە کەمپی دۆمیز 2."
+    },
+    "activities.srhr-awareness-domiz-2.documents.0.label": {
+      "en": "SRHR Awareness Session — Activity Report",
+      "ar": "SRHR Awareness Session — Activity Report",
+      "ku": "SRHR Awareness Session — Activity Report"
+    },
+    "activities.srhr-awareness-domiz-2.documents.1.label": {
+      "en": "تقرير الجلسة التوعوية — النسخة العربية",
+      "ar": "تقرير الجلسة التوعوية — النسخة العربية",
+      "ku": "تقرير الجلسة التوعوية — النسخة العربية"
+    },
+    "activities.student-health-festival-ifmsa.title": {
+      "en": "Student Health Festival with IFMSA Kurdistan",
+      "ar": "مهرجان صحة الطلاب مع IFMSA كردستان",
+      "ku": "فیستیڤاڵی تەندروستی خوێندکاران لەگەڵ IFMSA کوردستان"
+    },
+    "activities.student-health-festival-ifmsa.summary": {
+      "en": "A regional festival breaking social stigma around reproductive health among students.",
+      "ar": "مهرجان إقليمي يكسر الوصمة الاجتماعية المرتبطة بالصحة الإنجابية بين الطلاب.",
+      "ku": "فیستیڤاڵێکی هەرێمی کە شەرمەزاری کۆمەڵایەتی دەربارەی تەندروستی زاوزێ لەنێو خوێندکاراندا دەشکێنێت."
+    },
+    "activities.student-health-festival-ifmsa.body": {
+      "en": "In partnership with IFMSA Kurdistan, Nujeen took part in a regional student health festival aimed at breaking the social stigma around reproductive health and opening honest conversation among young people.\n",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.student-health-festival-ifmsa.seoTitle": {
+      "en": "Student Health Festival with IFMSA Kurdistan — Nujeen",
+      "ar": "مهرجان صحة الطلاب مع IFMSA كردستان — نوجين",
+      "ku": "فیستیڤاڵی تەندروستی خوێندکاران لەگەڵ IFMSA کوردستان — نوجین"
+    },
+    "activities.student-health-festival-ifmsa.seoDescription": {
+      "en": "A regional festival breaking social stigma around reproductive health among students.",
+      "ar": "مهرجان إقليمي يكسر الوصمة الاجتماعية المرتبطة بالصحة الإنجابية بين الطلاب.",
+      "ku": "فیستیڤاڵێکی هەرێمی کە شەرمەزاری کۆمەڵایەتی دەربارەی تەندروستی زاوزێ لەنێو خوێندکاراندا دەشکێنێت."
+    },
+    "activities.visiting-health-directorate.title": {
+      "en": "Visiting Nujeen Team to the Health Directorate",
+      "ar": "زيارة فريق نوجين إلى مديرية الصحة",
+      "ku": "سەردانی تیمی نوجین بۆ بەڕێوەبەرایەتی تەندروستی"
+    },
+    "activities.visiting-health-directorate.summary": {
+      "en": "Strengthening collaboration with the regional health infrastructure across Duhok.",
+      "ar": "تعزيز التعاون مع البنية التحتية الصحية الإقليمية في جميع أنحاء دهوك.",
+      "ku": "بەهێزکردنی هاوکاری لەگەڵ بنکە تەندروستییەکانی هەرێمی لە پانتایی دهۆک."
+    },
+    "activities.visiting-health-directorate.body": {
+      "en": "The Nujeen team visited the Duhok Health Directorate to strengthen collaboration with the region's health infrastructure, coordinating on shared priorities across reproductive health and family planning services.\n",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.visiting-health-directorate.seoTitle": {
+      "en": "Visiting Nujeen Team to the Health Directorate — Nujeen",
+      "ar": "زيارة فريق نوجين إلى مديرية الصحة — نوجين",
+      "ku": "سەردانی تیمی نوجین بۆ بەڕێوەبەرایەتی تەندروستی — نوجین"
+    },
+    "activities.visiting-health-directorate.seoDescription": {
+      "en": "Strengthening collaboration with the regional health infrastructure across Duhok.",
+      "ar": "تعزيز التعاون مع البنية التحتية الصحية الإقليمية في جميع أنحاء دهوك.",
+      "ku": "بەهێزکردنی هاوکاری لەگەڵ بنکە تەندروستییەکانی هەرێمی لە پانتایی دهۆک."
+    }
+  }
+}

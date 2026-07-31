@@ -1,0 +1,11 @@
+---
+// Isolates an LTR run (phone numbers, emails) inside RTL text so digit
+// groups, "+", and "@"/"." don't get bidi-reordered by the surrounding
+// Arabic/Kurdish paragraph direction. See NUJEEN fixes prompt #2.
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<bdi dir="ltr" style="unicode-bidi: isolate;" class={className}><slot /></bdi>

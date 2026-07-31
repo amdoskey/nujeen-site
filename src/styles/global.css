@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bone text-ink font-sans antialiased;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  [dir='rtl'] body {
+    @apply font-arabic;
+  }
+  /* Fraunces (the Latin display serif used for all headings/quotes via
+     .font-serif) has zero Arabic-script glyph coverage. Left alone, every
+     heading in ar/ku silently falls back to the browser's generic system
+     serif, which varies by platform and can render Arabic/Kurdish with
+     broken/non-joining glyphs. Force the Arabic font there instead. */
+  [dir='rtl'] .font-serif {
+    @apply font-arabic;
+  }
+  ::selection {
+    @apply bg-roseSoft;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto max-w-wrap px-6 md:px-10;
+  }
+  .eyebrow {
+    @apply text-rose text-xs font-semibold uppercase;
+    letter-spacing: 0.22em;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-sm bg-ink px-7 py-4 text-[15px] font-medium text-bone transition duration-200 ease-out;
+    letter-spacing: 0.01em;
+  }
+  .btn:hover {
+    @apply bg-blue -translate-y-px;
+  }
+  .btn-line {
+    @apply border border-line bg-transparent px-[29px] py-[14px] text-ink;
+  }
+  .btn-line:hover {
+    @apply border-ink bg-ink text-bone;
+  }
+  .btn .arrow {
+    @apply transition duration-200;
+  }
+  .btn:hover .arrow {
+    transform: translateX(4px);
+  }
+  [dir='rtl'] .btn:hover .arrow {
+    transform: scaleX(-1) translateX(4px);
+  }
+  /* Directional icons (arrows that imply reading-direction motion — "next",
+     "continue", "back") must visually mirror in RTL. Fixed-meaning icons
+     (download ↓, external-link ↗, clock ◷, search ⌕, file ▤) do NOT get
+     this class — their meaning doesn't depend on reading direction. */
+  .rtl-flip {
+    display: inline-block;
+  }
+  [dir='rtl'] .rtl-flip {
+    transform: scaleX(-1);
+  }
+  .chip {
+    @apply cursor-pointer rounded-full border border-line px-5 py-[9px] text-sm font-medium text-grey transition duration-200;
+  }
+  .chip:hover {
+    @apply border-ink text-ink;
+  }
+  .chip.on {
+    @apply border-ink bg-ink text-bone;
+  }
+  .tag-pill {
+    @apply rounded-sm bg-bone2 px-[13px] py-[6px] text-[11px] font-semibold uppercase text-blue;
+    letter-spacing: 0.14em;
+  }
+  .tag-pill.rose {
+    @apply bg-roseSoft text-roseDark;
+  }
+
+  /* Rendered Markdown body (activity/project/about detail pages) */
+  .article-body {
+    @apply text-[18.5px] leading-[1.75] text-[#2b3942];
+  }
+  .article-body p {
+    @apply mb-6;
+  }
+  .article-body > p:first-of-type {
+    @apply mb-[30px] font-serif text-[23px] font-normal leading-[1.5] text-ink;
+  }
+  .article-body h2 {
+    @apply mb-[18px] mt-[46px] font-serif text-[30px] font-medium tracking-tight text-ink;
+  }
+  .article-body ul {
+    @apply mb-6 ms-1 list-none;
+  }
+  .article-body li {
+    @apply relative mb-[13px] ps-7;
+  }
+  .article-body li::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0;
+    top: 12px;
+    width: 14px;
+    height: 1.5px;
+    background: theme('colors.rose');
+  }
+  .article-body .inline-fig {
+    @apply my-11;
+  }
+  .article-body .inline-fig .im {
+    @apply h-[380px] overflow-hidden rounded bg-ink;
+  }
+  .article-body .inline-fig img {
+    @apply h-full w-full object-cover;
+  }
+  .article-body figcaption {
+    @apply mt-3.5 font-serif text-sm italic text-grey;
+  }
+}
