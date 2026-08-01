@@ -22,7 +22,16 @@ export async function getPublished(collectionName: CollectionName) {
   const all = await reader.collections[collectionName].all();
   return all
     .filter((item) => item.entry.status === 'published')
-    .sort((a, b) => (a.entry.date < b.entry.date ? 1 : -1))
+    .sort((a, b) => {
+      // Entries without a date (not yet set by the client) sort after dated
+      // ones, rather than producing an inconsistent/undefined ordering.
+      const aDate = a.entry.date;
+      const bDate = b.entry.date;
+      if (!aDate && !bDate) return 0;
+      if (!aDate) return 1;
+      if (!bDate) return -1;
+      return aDate < bDate ? 1 : -1;
+    })
     .map((item) => ({ slug: item.slug, entry: normalizeEntry(item.entry) }));
 }
 

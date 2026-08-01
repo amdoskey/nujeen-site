@@ -20,7 +20,7 @@ const categoryKey = (cat: string) => `category_${cat}` as const;
 const items = activities.map(({ slug, entry }) => ({
   slug,
   href: localePath(locale, `/activities/${slug}`),
-  image: entry.featuredImage ?? '/uploads/activities/placeholder-1.svg',
+  image: entry.featuredImage ?? '/uploads/activities/placeholder.svg',
   category: entry.category,
   categoryLabel: t(locale, categoryKey(entry.category)),
   date: formatDate(entry.date, locale),

@@ -88,26 +88,39 @@ means copying that function's call, nothing more.
 Per the build brief's "placeholder honesty" rule, these are illustrative and
 must be swapped for the client's real material before going live:
 
-- **All photography** (`public/uploads/activities/placeholder-*.svg`,
-  `public/uploads/home/hero.jpeg`) — generated gradient placeholders /
-  the design mockup's sample image. Replace via Keystatic's image fields.
-  Same for the two sample PDFs in `public/uploads/activities/documents/`.
+- **Activities photography is now real** (from `_client-content/nuj-activities/`).
+  Featured images live flat at `public/uploads/activities/<slug>.jpg`
+  (matching the `directory`/`publicPath` configured in
+  `keystatic.config.ts`); gallery photos live at
+  `public/uploads/activities/gallery/<slug>-N.jpg`. Four of the five
+  activities have a populated gallery (the fifth, `ifmsa-golden-sponsorship`,
+  only had one source photo, so its gallery is empty by design). The home
+  hero image (`public/uploads/home/hero.jpeg`) is still the design
+  mockup's sample photo; replace it via Keystatic's Home → Hero image
+  field. `public/uploads/activities/placeholder.svg` is only a fallback
+  shown if an entry has no featured image set — not used by any real entry.
+- **Activity dates are not set — launch blocker.** The client's source
+  material for all 5 real activities had no dates, and none were invented
+  (see build brief's "don't fabricate" principle). Each entry's `date`
+  field is empty in Keystatic → Activities → (entry) → Date; the listing
+  and detail pages already degrade gracefully (no date shown, no "Invalid
+  Date", stable sort with undated entries sorting last), but real dates
+  must be filled in before launch for the dates and sort order to be
+  meaningful.
 - **Impact numbers** on the homepage (8+ years, 50+ workers, etc.) — carried
   over from the design mockup as illustrative figures. Editable in
   Keystatic → Home → Impact stats; the client should supply real figures.
-- **Projects collection is intentionally empty.** The design reference
-  never included real Projects content, so none was invented — the
-  collection, schema, listing, and detail pages are fully built and ready
-  for the editor to populate.
-- **Arabic and Kurdish translations** were written to make the trilingual/RTL
-  build fully testable end-to-end, but have not been reviewed by a native
-  speaker. **The Kurdish content is in Sorani; Duhok is a Badini-speaking
-  area, so it should be Kurmanji/Badini in Arabic script instead.** Use the
+- **Projects collection is intentionally empty.** No real Projects content
+  has been supplied yet — the collection, schema, listing, and detail
+  pages are fully built and ready for the editor to populate.
+- **Arabic and Kurdish translations are empty on all 5 real Activities**
+  (`titleAr`/`titleKu`/`summary.ar`/`summary.ku`/`body.ar`/`body.ku`) —
+  intentionally left blank rather than machine-translated, per the same
+  "don't fabricate" principle; the site falls back to English on `ar`/`ku`
+  pages for these entries until real translations are supplied. Use the
   export/import workflow below to send `translations-export.json` to a
-  translator for proper Arabic + Kurmanji/Badini values, then re-import.
-  Every Activity has full body copy in English; only the featured activity
-  (`srhr-awareness-domiz-2`) has a full Arabic/Kurdish body translation —
-  the rest fall back to English until translated.
+  translator. **Kurdish should be Kurmanji/Badini in Arabic script**
+  (Duhok is a Badini-speaking area) — not Sorani.
 
 ## Contact form
 

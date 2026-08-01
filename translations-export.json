@@ -6,7 +6,7 @@
     "keyFormat": "Dotted path: \"<collection/singleton>.<slug-if-any>.<field>[.<arrayIndex>.<subfield>]\". \"ui.*\" keys map 1:1 to src/i18n/ui.ts. Everything else maps to a field in the matching content/*.yaml file (title/titleAr/titleKu are the one exception — see keystatic.config.ts comment).",
     "roundTrip": "Do not add, remove, or rename keys — the import step matches purely by key. See README.md \"Translation export / import\" for the full workflow.",
     "generatedBy": "scripts/export-translations.mjs",
-    "generatedAt": "2026-07-31"
+    "generatedAt": "2026-08-01"
   },
   "strings": {
     "ui.nav_home": {
@@ -579,165 +579,80 @@
       "ar": "مديريات الصحة، الكليات الأكاديمية، الشركاء الدوليون، والأفراد — تواصلوا معنا عبر البيانات أدناه.",
       "ku": "بەڕێوەبەرایەتی تەندروستی، کۆلێژی ئەکادیمی، هاوبەشی نێودەوڵەتی، و تاکەکان — لە ڕێگەی زانیارییەکانی خوارەوە پەیوەندیمان پێوە بکەن."
     },
-    "activities.early-detection-awareness-sessions.title": {
-      "en": "Early Detection Awareness Sessions",
-      "ar": "جلسات توعية حول الكشف المبكر",
-      "ku": "دانیشتنی ئاگادارکردنەوە دەربارەی دۆزینەوەی زوو"
-    },
-    "activities.early-detection-awareness-sessions.summary": {
-      "en": "Awareness raising on early detection and women's health in schools.",
-      "ar": "رفع الوعي حول الكشف المبكر وصحة المرأة في المدارس.",
-      "ku": "بەرزکردنەوەی ئاگاداری دەربارەی دۆزینەوەی زوو و تەندروستی ژنان لە قوتابخانەکان."
-    },
-    "activities.early-detection-awareness-sessions.body": {
-      "en": "Nujeen ran a series of awareness sessions in schools around Mosul focused on early detection and women's health, reaching students and staff with practical, plain-language guidance.\n",
+    "activities.adolescent-boys-awareness-mosul.title": {
+      "en": "Awareness Sessions for Adolescent Boys in Mosul",
       "ar": "",
       "ku": ""
     },
-    "activities.early-detection-awareness-sessions.seoTitle": {
-      "en": "Early Detection Awareness Sessions — Nujeen",
-      "ar": "جلسات توعية حول الكشف المبكر — نوجين",
-      "ku": "دانیشتنی ئاگادارکردنەوە دەربارەی دۆزینەوەی زوو — نوجین"
-    },
-    "activities.early-detection-awareness-sessions.seoDescription": {
-      "en": "Awareness raising on early detection and women's health in schools.",
-      "ar": "رفع الوعي حول الكشف المبكر وصحة المرأة في المدارس.",
-      "ku": "بەرزکردنەوەی ئاگاداری دەربارەی دۆزینەوەی زوو و تەندروستی ژنان لە قوتابخانەکان."
-    },
-    "activities.family-planning-training-health-workers.title": {
-      "en": "Family Planning Training for Health Workers",
-      "ar": "تدريب تنظيم الأسرة للعاملين الصحيين",
-      "ku": "ڕاهێنانی خێزان‌دانان بۆ کارمەندانی تەندروستی"
-    },
-    "activities.family-planning-training-health-workers.summary": {
-      "en": "Two one-day workshops with the Directorate of Preventive Health Affairs for 50 staff.",
-      "ar": "ورشتا عمل ليوم واحد بالتعاون مع مديرية الشؤون الصحية الوقائية لـ 50 موظفًا.",
-      "ku": "دوو ڕاهێنانی یەک ڕۆژە لەگەڵ بەڕێوەبەرایەتی کاروباری تەندروستی پێشگیرکەرەوە بۆ 50 کارمەند."
-    },
-    "activities.family-planning-training-health-workers.body": {
-      "en": "Nujeen delivered two one-day training workshops in partnership with the Directorate of Preventive Health Affairs, reaching 50 health workers across Duhok.\n\nThe sessions focused on practical family planning counselling skills so that participating staff can better support patients across the region's clinics and health centres.\n",
+    "activities.adolescent-boys-awareness-mosul.summary": {
+      "en": "Nujeen for Family Democratizing Organization held awareness sessions for adolescent male aged between (12-18) years old, on age appropriate SRHR topics in Mosul and surrounding areas.",
       "ar": "",
       "ku": ""
     },
-    "activities.family-planning-training-health-workers.seoTitle": {
-      "en": "Family Planning Training for Health Workers — Nujeen",
-      "ar": "تدريب تنظيم الأسرة للعاملين الصحيين — نوجين",
-      "ku": "ڕاهێنانی خێزان‌دانان بۆ کارمەندانی تەندروستی — نوجین"
-    },
-    "activities.family-planning-training-health-workers.seoDescription": {
-      "en": "Two one-day workshops with the Directorate of Preventive Health Affairs for 50 staff.",
-      "ar": "ورشتا عمل ليوم واحد بالتعاون مع مديرية الشؤون الصحية الوقائية لـ 50 موظفًا.",
-      "ku": "دوو ڕاهێنانی یەک ڕۆژە لەگەڵ بەڕێوەبەرایەتی کاروباری تەندروستی پێشگیرکەرەوە بۆ 50 کارمەند."
-    },
-    "activities.reproductive-health-education-displacement.title": {
-      "en": "Reproductive Health Education in Displacement",
-      "ar": "التثقيف الصحي الإنجابي في أماكن النزوح",
-      "ku": "پەروەردەی تەندروستی زاوزێ لە شوێنی ئاوارەیی"
-    },
-    "activities.reproductive-health-education-displacement.summary": {
-      "en": "Ongoing educational sessions inside the Domiz 2 Syrian refugee camp.",
-      "ar": "جلسات تثقيفية مستمرة داخل مخيم دوميز 2 للاجئين السوريين.",
-      "ku": "دانیشتنی پەروەردەیی بەردەوام لەناو کەمپی پەنابەرانی سووری دۆمیز 2."
-    },
-    "activities.reproductive-health-education-displacement.body": {
-      "en": "Nujeen maintains an ongoing programme of reproductive health education sessions inside the Domiz 2 Syrian refugee camp, supporting displaced women and girls with consistent access to information and services.\n",
+    "activities.adolescent-boys-awareness-mosul.body": {
+      "en": "Nujeen for Family Democratizing Organization held awareness sessions for adolescent male aged between (12-18) years old, on age appropriate SRHR topics in Mosul and surrounding areas.\n",
       "ar": "",
       "ku": ""
     },
-    "activities.reproductive-health-education-displacement.seoTitle": {
-      "en": "Reproductive Health Education in Displacement — Nujeen",
-      "ar": "التثقيف الصحي الإنجابي في أماكن النزوح — نوجين",
-      "ku": "پەروەردەی تەندروستی زاوزێ لە شوێنی ئاوارەیی — نوجین"
-    },
-    "activities.reproductive-health-education-displacement.seoDescription": {
-      "en": "Ongoing educational sessions inside the Domiz 2 Syrian refugee camp.",
-      "ar": "جلسات تثقيفية مستمرة داخل مخيم دوميز 2 للاجئين السوريين.",
-      "ku": "دانیشتنی پەروەردەیی بەردەوام لەناو کەمپی پەنابەرانی سووری دۆمیز 2."
-    },
-    "activities.srhr-awareness-domiz-2.title": {
-      "en": "Together for Better Understanding our Sexual & Reproductive Health and Rights",
-      "ar": "معًا من أجل فهم أفضل لصحتنا وحقوقنا الجنسية والإنجابية",
-      "ku": "پێکەوە بۆ تێگەیشتنێکی باشتر لە تەندروستی و مافەکانی سێکسی و زاوزێمان"
-    },
-    "activities.srhr-awareness-domiz-2.summary": {
-      "en": "A series of awareness sessions on family planning for women and girls aged 15 to 49, held inside the Domiz 2 Syrian refugee camp.",
-      "ar": "سلسلة من الجلسات التوعوية حول تنظيم الأسرة للنساء والفتيات من سن 15 إلى 49 عامًا، أُقيمت داخل مخيم دوميز 2 للاجئين السوريين.",
-      "ku": "کۆمەڵێک دانیشتنی ئاگادارکردنەوە دەربارەی خێزان‌دانان بۆ ژنان و کچان لە تەمەنی 15 تا 49 ساڵدا، لەناو کەمپی پەنابەرانی سووری دۆمیز 2 بەڕێوەچوو."
-    },
-    "activities.srhr-awareness-domiz-2.body": {
-      "en": "Under the title \"Together for Better Understanding our Sexual and Reproductive Health and Rights,\" Nujeen held a series of awareness sessions on family planning for women and girls aged 15 to 49.\n\nThe sessions took place inside the Domiz 2 Syrian refugee camp, where Nujeen has maintained an ongoing presence supporting displaced families. Working directly within displacement venues allows the organization to reach women who would otherwise have limited access to reproductive health education and services.\n\n## What the sessions covered\n\nEach session combined practical family planning guidance with open discussion designed to ease the social stigma that often surrounds reproductive health. Facilitators worked in small groups so that every participant felt comfortable asking questions.\n\n- Family planning methods and informed choice\n- Maternal and reproductive health fundamentals\n- A rights-based understanding of reproductive health\n- Clear referral pathways to local health services\n\n![Facilitators leading a small-group discussion at Domiz 2.](/uploads/activities/placeholder-1.svg)\n\nOver the course of the program, participants moved from hesitation toward genuine engagement — asking questions, sharing experiences, and carrying what they learned back to their families. That shift, more than any single statistic, is what the work is for.\n",
-      "ar": "تحت عنوان \"معًا من أجل فهم أفضل لصحتنا وحقوقنا الجنسية والإنجابية\"، أقامت نوجين سلسلة من الجلسات التوعوية حول تنظيم الأسرة للنساء والفتيات من سن 15 إلى 49 عامًا.\n\nأُقيمت الجلسات داخل مخيم دوميز 2 للاجئين السوريين، حيث حافظت نوجين على حضور مستمر لدعم الأسر النازحة. يتيح العمل المباشر داخل مواقع النزوح للمنظمة الوصول إلى النساء اللواتي قد يكون وصولهن محدودًا إلى التثقيف والخدمات الصحية الإنجابية.\n\n## ما تناولته الجلسات\n\nجمعت كل جلسة بين إرشادات عملية حول تنظيم الأسرة ونقاش مفتوح مصمم لتخفيف الوصمة الاجتماعية التي كثيرًا ما تحيط بالصحة الإنجابية. عمل الميسرون في مجموعات صغيرة حتى يشعر كل مشارك بالراحة في طرح الأسئلة.\n\n- طرق تنظيم الأسرة والاختيار المستنير\n- أساسيات صحة الأمومة والصحة الإنجابية\n- فهم قائم على الحقوق للصحة الإنجابية\n- مسارات إحالة واضحة إلى الخدمات الصحية المحلية\n\n![الميسرون يقودون نقاشًا لمجموعة صغيرة في دوميز 2.](/uploads/activities/placeholder-1.svg)\n\nعلى مدار البرنامج، انتقل المشاركون من التردد إلى مشاركة حقيقية — طرحوا الأسئلة، وتبادلوا التجارب، ونقلوا ما تعلموه إلى أسرهم. هذا التحول، أكثر من أي إحصائية، هو ما يجعل هذا العمل ذا قيمة.\n",
-      "ku": "لەژێر ناونیشانی \"پێکەوە بۆ تێگەیشتنێکی باشتر لە تەندروستی و مافەکانی سێکسی و زاوزێمان\"، نوجین کۆمەڵێک دانیشتنی ئاگادارکردنەوەی دەربارەی خێزان‌دانانی بۆ ژنان و کچانی تەمەن 15 تا 49 ساڵ بەڕێوەبرد.\n\nدانیشتنەکان لەناو کەمپی پەنابەرانی سووری دۆمیز 2 بەڕێوەچوون، لەوێ نوجین بوونی بەردەوامی هەبووە بۆ پشتگیریکردنی خێزانە ئاوارەکان. کارکردنی ڕاستەوخۆ لەناو شوێنی ئاوارەیی ڕێگا بە ڕێکخراوەکە دەدات بگاتە ژنانێک کە بەشێوەیەکی تر دەستگەیشتنیان بە پەروەردە و خزمەتگوزاری تەندروستی زاوزێ کەمە.\n\n## دانیشتنەکان چییان لەخۆگرت\n\nهەر دانیشتنێک ڕێنمایی کرداری خێزان‌دانانی لەگەڵ گفتوگۆیەکی کراوە کە بۆ کەمکردنەوەی شەرمەزاری کۆمەڵایەتی دەوروبەری تەندروستی زاوزێ دیزاین کرابوو تێکەڵ دەکرد. ڕێنماییکاران لە گروپی بچووکدا کاریان دەکرد بۆ ئەوەی هەموو بەشدارێک هەست بە ئاسوودەیی بکات لە پرسیارکردن.\n\n- ڕێگاکانی خێزان‌دانان و هەڵبژاردنی ئاگادارانە\n- بنەماکانی تەندروستی دایکبوون و زاوزێ\n- تێگەیشتنێکی مافناسانە لە تەندروستی زاوزێ\n- ڕێگای ڕاگەیاندنی ڕوون بۆ خزمەتگوزاریی تەندروستی ناوخۆیی\n\n![ڕێنماییکاران گفتوگۆیەکی گروپی بچووک لە دۆمیز 2 ڕابەرایەتی دەکەن.](/uploads/activities/placeholder-1.svg)\n\nلە ماوەی بەرنامەکەدا، بەشداربووان لە دوودڵی بەرەو بەشداریکردنی ڕاستەقینە گواستنەوە — پرسیاریان کرد، ئەزموونیان هاوبەش کرد، و ئەوەی فێربوون گەڕاندیانەوە بۆ خێزانەکانیان. ئەم گۆڕانە، زیاتر لە هەر ئامارێک، ئەوەیە کە ئەم کارە بۆی دەکرێت.\n"
-    },
-    "activities.srhr-awareness-domiz-2.seoTitle": {
-      "en": "Together for Better Understanding our SRHR — Nujeen",
-      "ar": "معًا من أجل فهم أفضل لصحتنا الإنجابية — نوجين",
-      "ku": "پێکەوە بۆ تێگەیشتنی باشتر لە SRHR — نوجین"
-    },
-    "activities.srhr-awareness-domiz-2.seoDescription": {
-      "en": "A series of awareness sessions on family planning for women and girls aged 15–49 inside the Domiz 2 Syrian refugee camp.",
-      "ar": "سلسلة من الجلسات التوعوية حول تنظيم الأسرة للنساء والفتيات من سن 15 إلى 49 عامًا داخل مخيم دوميز 2.",
-      "ku": "کۆمەڵێک دانیشتنی ئاگادارکردنەوە دەربارەی خێزان‌دانان بۆ ژنان و کچان لە کەمپی دۆمیز 2."
-    },
-    "activities.srhr-awareness-domiz-2.documents.0.label": {
-      "en": "SRHR Awareness Session — Activity Report",
-      "ar": "SRHR Awareness Session — Activity Report",
-      "ku": "SRHR Awareness Session — Activity Report"
-    },
-    "activities.srhr-awareness-domiz-2.documents.1.label": {
-      "en": "تقرير الجلسة التوعوية — النسخة العربية",
-      "ar": "تقرير الجلسة التوعوية — النسخة العربية",
-      "ku": "تقرير الجلسة التوعوية — النسخة العربية"
-    },
-    "activities.student-health-festival-ifmsa.title": {
-      "en": "Student Health Festival with IFMSA Kurdistan",
-      "ar": "مهرجان صحة الطلاب مع IFMSA كردستان",
-      "ku": "فیستیڤاڵی تەندروستی خوێندکاران لەگەڵ IFMSA کوردستان"
-    },
-    "activities.student-health-festival-ifmsa.summary": {
-      "en": "A regional festival breaking social stigma around reproductive health among students.",
-      "ar": "مهرجان إقليمي يكسر الوصمة الاجتماعية المرتبطة بالصحة الإنجابية بين الطلاب.",
-      "ku": "فیستیڤاڵێکی هەرێمی کە شەرمەزاری کۆمەڵایەتی دەربارەی تەندروستی زاوزێ لەنێو خوێندکاراندا دەشکێنێت."
-    },
-    "activities.student-health-festival-ifmsa.body": {
-      "en": "In partnership with IFMSA Kurdistan, Nujeen took part in a regional student health festival aimed at breaking the social stigma around reproductive health and opening honest conversation among young people.\n",
+    "activities.adolescent-girls-awareness-mosul.title": {
+      "en": "Awareness Sessions for Adolescent Girls in Mosul",
       "ar": "",
       "ku": ""
     },
-    "activities.student-health-festival-ifmsa.seoTitle": {
-      "en": "Student Health Festival with IFMSA Kurdistan — Nujeen",
-      "ar": "مهرجان صحة الطلاب مع IFMSA كردستان — نوجين",
-      "ku": "فیستیڤاڵی تەندروستی خوێندکاران لەگەڵ IFMSA کوردستان — نوجین"
-    },
-    "activities.student-health-festival-ifmsa.seoDescription": {
-      "en": "A regional festival breaking social stigma around reproductive health among students.",
-      "ar": "مهرجان إقليمي يكسر الوصمة الاجتماعية المرتبطة بالصحة الإنجابية بين الطلاب.",
-      "ku": "فیستیڤاڵێکی هەرێمی کە شەرمەزاری کۆمەڵایەتی دەربارەی تەندروستی زاوزێ لەنێو خوێندکاراندا دەشکێنێت."
-    },
-    "activities.visiting-health-directorate.title": {
-      "en": "Visiting Nujeen Team to the Health Directorate",
-      "ar": "زيارة فريق نوجين إلى مديرية الصحة",
-      "ku": "سەردانی تیمی نوجین بۆ بەڕێوەبەرایەتی تەندروستی"
-    },
-    "activities.visiting-health-directorate.summary": {
-      "en": "Strengthening collaboration with the regional health infrastructure across Duhok.",
-      "ar": "تعزيز التعاون مع البنية التحتية الصحية الإقليمية في جميع أنحاء دهوك.",
-      "ku": "بەهێزکردنی هاوکاری لەگەڵ بنکە تەندروستییەکانی هەرێمی لە پانتایی دهۆک."
-    },
-    "activities.visiting-health-directorate.body": {
-      "en": "The Nujeen team visited the Duhok Health Directorate to strengthen collaboration with the region's health infrastructure, coordinating on shared priorities across reproductive health and family planning services.\n",
+    "activities.adolescent-girls-awareness-mosul.summary": {
+      "en": "Nujeen for Family Democratizing Organization held awareness sessions for adolescent female aged between (11-18) years old, on age appropriate SRHR topics in Mosul and surrounding areas.",
       "ar": "",
       "ku": ""
     },
-    "activities.visiting-health-directorate.seoTitle": {
-      "en": "Visiting Nujeen Team to the Health Directorate — Nujeen",
-      "ar": "زيارة فريق نوجين إلى مديرية الصحة — نوجين",
-      "ku": "سەردانی تیمی نوجین بۆ بەڕێوەبەرایەتی تەندروستی — نوجین"
+    "activities.adolescent-girls-awareness-mosul.body": {
+      "en": "Nujeen for Family Democratizing Organization held awareness sessions for adolescent female aged between (11-18) years old, on age appropriate SRHR topics in Mosul and surrounding areas.\n",
+      "ar": "",
+      "ku": ""
     },
-    "activities.visiting-health-directorate.seoDescription": {
-      "en": "Strengthening collaboration with the regional health infrastructure across Duhok.",
-      "ar": "تعزيز التعاون مع البنية التحتية الصحية الإقليمية في جميع أنحاء دهوك.",
-      "ku": "بەهێزکردنی هاوکاری لەگەڵ بنکە تەندروستییەکانی هەرێمی لە پانتایی دهۆک."
+    "activities.ifmsa-golden-sponsorship.title": {
+      "en": "Investing in the Next Generation of Healthcare Leaders",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.ifmsa-golden-sponsorship.summary": {
+      "en": "Nujeen Organization is proud to announce our Golden Sponsorship of the 16th National Assembly of IFMSA Kurdistan.",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.ifmsa-golden-sponsorship.body": {
+      "en": "Nujeen Organization is proud to announce our Golden Sponsorship of the 16th National Assembly of IFMSA Kurdistan.\n\nThis partnership reflects our commitment to empowering future healthcare professionals through knowledge, collaboration, and capacity building. The National Assembly will bring together medical students and young doctors from across the Kurdistan Region for a series of trainings, workshops, and discussions on key health topics, including sexual and reproductive health and rights (SRHR).\n\nWe believe that today's medical students are tomorrow's changemakers. By investing in their education and leadership, we are contributing to a future where healthcare is more informed, compassionate, and accessible for everyone.\n\nWe look forward to a successful collaboration and to supporting the next generation in creating lasting, positive change.\n",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.nujeen-clinic-domiz-2.title": {
+      "en": "Nujeen Clinic for Providing Family Planning",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.nujeen-clinic-domiz-2.summary": {
+      "en": "Within the project of Together for better understanding of our Sexual and Reproductive Health and Rights, that is funded by SAAF, Nujeen has established and run a clinic in Domiz-2 Refugee camp for providing Family planning and SRH consultations for the Syrian refugee women and girls.",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.nujeen-clinic-domiz-2.body": {
+      "en": "Within the project of Together for better understanding of our Sexual and Reproductive Health and Rights, that is funded by SAAF, Nujeen has established and run a clinic in Domiz-2 Refugee camp for providing Family planning and SRH consultations for the Syrian refugee women and girls.\n",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.srhr-focus-group-discussion.title": {
+      "en": "Focus Group Discussion on SRHR",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.srhr-focus-group-discussion.summary": {
+      "en": "Nujeen held Focus Group Discussions with community Leaders in different sectors including (Health, education, NGO and humanitarian fields) on SRHR and the how to improve access to it in the region.",
+      "ar": "",
+      "ku": ""
+    },
+    "activities.srhr-focus-group-discussion.body": {
+      "en": "Nujeen held Focus Group Discussions with community Leaders in different sectors including (Health, education, NGO and humanitarian fields) on SRHR and the how to improve access to it in the region.\n",
+      "ar": "",
+      "ku": ""
     }
   }
 }

@@ -56,7 +56,11 @@ const documents = entry.documents.map((doc: any) => ({
         {pick(entry.title, locale)}
       </h1>
       <div class="mt-[26px] flex flex-wrap gap-7 border-t border-line pt-6 text-[14.5px] text-grey">
-        <span class="flex items-center gap-2">◷ {formatDate(entry.date, locale)}</span>
+        {
+          formatDate(entry.date, locale) && (
+            <span class="flex items-center gap-2">◷ {formatDate(entry.date, locale)}</span>
+          )
+        }
       </div>
     </div>
   </section>
@@ -110,7 +114,9 @@ const documents = entry.documents.map((doc: any) => ({
                     class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div class="mb-1.5 text-[13px] text-grey">{formatDate(rEntry.date, locale)}</div>
+                {formatDate(rEntry.date, locale) && (
+                  <div class="mb-1.5 text-[13px] text-grey">{formatDate(rEntry.date, locale)}</div>
+                )}
                 <h4 class="font-serif text-xl font-medium leading-tight transition group-hover:text-blue">
                   {pick(rEntry.title, locale)}
                 </h4>
