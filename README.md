@@ -113,14 +113,15 @@ must be swapped for the client's real material before going live:
 - **Projects collection is intentionally empty.** No real Projects content
   has been supplied yet — the collection, schema, listing, and detail
   pages are fully built and ready for the editor to populate.
-- **Arabic and Kurdish translations are empty on all 5 real Activities**
-  (`titleAr`/`titleKu`/`summary.ar`/`summary.ku`/`body.ar`/`body.ku`) —
-  intentionally left blank rather than machine-translated, per the same
-  "don't fabricate" principle; the site falls back to English on `ar`/`ku`
-  pages for these entries until real translations are supplied. Use the
-  export/import workflow below to send `translations-export.json` to a
-  translator. **Kurdish should be Kurmanji/Badini in Arabic script**
-  (Duhok is a Badini-speaking area) — not Sorani.
+- **Arabic and Kurdish translations on all real Activities (and the rest of
+  the site) are machine-translated (LLM-authored), not reviewed by a native
+  speaker.** Each of the 5 real Activities carries a `# TRANSLATION STATUS`
+  comment at the top of its YAML file saying so explicitly. **The Kurdish
+  is Sorani, filled in only for site-wide consistency — the client's actual
+  dialect is Kurmanji/Badini in Arabic script** (Duhok is a Badini-speaking
+  area). This is a launch blocker: use the export/import workflow below to
+  send `translations-export.json` to a native speaker/translator for real
+  Arabic review and Badini re-translation, then re-import.
 
 ## Contact form
 

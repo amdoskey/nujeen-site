@@ -1,15 +1,23 @@
+# TRANSLATION STATUS: ar/ku below are machine-translated (LLM-authored), not
+# yet reviewed by a native speaker. ku is Sorani, used only for site-wide
+# consistency — the client's actual dialect is Kurmanji/Badini (Arabic
+# script). Pending native review + Badini re-translation before launch.
+# See translations-export.json _meta.dialectNote and README.md "Known
+# placeholders".
 title: Nujeen Clinic for Providing Family Planning
-titleAr: ""
-titleKu: ""
+titleAr: عيادة نوجين لتقديم خدمات تنظيم الأسرة
+titleKu: کلینیکی نوجین بۆ پێشکەشکردنی خزمەتگوزاری خێزان‌دانان
 summary:
   en: Within the project of Together for better understanding of our Sexual and Reproductive Health and Rights, that is funded by SAAF, Nujeen has established and run a clinic in Domiz-2 Refugee camp for providing Family planning and SRH consultations for the Syrian refugee women and girls.
-  ar: ""
-  ku: ""
+  ar: في إطار مشروع "معًا من أجل فهم أفضل لصحتنا وحقوقنا الجنسية والإنجابية" الممول من SAAF، أنشأت نوجين وتدير عيادة في مخيم دوميز-2 لتقديم استشارات تنظيم الأسرة والصحة الإنجابية للاجئات السوريات من النساء والفتيات.
+  ku: لە چوارچێوەی پڕۆژەی "پێکەوە بۆ تێگەیشتنێکی باشتر لە SRHR" کە لەلایەن SAAF پاڵپشتی کراوە، نوجین کلینیکێکی لە کەمپی پەنابەرانی دۆمیز-2 دامەزراندووە بۆ پێشکەشکردنی ڕاوێژکاری خێزان‌دانان و SRH بۆ ژنان و کچانی پەنابەری سووری.
 body:
   en: |
     Within the project of Together for better understanding of our Sexual and Reproductive Health and Rights, that is funded by SAAF, Nujeen has established and run a clinic in Domiz-2 Refugee camp for providing Family planning and SRH consultations for the Syrian refugee women and girls.
-  ar: ""
-  ku: ""
+  ar: |
+    في إطار مشروع "معًا من أجل فهم أفضل لصحتنا وحقوقنا الجنسية والإنجابية"، الممول من SAAF، أنشأت نوجين وتدير عيادة في مخيم دوميز-2 للاجئين لتقديم استشارات تنظيم الأسرة والصحة الجنسية والإنجابية للاجئات السوريات من النساء والفتيات.
+  ku: |
+    لە چوارچێوەی پڕۆژەی "پێکەوە بۆ تێگەیشتنێکی باشتر لە تەندروستی و مافەکانی سێکسی و زاوزێمان"، کە لەلایەن SAAF پاڵپشتی کراوە، نوجین کلینیکێکی لە کەمپی پەنابەرانی دۆمیز-2 دامەزراندووە و بەڕێوەی دەبات بۆ پێشکەشکردنی ڕاوێژکاری خێزان‌دانان و تەندروستی سێکسی و زاوزێ بۆ ژنان و کچانی پەنابەری سووری.
 featuredImage: /uploads/activities/nujeen-clinic-domiz-2.jpg
 gallery:
   - /uploads/activities/gallery/nujeen-clinic-domiz-2-1.jpg

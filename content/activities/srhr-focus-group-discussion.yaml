@@ -1,15 +1,23 @@
+# TRANSLATION STATUS: ar/ku below are machine-translated (LLM-authored), not
+# yet reviewed by a native speaker. ku is Sorani, used only for site-wide
+# consistency — the client's actual dialect is Kurmanji/Badini (Arabic
+# script). Pending native review + Badini re-translation before launch.
+# See translations-export.json _meta.dialectNote and README.md "Known
+# placeholders".
 title: Focus Group Discussion on SRHR
-titleAr: ""
-titleKu: ""
+titleAr: جلسة نقاش مجموعة مركزة حول الصحة والحقوق الجنسية والإنجابية
+titleKu: دانیشتنی گروپی سەرەکی دەربارەی SRHR
 summary:
   en: Nujeen held Focus Group Discussions with community Leaders in different sectors including (Health, education, NGO and humanitarian fields) on SRHR and the how to improve access to it in the region.
-  ar: ""
-  ku: ""
+  ar: عقدت نوجين جلسات نقاش مع قادة المجتمع من قطاعات الصحة والتعليم والعمل الإنساني لتحديد سبل تحسين الوصول إلى خدمات الصحة والحقوق الجنسية والإنجابية في المنطقة.
+  ku: نوجین دانیشتنی گروپی سەرەکی لەگەڵ ڕابەرانی کۆمەڵگا لە بوارەکانی تەندروستی، پەروەردە، و مرۆیی سازدا بۆ دۆزینەوەی ڕێگاکانی باشترکردنی دەستگەیشتن بە SRHR لە هەرێمەکەدا.
 body:
   en: |
     Nujeen held Focus Group Discussions with community Leaders in different sectors including (Health, education, NGO and humanitarian fields) on SRHR and the how to improve access to it in the region.
-  ar: ""
-  ku: ""
+  ar: |
+    عقدت نوجين جلسات نقاش مجموعة مركزة مع قادة المجتمع في قطاعات مختلفة — بما في ذلك الصحة والتعليم والمنظمات غير الحكومية والمجال الإنساني — حول الصحة والحقوق الجنسية والإنجابية (SRHR) وكيفية تحسين الوصول إليها في المنطقة.
+  ku: |
+    نوجین دانیشتنی گروپی سەرەکی لەگەڵ ڕابەرانی کۆمەڵگا لە بوارە جیاوازەکاندا — لەوانە تەندروستی، پەروەردە، ڕێکخراوە ناحکومییەکان و بوارە مرۆییەکان — سازدا، دەربارەی تەندروستی و مافەکانی سێکسی و زاوزێ (SRHR) و چۆنیەتی باشترکردنی دەستگەیشتن بەوە لە هەرێمەکەدا.
 featuredImage: /uploads/activities/srhr-focus-group-discussion.jpg
 gallery:
   - /uploads/activities/gallery/srhr-focus-group-discussion-1.jpg

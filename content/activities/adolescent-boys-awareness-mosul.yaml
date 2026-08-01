@@ -1,15 +1,23 @@
+# TRANSLATION STATUS: ar/ku below are machine-translated (LLM-authored), not
+# yet reviewed by a native speaker. ku is Sorani, used only for site-wide
+# consistency — the client's actual dialect is Kurmanji/Badini (Arabic
+# script). Pending native review + Badini re-translation before launch.
+# See translations-export.json _meta.dialectNote and README.md "Known
+# placeholders".
 title: Awareness Sessions for Adolescent Boys in Mosul
-titleAr: ""
-titleKu: ""
+titleAr: جلسات توعية للمراهقين الذكور حول الصحة الإنجابية — الموصل
+titleKu: دانیشتنی ئاگادارکردنەوە بۆ کوڕە گەنجەکان دەربارەی SRHR — موسڵ
 summary:
   en: Nujeen for Family Democratizing Organization held awareness sessions for adolescent male aged between (12-18) years old, on age appropriate SRHR topics in Mosul and surrounding areas.
-  ar: ""
-  ku: ""
+  ar: عقدت نوجين جلسات توعية للمراهقين الذكور الذين تتراوح أعمارهم بين 12 و18 عامًا حول مواضيع الصحة والحقوق الجنسية والإنجابية المناسبة لأعمارهم، في الموصل والمناطق المحيطة بها.
+  ku: نوجین دانیشتنی ئاگادارکردنەوەی بۆ کوڕە گەنجەکانی تەمەن 12 تا 18 ساڵ دەربارەی بابەتی SRHR ی گونجاو لەگەڵ تەمەنیان، لە موسڵ و ناوچەکانی دەوروبەری بەڕێوەبرد.
 body:
   en: |
     Nujeen for Family Democratizing Organization held awareness sessions for adolescent male aged between (12-18) years old, on age appropriate SRHR topics in Mosul and surrounding areas.
-  ar: ""
-  ku: ""
+  ar: |
+    عقدت منظمة نوجين لدمقرطة الأسرة جلسات توعية للمراهقين الذكور الذين تتراوح أعمارهم بين 12 و18 عامًا، حول مواضيع الصحة والحقوق الجنسية والإنجابية المناسبة لأعمارهم، في الموصل والمناطق المحيطة بها.
+  ku: |
+    ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان دانیشتنی ئاگادارکردنەوەی بۆ کوڕە گەنجەکانی تەمەن 12 تا 18 ساڵ بەڕێوەبرد، دەربارەی بابەتی SRHR ی گونجاو لەگەڵ تەمەنیان، لە موسڵ و ناوچەکانی دەوروبەری.
 featuredImage: /uploads/activities/adolescent-boys-awareness-mosul.jpg
 gallery:
   - /uploads/activities/gallery/adolescent-boys-awareness-mosul-1.jpg
