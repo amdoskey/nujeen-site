@@ -1,0 +1,30 @@
+# TRANSLATION STATUS: ar/ku below are machine-translated (LLM-authored), not
+# yet reviewed by a native speaker. ku is Sorani, used only for site-wide
+# consistency — the client's actual dialect is Kurmanji/Badini (Arabic
+# script). Pending native review + Badini re-translation before launch.
+# See translations-export.json _meta.dialectNote and README.md "Known
+# placeholders".
+title: Family Planning Training for Health Care Providers
+titleAr: تدريب مقدمي الرعاية الصحية على تنظيم الأسرة
+titleKu: ڕاهێنانی دابینکەرانی چاودێری تەندروستی لەسەر خێزاندانان
+summary:
+  en: Nujeen held two family planning trainings for 36 health care providers, with the Directorate of Preventive Health Affairs.
+  ar: عقدت نوجين تدريبين حول تنظيم الأسرة لـ36 من مقدمي الرعاية الصحية، بالتعاون مع مديرية الصحة الوقائية.
+  ku: نوجین دوو ڕاهێنانی خێزاندانانی بۆ 36 دابینکەری چاودێری تەندروستی بەڕێوەبرد، لەگەڵ بەڕێوەبەرایەتی تەندروستی پێشگیریکەرەوە.
+body:
+  en: |
+    Nujeen for Family Democratizing Organization, in collaboration with the Directorate of Preventive Health Affairs, held two trainings for 36 health care providers on Family Planning, under the title "Together for Better Understanding of our Sexual and Reproductive Health and Rights."
+  ar: |
+    نظّمت منظمة نوجين لدمقرطة الأسرة، بالتعاون مع مديرية الصحة الوقائية، تدريبين لـ36 من مقدمي الرعاية الصحية حول تنظيم الأسرة، تحت عنوان "معًا من أجل فهم أفضل لصحتنا وحقوقنا الجنسية والإنجابية".
+  ku: |
+    ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان، بە هاوکاری بەڕێوەبەرایەتی تەندروستی پێشگیریکەرەوە، دوو ڕاهێنانی بۆ 36 دابینکەری چاودێری تەندروستی لەسەر خێزاندانان بەڕێوەبرد، لەژێر ناونیشانی "پێکەوە بۆ تێگەیشتنێکی باشتر لە تەندروستی و مافەکانی سێکسی و زاوزێمان".
+featuredImage: /uploads/activities/family-planning-training-health-providers.jpg
+gallery:
+  - /uploads/activities/gallery/family-planning-training-health-providers-1.jpg
+  - /uploads/activities/gallery/family-planning-training-health-providers-2.jpg
+  - /uploads/activities/gallery/family-planning-training-health-providers-3.jpg
+  - /uploads/activities/gallery/family-planning-training-health-providers-4.jpg
+  - /uploads/activities/gallery/family-planning-training-health-providers-5.jpg
+category: training
+documents: []
+status: published

@@ -6,7 +6,7 @@
     "keyFormat": "Dotted path: \"<collection/singleton>.<slug-if-any>.<field>[.<arrayIndex>.<subfield>]\". \"ui.*\" keys map 1:1 to src/i18n/ui.ts. Everything else maps to a field in the matching content/*.yaml file (title/titleAr/titleKu are the one exception — see keystatic.config.ts comment).",
     "roundTrip": "Do not add, remove, or rename keys — the import step matches purely by key. See README.md \"Translation export / import\" for the full workflow.",
     "generatedBy": "scripts/export-translations.mjs",
-    "generatedAt": "2026-08-01"
+    "generatedAt": "2026-08-04"
   },
   "strings": {
     "ui.nav_home": {
@@ -609,6 +609,36 @@
       "ar": "عقدت منظمة نوجين لدمقرطة الأسرة جلسات توعية للمراهقات اللواتي تتراوح أعمارهن بين 11 و18 عامًا، حول مواضيع الصحة والحقوق الجنسية والإنجابية المناسبة لأعمارهن، في الموصل والمناطق المحيطة بها.\n",
       "ku": "ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان دانیشتنی ئاگادارکردنەوەی بۆ کچە گەنجەکانی تەمەن 11 تا 18 ساڵ بەڕێوەبرد، دەربارەی بابەتی SRHR ی گونجاو لەگەڵ تەمەنیان، لە موسڵ و ناوچەکانی دەوروبەری.\n"
     },
+    "activities.ararat-institute-awareness-sessions.title": {
+      "en": "Awareness Sessions for Ararat Institute Students on SRHR",
+      "ar": "جلسات توعية لطلاب معهد أرارات حول الصحة والحقوق الجنسية والإنجابية",
+      "ku": "دانیشتنی ئاگادارکردنەوە بۆ خوێندکارانی پەیمانگای ئارارات دەربارەی SRHR"
+    },
+    "activities.ararat-institute-awareness-sessions.summary": {
+      "en": "Nujeen for Family Democratizing Organization held awareness-raising sessions for Ararat Institute students on SRHR, including Family Planning.",
+      "ar": "عقدت منظمة نوجين لدمقرطة الأسرة جلسات توعية لطلاب معهد أرارات حول الصحة والحقوق الجنسية والإنجابية (SRHR)، بما في ذلك تنظيم الأسرة.",
+      "ku": "ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان دانیشتنی ئاگادارکردنەوەی بۆ خوێندکارانی پەیمانگای ئارارات دەربارەی تەندروستی و مافەکانی سێکسی و زاوزێ (SRHR) بەڕێوەبرد، لەوانە خێزاندانان."
+    },
+    "activities.ararat-institute-awareness-sessions.body": {
+      "en": "Nujeen for Family Democratizing Organization held awareness-raising sessions for Ararat Institute students on SRHR, including Family Planning.\n",
+      "ar": "عقدت منظمة نوجين لدمقرطة الأسرة جلسات توعية لطلاب معهد أرارات حول الصحة والحقوق الجنسية والإنجابية (SRHR)، بما في ذلك تنظيم الأسرة.\n",
+      "ku": "ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان دانیشتنی ئاگادارکردنەوەی بۆ خوێندکارانی پەیمانگای ئارارات دەربارەی تەندروستی و مافەکانی سێکسی و زاوزێ (SRHR) بەڕێوەبرد، لەوانە خێزاندانان.\n"
+    },
+    "activities.family-planning-training-health-providers.title": {
+      "en": "Family Planning Training for Health Care Providers",
+      "ar": "تدريب مقدمي الرعاية الصحية على تنظيم الأسرة",
+      "ku": "ڕاهێنانی دابینکەرانی چاودێری تەندروستی لەسەر خێزاندانان"
+    },
+    "activities.family-planning-training-health-providers.summary": {
+      "en": "Nujeen held two family planning trainings for 36 health care providers, with the Directorate of Preventive Health Affairs.",
+      "ar": "عقدت نوجين تدريبين حول تنظيم الأسرة لـ36 من مقدمي الرعاية الصحية، بالتعاون مع مديرية الصحة الوقائية.",
+      "ku": "نوجین دوو ڕاهێنانی خێزاندانانی بۆ 36 دابینکەری چاودێری تەندروستی بەڕێوەبرد، لەگەڵ بەڕێوەبەرایەتی تەندروستی پێشگیریکەرەوە."
+    },
+    "activities.family-planning-training-health-providers.body": {
+      "en": "Nujeen for Family Democratizing Organization, in collaboration with the Directorate of Preventive Health Affairs, held two trainings for 36 health care providers on Family Planning, under the title \"Together for Better Understanding of our Sexual and Reproductive Health and Rights.\"\n",
+      "ar": "نظّمت منظمة نوجين لدمقرطة الأسرة، بالتعاون مع مديرية الصحة الوقائية، تدريبين لـ36 من مقدمي الرعاية الصحية حول تنظيم الأسرة، تحت عنوان \"معًا من أجل فهم أفضل لصحتنا وحقوقنا الجنسية والإنجابية\".\n",
+      "ku": "ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان، بە هاوکاری بەڕێوەبەرایەتی تەندروستی پێشگیریکەرەوە، دوو ڕاهێنانی بۆ 36 دابینکەری چاودێری تەندروستی لەسەر خێزاندانان بەڕێوەبرد، لەژێر ناونیشانی \"پێکەوە بۆ تێگەیشتنێکی باشتر لە تەندروستی و مافەکانی سێکسی و زاوزێمان\".\n"
+    },
     "activities.ifmsa-golden-sponsorship.title": {
       "en": "Investing in the Next Generation of Healthcare Leaders",
       "ar": "الاستثمار في الجيل القادم من قادة الرعاية الصحية",
@@ -638,6 +668,21 @@
       "en": "Within the project of Together for better understanding of our Sexual and Reproductive Health and Rights, that is funded by SAAF, Nujeen has established and run a clinic in Domiz-2 Refugee camp for providing Family planning and SRH consultations for the Syrian refugee women and girls.\n",
       "ar": "في إطار مشروع \"معًا من أجل فهم أفضل لصحتنا وحقوقنا الجنسية والإنجابية\"، الممول من SAAF، أنشأت نوجين وتدير عيادة في مخيم دوميز-2 للاجئين لتقديم استشارات تنظيم الأسرة والصحة الجنسية والإنجابية للاجئات السوريات من النساء والفتيات.\n",
       "ku": "لە چوارچێوەی پڕۆژەی \"پێکەوە بۆ تێگەیشتنێکی باشتر لە تەندروستی و مافەکانی سێکسی و زاوزێمان\"، کە لەلایەن SAAF پاڵپشتی کراوە، نوجین کلینیکێکی لە کەمپی پەنابەرانی دۆمیز-2 دامەزراندووە و بەڕێوەی دەبات بۆ پێشکەشکردنی ڕاوێژکاری خێزان‌دانان و تەندروستی سێکسی و زاوزێ بۆ ژنان و کچانی پەنابەری سووری.\n"
+    },
+    "activities.srh-outreach-ramadan-bazar.title": {
+      "en": "SRH Awareness Outreach at Ramadan Bazar",
+      "ar": "التوعية بالصحة الجنسية والإنجابية في بازار رمضان",
+      "ku": "ئاگادارکردنەوە لە تەندروستی سێکسی و زاوزێ لە بازاڕی ڕەمەزان"
+    },
+    "activities.srh-outreach-ramadan-bazar.summary": {
+      "en": "Nujeen for Family Democratizing Organization sponsored and participated with SCORA-IFMSA Kurdistan in a community outreach activity raising awareness on various SRH topics, conducted by medical students of the University of Duhok at Ramadan Bazar, Duhok Mall. The activity included providing IEC materials as well as consultations from our professional staff.",
+      "ar": "رعت منظمة نوجين لدمقرطة الأسرة وشاركت مع SCORA-IFMSA كردستان في نشاط توعية مجتمعي حول مواضيع متنوعة في الصحة الجنسية والإنجابية، نفّذه طلاب كلية الطب في جامعة دهوك في بازار رمضان بدهوك مول. تضمّن النشاط تقديم مواد توعوية (IEC) إضافة إلى استشارات من طاقمنا المتخصص.",
+      "ku": "ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان سپۆنسەری کرد و بەشداری کرد لەگەڵ SCORA-IFMSA کوردستان لە چالاکییەکی ئاگادارکردنەوەی کۆمەڵگا لەسەر بابەتە جۆراوجۆرەکانی تەندروستی سێکسی و زاوزێ، کە لەلایەن خوێندکارانی کۆلێژی پزیشکی زانکۆی دهۆکەوە لە بازاڕی ڕەمەزان لە دهۆک مۆڵ ئەنجامدرا. چالاکییەکە بریتی بوو لە دابینکردنی ماددەی ئاگادارکەرەوە (IEC) هەروەها ڕاوێژکاری لەلایەن ستافی پیشەیمان."
+    },
+    "activities.srh-outreach-ramadan-bazar.body": {
+      "en": "Nujeen for Family Democratizing Organization sponsored and participated with SCORA-IFMSA Kurdistan in a community outreach activity raising awareness on various SRH topics, conducted by medical students of the University of Duhok at Ramadan Bazar, Duhok Mall. The activity included providing IEC materials as well as consultations from our professional staff.\n",
+      "ar": "رعت منظمة نوجين لدمقرطة الأسرة وشاركت مع SCORA-IFMSA كردستان في نشاط توعية مجتمعي حول مواضيع متنوعة في الصحة الجنسية والإنجابية، نفّذه طلاب كلية الطب في جامعة دهوك في بازار رمضان بدهوك مول. تضمّن النشاط تقديم مواد توعوية (IEC) إضافة إلى استشارات من طاقمنا المتخصص.\n",
+      "ku": "ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان سپۆنسەری کرد و بەشداری کرد لەگەڵ SCORA-IFMSA کوردستان لە چالاکییەکی ئاگادارکردنەوەی کۆمەڵگا لەسەر بابەتە جۆراوجۆرەکانی تەندروستی سێکسی و زاوزێ، کە لەلایەن خوێندکارانی کۆلێژی پزیشکی زانکۆی دهۆکەوە لە بازاڕی ڕەمەزان لە دهۆک مۆڵ ئەنجامدرا. چالاکییەکە بریتی بوو لە دابینکردنی ماددەی ئاگادارکەرەوە (IEC) هەروەها ڕاوێژکاری لەلایەن ستافی پیشەیمان.\n"
     },
     "activities.srhr-focus-group-discussion.title": {
       "en": "Focus Group Discussion on SRHR",

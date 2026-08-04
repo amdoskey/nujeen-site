@@ -1,0 +1,28 @@
+# TRANSLATION STATUS: ar/ku below are machine-translated (LLM-authored), not
+# yet reviewed by a native speaker. ku is Sorani, used only for site-wide
+# consistency — the client's actual dialect is Kurmanji/Badini (Arabic
+# script). Pending native review + Badini re-translation before launch.
+# See translations-export.json _meta.dialectNote and README.md "Known
+# placeholders".
+title: Awareness Sessions for Ararat Institute Students on SRHR
+titleAr: جلسات توعية لطلاب معهد أرارات حول الصحة والحقوق الجنسية والإنجابية
+titleKu: دانیشتنی ئاگادارکردنەوە بۆ خوێندکارانی پەیمانگای ئارارات دەربارەی SRHR
+summary:
+  en: Nujeen for Family Democratizing Organization held awareness-raising sessions for Ararat Institute students on SRHR, including Family Planning.
+  ar: عقدت منظمة نوجين لدمقرطة الأسرة جلسات توعية لطلاب معهد أرارات حول الصحة والحقوق الجنسية والإنجابية (SRHR)، بما في ذلك تنظيم الأسرة.
+  ku: ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان دانیشتنی ئاگادارکردنەوەی بۆ خوێندکارانی پەیمانگای ئارارات دەربارەی تەندروستی و مافەکانی سێکسی و زاوزێ (SRHR) بەڕێوەبرد، لەوانە خێزاندانان.
+body:
+  en: |
+    Nujeen for Family Democratizing Organization held awareness-raising sessions for Ararat Institute students on SRHR, including Family Planning.
+  ar: |
+    عقدت منظمة نوجين لدمقرطة الأسرة جلسات توعية لطلاب معهد أرارات حول الصحة والحقوق الجنسية والإنجابية (SRHR)، بما في ذلك تنظيم الأسرة.
+  ku: |
+    ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان دانیشتنی ئاگادارکردنەوەی بۆ خوێندکارانی پەیمانگای ئارارات دەربارەی تەندروستی و مافەکانی سێکسی و زاوزێ (SRHR) بەڕێوەبرد، لەوانە خێزاندانان.
+featuredImage: /uploads/activities/ararat-institute-awareness-sessions.jpg
+gallery:
+  - /uploads/activities/gallery/ararat-institute-awareness-sessions-1.jpg
+  - /uploads/activities/gallery/ararat-institute-awareness-sessions-2.jpg
+  - /uploads/activities/gallery/ararat-institute-awareness-sessions-3.jpg
+category: youth
+documents: []
+status: published

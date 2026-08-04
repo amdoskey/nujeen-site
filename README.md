@@ -92,15 +92,15 @@ must be swapped for the client's real material before going live:
   Featured images live flat at `public/uploads/activities/<slug>.jpg`
   (matching the `directory`/`publicPath` configured in
   `keystatic.config.ts`); gallery photos live at
-  `public/uploads/activities/gallery/<slug>-N.jpg`. Four of the five
-  activities have a populated gallery (the fifth, `ifmsa-golden-sponsorship`,
-  only had one source photo, so its gallery is empty by design). The home
+  `public/uploads/activities/gallery/<slug>-N.jpg`. Seven of the eight
+  activities have a populated gallery (`ifmsa-golden-sponsorship` only had
+  one source photo, so its gallery is empty by design). The home
   hero image (`public/uploads/home/hero.jpeg`) is still the design
   mockup's sample photo; replace it via Keystatic's Home → Hero image
   field. `public/uploads/activities/placeholder.svg` is only a fallback
   shown if an entry has no featured image set — not used by any real entry.
 - **Activity dates are not set — launch blocker.** The client's source
-  material for all 5 real activities had no dates, and none were invented
+  material for all 8 real activities had no dates, and none were invented
   (see build brief's "don't fabricate" principle). Each entry's `date`
   field is empty in Keystatic → Activities → (entry) → Date; the listing
   and detail pages already degrade gracefully (no date shown, no "Invalid
@@ -115,7 +115,7 @@ must be swapped for the client's real material before going live:
   pages are fully built and ready for the editor to populate.
 - **Arabic and Kurdish translations on all real Activities (and the rest of
   the site) are machine-translated (LLM-authored), not reviewed by a native
-  speaker.** Each of the 5 real Activities carries a `# TRANSLATION STATUS`
+  speaker.** Each of the 8 real Activities carries a `# TRANSLATION STATUS`
   comment at the top of its YAML file saying so explicitly. **The Kurdish
   is Sorani, filled in only for site-wide consistency — the client's actual
   dialect is Kurmanji/Badini in Arabic script** (Duhok is a Badini-speaking

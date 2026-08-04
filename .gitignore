@@ -14,5 +14,8 @@ node_modules/
 .DS_Store
 Thumbs.db
 
+# Claude Code dev config (local preview server settings)
+.claude/
+
 # logs
 npm-debug.log*
