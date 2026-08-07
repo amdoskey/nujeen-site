@@ -107,9 +107,6 @@ must be swapped for the client's real material before going live:
   Date", stable sort with undated entries sorting last), but real dates
   must be filled in before launch for the dates and sort order to be
   meaningful.
-- **Impact numbers** on the homepage (8+ years, 50+ workers, etc.) — carried
-  over from the design mockup as illustrative figures. Editable in
-  Keystatic → Home → Impact stats; the client should supply real figures.
 - **Projects collection is intentionally empty.** No real Projects content
   has been supplied yet — the collection, schema, listing, and detail
   pages are fully built and ready for the editor to populate.

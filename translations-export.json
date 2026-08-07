@@ -6,7 +6,7 @@
     "keyFormat": "Dotted path: \"<collection/singleton>.<slug-if-any>.<field>[.<arrayIndex>.<subfield>]\". \"ui.*\" keys map 1:1 to src/i18n/ui.ts. Everything else maps to a field in the matching content/*.yaml file (title/titleAr/titleKu are the one exception — see keystatic.config.ts comment).",
     "roundTrip": "Do not add, remove, or rename keys — the import step matches purely by key. See README.md \"Translation export / import\" for the full workflow.",
     "generatedBy": "scripts/export-translations.mjs",
-    "generatedAt": "2026-08-04"
+    "generatedAt": "2026-08-07"
   },
   "strings": {
     "ui.nav_home": {
@@ -259,6 +259,26 @@
       "ar": "فريق نوجين الميداني يعمل مع النساء في المجتمع",
       "ku": "تیمی مەیدانی نوجین لەگەڵ ژنان لە کۆمەڵگا کار دەکات"
     },
+    "ui.about_image_alt": {
+      "en": "Nujeen staff providing services at the Nujeen clinic, Domiz 2 refugee camp",
+      "ar": "طاقم نوجين يقدم الخدمات في عيادة نوجين، مخيم دوميز 2 للاجئين",
+      "ku": "ستافی نوجین خزمەتگوزاری پێشکەش دەکات لە کلینیکی نوجین، کەمپی پەنابەرانی دۆمیز 2"
+    },
+    "ui.about_hero_image_alt": {
+      "en": "Nujeen leadership at a project signing event",
+      "ar": "قيادة نوجين في حفل توقيع أحد المشاريع",
+      "ku": "ڕابەرایەتی نوجین لە ڕووداوێکی واژووکردنی پڕۆژەیەک"
+    },
+    "ui.menu_open": {
+      "en": "Open menu",
+      "ar": "فتح القائمة",
+      "ku": "کردنەوەی مێنیو"
+    },
+    "ui.menu_close": {
+      "en": "Close menu",
+      "ar": "إغلاق القائمة",
+      "ku": "داخستنی مێنیو"
+    },
     "ui.share_facebook": {
       "en": "Share on Facebook",
       "ar": "مشاركة عبر فيسبوك",
@@ -355,9 +375,9 @@
       "ku": "لەوێ کە زۆرترین پێویستیشیانە."
     },
     "home.dek": {
-      "en": "From the neighborhoods of Duhok to the displacement camps, Nujeen advances reproductive health, family planning, and the dignity of every woman and girl.",
-      "ar": "من أحياء دهوك إلى مخيمات النزوح، تعمل نوجين على النهوض بالصحة الإنجابية وتنظيم الأسرة وكرامة كل امرأة وفتاة.",
-      "ku": "لە گەڕەکەکانی دهۆک بۆ کەمپەکانی ئاوارەیی، نوجین کار لەسەر باشترکردنی تەندروستی زاوزێ، خێزان‌دانان و ڕێزی هەموو ژن و کچێک دەکات."
+      "en": "Since 2003, from the neighborhoods of Duhok to the displacement camps, Nujeen has worked to strengthen families, advance human rights, and build a more democratic, inclusive community — for every woman, child, and family.",
+      "ar": "",
+      "ku": ""
     },
     "home.heroQuote": {
       "en": "When a woman understands her own health, a whole family grows stronger.",
@@ -369,20 +389,40 @@
       "ar": "فريق نوجين الميداني، دهوك",
       "ku": "تیمی مەیدانی نوجین، دهۆک"
     },
+    "home.missionHeading": {
+      "en": "Our mission",
+      "ar": "",
+      "ku": ""
+    },
+    "home.missionText": {
+      "en": "To spread a culture of democracy and humanity among families and throughout society.",
+      "ar": "",
+      "ku": ""
+    },
+    "home.visionHeading": {
+      "en": "Our vision",
+      "ar": "",
+      "ku": ""
+    },
+    "home.visionText": {
+      "en": "A democratic, civil community built on coexistence, mutual respect, and acceptance of one another.",
+      "ar": "",
+      "ku": ""
+    },
     "home.focusEyebrow": {
       "en": "What we do",
       "ar": "ماذا نفعل",
       "ku": "چیمان دەکەین"
     },
     "home.focusHeading": {
-      "en": "Five fields, one commitment to family wellbeing.",
-      "ar": "خمسة مجالات، التزام واحد برفاهية الأسرة.",
-      "ku": "پێنج بواری کار، یەک ئەرکی بەرزکردنەوەی خۆشگوزەرانی خێزان."
+      "en": "Our work spans peace-building, development, and human rights.",
+      "ar": "",
+      "ku": ""
     },
     "home.focusIntro": {
-      "en": "Each strand of our work reinforces the others — education leads to access, access builds trust, and trust opens the door to lasting change.",
-      "ar": "يعزز كل جانب من عملنا الجوانب الأخرى — التعليم يقود إلى الوصول، والوصول يبني الثقة، والثقة تفتح الباب أمام تغيير دائم.",
-      "ku": "هەر بەشێک لە کارەکەمان بەشەکانی تر بەهێز دەکات — پەروەردە ڕێگا بۆ دەستگەیشتن دەکاتەوە، دەستگەیشتن متمانە دروست دەکات، و متمانە دەرگا بۆ گۆڕانێکی بەردەوام دەکاتەوە."
+      "en": "It takes many forms across the communities we serve — from child protection and women's empowerment to reproductive health, support for displaced families, youth leadership, and the inclusion of people with disabilities and minorities. Nujeen works wherever families and individuals need support to live with dignity and equal rights.",
+      "ar": "",
+      "ku": ""
     },
     "home.recentEyebrow": {
       "en": "From the field",
@@ -425,89 +465,44 @@
       "ku": "بەڕێوەبەرایەتی تەندروستی، کۆلێژی ئەکادیمی، هاوبەشی نێودەوڵەتی، و تاکەکان — لەم کارەدا شوێنێک بۆ ئێوە هەیە."
     },
     "home.heroStats.0.label": {
-      "en": "Serving the region since",
-      "ar": "تخدم المنطقة منذ",
-      "ku": "خزمەتکردنی ناوچەکە لە ساڵی"
+      "en": "Serving communities since",
+      "ar": "",
+      "ku": ""
     },
     "home.heroStats.1.label": {
-      "en": "Ages of women & girls reached",
-      "ar": "أعمار النساء والفتيات المستفيدات",
-      "ku": "تەمەنی ژنان و کچانی بەرەوپێش"
+      "en": "Years of work across Kurdistan and Iraq",
+      "ar": "",
+      "ku": ""
     },
     "home.heroStats.2.label": {
-      "en": "Ongoing work inside refugee camps",
-      "ar": "عمل مستمر داخل مخيمات اللاجئين",
-      "ku": "کارکردنی بەردەوام لەناو کەمپی پەنابەران"
+      "en": "Projects delivered",
+      "ar": "",
+      "ku": ""
     },
-    "home.focusAreas.0.title": {
-      "en": "Reproductive Health Education",
-      "ar": "التثقيف الصحي الإنجابي",
-      "ku": "پەروەردەی تەندروستی زاوزێ"
-    },
-    "home.focusAreas.0.description": {
-      "en": "Community outreach and awareness series on sexual and reproductive health and rights, delivered in plain language and safe spaces.",
-      "ar": "سلسلة توعية وتواصل مجتمعي حول الصحة والحقوق الجنسية والإنجابية، تُقدَّم بلغة بسيطة وفي أماكن آمنة.",
-      "ku": "کۆمەڵگای دەرەکی و زنجیرەی ئاگادارکردنەوە دەربارەی تەندروستی و مافی سێکسی و زاوزێ، بە زمانێکی سادە و لە شوێنی سەلامەت."
-    },
-    "home.focusAreas.1.title": {
-      "en": "Family Planning",
-      "ar": "تنظيم الأسرة",
-      "ku": "خێزان‌دانان"
-    },
-    "home.focusAreas.1.description": {
-      "en": "Targeted sessions for women and youth, focused on girls and women aged 11 to 49, grounded in informed choice.",
-      "ar": "جلسات موجهة للنساء والشباب، تركز على الفتيات والنساء من سن 11 إلى 49 عامًا، وترتكز على الاختيار المستنير.",
-      "ku": "دانیشتنی ئامانجدارکراو بۆ ژنان و گەنجان، تیشک دەخاتە سەر کچان و ژنانی تەمەن 11 تا 49 ساڵ، پشت بە هەڵبژاردنی ئاگادارانە دەبەستێت."
-    },
-    "home.focusAreas.2.title": {
-      "en": "Refugee & IDP Support",
-      "ar": "دعم اللاجئين والنازحين",
-      "ku": "پشتگیری پەنابەران و ئاوارەکان"
-    },
-    "home.focusAreas.2.description": {
-      "en": "Direct operations and education inside displacement venues, including a continuous presence at the Domiz 2 camp.",
-      "ar": "عمليات وتثقيف مباشر داخل مواقع النزوح، بما في ذلك حضور مستمر في مخيم دوميز 2.",
-      "ku": "کاری ڕاستەوخۆ و پەروەردە لەناو شوێنی ئاوارەیی، لەوانە بوونی بەردەوام لە کەمپی دۆمیز 2."
-    },
-    "home.focusAreas.3.title": {
-      "en": "Legal & Policy Advocacy",
-      "ar": "المناصرة القانونية والسياساتية",
-      "ku": "پاراستنی یاسایی و سیاسەت"
-    },
-    "home.focusAreas.3.description": {
-      "en": "Working alongside academic institutions and public health bodies to shape healthcare and legal reform.",
-      "ar": "العمل جنبًا إلى جنب مع المؤسسات الأكاديمية وهيئات الصحة العامة لتشكيل الإصلاح الصحي والقانوني.",
-      "ku": "کارکردن لەگەڵ دامەزراوە ئەکادیمی و دامودەزگای تەندروستی گشتی بۆ شێوەدانی چاکسازی تەندروستی و یاسایی."
-    },
-    "home.focusAreas.4.title": {
-      "en": "Youth Empowerment",
-      "ar": "تمكين الشباب",
-      "ku": "بەهێزکردنی گەنجان"
-    },
-    "home.focusAreas.4.description": {
-      "en": "Partnering with IFMSA Kurdistan on student health festivals that break stigma and open honest conversation.",
-      "ar": "الشراكة مع IFMSA كردستان في مهرجانات صحية طلابية تكسر الوصمة وتفتح حوارًا صادقًا.",
-      "ku": "هاوبەشی لەگەڵ IFMSA کوردستان لە فیستیڤاڵی تەندروستی خوێندکاران کە شەرمەزاری کۆمەڵایەتی دەشکێنێت و گفتوگۆیەکی ڕاستگۆیانە دەکاتەوە."
+    "home.heroStats.3.label": {
+      "en": "People reached",
+      "ar": "",
+      "ku": ""
     },
     "home.impactStats.0.label": {
-      "en": "Years serving the Duhok community",
-      "ar": "سنوات من خدمة مجتمع دهوك",
-      "ku": "ساڵ خزمەتکردنی کۆمەڵگای دهۆک"
+      "en": "Serving communities since",
+      "ar": "",
+      "ku": ""
     },
     "home.impactStats.1.label": {
-      "en": "Awareness & training programs delivered",
-      "ar": "برنامج توعية وتدريب تم تنفيذه",
-      "ku": "بەرنامەی ئاگادارکردنەوە و ڕاهێنان بەڕێوەچووە"
+      "en": "Years of work across Kurdistan and Iraq",
+      "ar": "",
+      "ku": ""
     },
     "home.impactStats.2.label": {
-      "en": "Health workers trained with the Directorate",
-      "ar": "عامل صحي تم تدريبهم مع المديرية",
-      "ku": "کارمەندی تەندروستی لەگەڵ بەڕێوەبەرایەتییەکە ڕاهێنراون"
+      "en": "Projects delivered",
+      "ar": "",
+      "ku": ""
     },
     "home.impactStats.3.label": {
-      "en": "Institutional & academic partners",
-      "ar": "شريك مؤسسي وأكاديمي",
-      "ku": "هاوبەشی دامەزراوەیی و ئەکادیمی"
+      "en": "People reached",
+      "ar": "",
+      "ku": ""
     },
     "siteSettings.tagline": {
       "en": "Democratizing the Family",
@@ -555,14 +550,14 @@
       "ku": "دەربارەی نوجین"
     },
     "about.intro": {
-      "en": "Nujeen for Family Democratizing Organization is a non-governmental organization based in Duhok, Kurdistan Region of Iraq, serving the region since 2016.",
-      "ar": "منظمة نوجين لدمقرطة الأسرة هي منظمة غير حكومية مقرها دهوك، إقليم كردستان العراق، تخدم المنطقة منذ عام 2016.",
-      "ku": "ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان ڕێکخراوێکی ناحکومییە لە دهۆک، هەرێمی کوردستانی عێراق، کە لە ساڵی 2016ەوە خزمەتی ناوچەکە دەکات."
+      "en": "Nujeen for Family Democratizing Organization (NFDO) is a non-governmental, non-profit, independent humanitarian organization based in Duhok, in the Kurdistan Region of Iraq. Founded in September 2003 and registered with both the Kurdistan Regional Government and the Federal Government of Iraq, Nujeen has spent more than two decades working alongside families and communities across the region.",
+      "ar": "",
+      "ku": ""
     },
     "about.body": {
-      "en": "Nujeen advances women's rights, family planning, and sexual and reproductive health and rights (SRHR) — reaching women and girls aged 11 to 49 across Duhok and inside displacement camps, including an ongoing presence at Domiz 2.\n\n## What we do\n\nOur work spans five connected fields: reproductive health education, family planning, refugee and IDP support, legal and policy advocacy, and youth empowerment — each one reinforcing the others.\n\n## Our approach\n\nWe don't just deliver sessions. We build the understanding that lets a community care for its own — working directly inside the neighborhoods and camps where it matters most.\n",
-      "ar": "تعمل نوجين على النهوض بحقوق المرأة وتنظيم الأسرة والصحة والحقوق الجنسية والإنجابية — لتصل إلى النساء والفتيات من سن 11 إلى 49 عامًا في جميع أنحاء دهوك وداخل مخيمات النزوح، بما في ذلك حضور مستمر في مخيم دوميز 2.\n\n## ماذا نفعل\n\nيمتد عملنا عبر خمسة مجالات مترابطة: التثقيف الصحي الإنجابي، وتنظيم الأسرة، ودعم اللاجئين والنازحين، والمناصرة القانونية والسياساتية، وتمكين الشباب — يعزز كل منها الآخر.\n\n## نهجنا\n\nنحن لا نكتفي بتقديم الجلسات. نحن نبني الفهم الذي يمكّن المجتمع من رعاية أفراده — من خلال العمل مباشرة داخل الأحياء والمخيمات حيث تشتد الحاجة.\n",
-      "ku": "نوجین کار لەسەر باشترکردنی مافی ژنان، خێزان‌دانان و تەندروستی و مافەکانی سێکسی و زاوزێ (SRHR) دەکات — گەیشتن بە ژنان و کچانی تەمەن 11 تا 49 ساڵ لە دهۆک و لەناو کەمپەکانی ئاوارەیی، لەوانە بوونی بەردەوام لە کەمپی دۆمیز 2.\n\n## چیمان دەکەین\n\nکارەکەمان پێنج بواری پەیوەستی دەگرێتەوە: پەروەردەی تەندروستی زاوزێ، خێزان‌دانان، پشتگیری پەنابەران و ئاوارەکان، پاراستنی یاسایی و سیاسەت، و بەهێزکردنی گەنجان — هەریەکەیان یەکەی تر بەهێز دەکات.\n\n## ڕێبازمان\n\nئێمە تەنها دانیشتن پێشکەش ناکەین. ئێمە تێگەیشتن بنیات دەنێین کە ڕێگا بە کۆمەڵگا دەدات خۆی چاودێری بکات — بە کارکردنی ڕاستەوخۆ لەناو گەڕەک و کەمپەکان لەوێ کە زۆرترین پێویستیشیانە.\n"
+      "en": "## Our mission\n\nTo spread a culture of democracy and humanity among families and throughout society.\n\n## Our vision\n\nA democratic, civil community built on coexistence, mutual respect, and acceptance of one another.\n\n## Our goals\n\nNujeen's work is guided by a set of long-standing commitments:\n\n- To build family and social relationships on the foundations of democracy, participation, pluralism, and the peaceful resolution of disputes.\n- To strengthen the role of individuals within the family and society, protecting their freedoms and building their capacities.\n- To raise awareness among family members and nurture a spirit of understanding, dialogue, and mutual respect.\n- To reduce the harm of gender discrimination and the negative social attitudes that weigh most heavily on women.\n- To support family economic wellbeing by engaging with public and private policies that affect household income.\n- To respond to the needs of marginalized people — children, people with disabilities, orphans, displaced persons, and refugees.\n- To advance the democratization of educational curricula in partnership with the relevant authorities.\n- To improve health at the individual and community levels, promoting wellbeing and equal access to health services for all.\n\n## How we work\n\nNujeen pursues these goals through awareness-raising, capacity building, advocacy, accountability and transparency work, conflict resolution, and by building and joining coalitions with partners who share its values.\n\n## Our structure\n\nNujeen's work is organized across three areas — peace-building and conflict resolution, development, and human rights — spanning child protection, women's empowerment, minority rights, support for people with special needs, social integration and livelihoods, and youth participation and leadership.\n\n## Our partners\n\nOver the years, Nujeen has worked with a wide range of national and international partners, including SAAF, IPPF, Médecins Sans Frontières (MSF), Handicap International, the European Union, Concern Worldwide, GIZ, and UN agencies including UNICEF, UN Women, UNDP, UNFPA, and IOM, alongside ministries and agencies of the Kurdistan Regional Government.\n",
+      "ar": "",
+      "ku": ""
     },
     "contact.eyebrow": {
       "en": "Get in touch",

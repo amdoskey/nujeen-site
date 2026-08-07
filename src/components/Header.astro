@@ -68,6 +68,145 @@ const navItems: Array<{ key: Props['activeNav']; label: string; href: string }> 
         }
       </ul>
     </nav>
-    <a href={localePath(locale, '/contact')} class="btn px-6 py-3">{t(locale, 'nav_get_involved')}</a>
+    <div class="flex items-center gap-3">
+      <a href={localePath(locale, '/contact')} class="btn hidden px-6 py-3 md:inline-flex">
+        {t(locale, 'nav_get_involved')}
+      </a>
+      <button
+        id="menu-toggle"
+        type="button"
+        class="group flex h-11 w-11 items-center justify-center rounded-sm border border-line text-ink transition hover:border-ink md:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label={t(locale, 'menu_open')}
+      >
+        <span class="relative block h-4 w-5">
+          <span class="absolute inset-x-0 top-0 h-[1.5px] bg-ink transition-all duration-300 group-aria-expanded:top-[7px] group-aria-expanded:rotate-45" />
+          <span class="absolute inset-x-0 top-[7px] h-[1.5px] bg-ink transition-all duration-300 group-aria-expanded:opacity-0" />
+          <span class="absolute inset-x-0 bottom-0 h-[1.5px] bg-ink transition-all duration-300 group-aria-expanded:bottom-[7px] group-aria-expanded:-rotate-45" />
+        </span>
+      </button>
+    </div>
   </div>
 </header>
+
+<div
+  id="mobile-menu"
+  class="fixed inset-0 z-[60] hidden flex-col bg-bone md:hidden"
+  role="dialog"
+  aria-modal="true"
+  aria-label={t(locale, 'nav_home')}
+>
+  <div class="wrap flex h-[88px] shrink-0 items-center justify-between border-b border-lineSoft">
+    <a href={localePath(locale, '/')} class="flex flex-col leading-none" data-menu-link>
+      <span class="font-serif text-3xl font-semibold tracking-tight text-blue"
+        >nu<i class="not-italic text-ink">jeen</i></span
+      >
+    </a>
+    <button
+      id="menu-close"
+      type="button"
+      class="flex h-11 w-11 items-center justify-center rounded-sm border border-line text-ink transition hover:border-ink"
+      aria-label={t(locale, 'menu_close')}
+    >
+      <span class="relative block h-4 w-5">
+        <span class="absolute inset-x-0 top-[7px] h-[1.5px] rotate-45 bg-ink" />
+        <span class="absolute inset-x-0 top-[7px] h-[1.5px] -rotate-45 bg-ink" />
+      </span>
+    </button>
+  </div>
+  <nav class="wrap flex flex-1 flex-col justify-center gap-10 overflow-y-auto py-10" aria-label={t(locale, 'nav_home')}>
+    <ul class="flex flex-col gap-1">
+      {
+        navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              data-menu-link
+              class:list={[
+                'block py-2.5 font-serif text-[32px] font-medium leading-tight text-ink transition hover:text-blue',
+                { 'text-blue': activeNav === item.key },
+              ]}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <a href={localePath(locale, '/contact')} class="btn w-fit px-7 py-4" data-menu-link>
+      {t(locale, 'nav_get_involved')}
+    </a>
+    <div class="border-t border-line pt-8">
+      <span class="eyebrow mb-3 block">{t(locale, 'lang_switch')}</span>
+      <LangSwitcher locale={locale} />
+    </div>
+  </nav>
+</div>
+
+<script>
+  function initMobileMenu() {
+    const toggle = document.getElementById('menu-toggle');
+    const closeBtn = document.getElementById('menu-close');
+    const overlay = document.getElementById('mobile-menu');
+    if (!toggle || !overlay) return;
+
+    const focusableSelector = 'a[href], button:not([disabled])';
+    let lastFocused: HTMLElement | null = null;
+
+    function onKeydown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        closeMenu();
+        return;
+      }
+      if (e.key === 'Tab') {
+        const focusables = Array.from(overlay!.querySelectorAll<HTMLElement>(focusableSelector));
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+
+    function openMenu() {
+      lastFocused = document.activeElement as HTMLElement;
+      overlay!.classList.remove('hidden');
+      overlay!.classList.add('flex');
+      toggle!.setAttribute('aria-expanded', 'true');
+      document.documentElement.style.overflow = 'hidden';
+      const first = overlay!.querySelector<HTMLElement>(focusableSelector);
+      first?.focus();
+      document.addEventListener('keydown', onKeydown);
+    }
+
+    function closeMenu() {
+      overlay!.classList.add('hidden');
+      overlay!.classList.remove('flex');
+      toggle!.setAttribute('aria-expanded', 'false');
+      document.documentElement.style.overflow = '';
+      document.removeEventListener('keydown', onKeydown);
+      (lastFocused ?? toggle)?.focus();
+    }
+
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      if (isOpen) closeMenu();
+      else openMenu();
+    });
+    closeBtn?.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeMenu();
+    });
+    overlay.querySelectorAll('[data-menu-link]').forEach((el) => {
+      el.addEventListener('click', closeMenu);
+    });
+  }
+
+  initMobileMenu();
+</script>

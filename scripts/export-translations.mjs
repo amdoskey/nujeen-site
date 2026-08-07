@@ -54,6 +54,10 @@ const home = loadYaml('content/home.yaml');
   'dek',
   'heroQuote',
   'heroQuoteAttribution',
+  'missionHeading',
+  'missionText',
+  'visionHeading',
+  'visionText',
   'focusEyebrow',
   'focusHeading',
   'focusIntro',
@@ -68,10 +72,6 @@ const home = loadYaml('content/home.yaml');
 ].forEach((f) => addField('home', f, home[f]));
 
 (home.heroStats ?? []).forEach((s, i) => addField('home', `heroStats.${i}.label`, s.label));
-(home.focusAreas ?? []).forEach((a, i) => {
-  addField('home', `focusAreas.${i}.title`, a.title);
-  addField('home', `focusAreas.${i}.description`, a.description);
-});
 (home.impactStats ?? []).forEach((s, i) => addField('home', `impactStats.${i}.label`, s.label));
 
 // ---------------------------------------------------------------------------

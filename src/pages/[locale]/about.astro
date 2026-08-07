@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import PageHeader from '../../components/PageHeader.astro';
 import { locales, type Locale } from '../../i18n/locales';
-import { pick } from '../../i18n/utils';
+import { pick, localePath } from '../../i18n/utils';
 import { t } from '../../i18n/ui';
 import { reader } from '../../lib/reader';
 import { renderMarkdown } from '../../lib/markdown';
@@ -19,14 +18,39 @@ const bodyHtml = renderMarkdown(pick(about.body, locale));
 ---
 
 <BaseLayout locale={locale} activeNav="about" title={`Nujeen — ${pick(about.heading, locale)}`} description={pick(about.intro, locale)}>
-  <PageHeader
-    locale={locale}
-    eyebrow={pick(about.eyebrow, locale)}
-    heading={pick(about.heading, locale)}
-    intro={pick(about.intro, locale)}
-    crumbs={[{ label: t(locale, 'nav_about') }]}
-  />
-  <div class="wrap py-16">
-    <div class="article-body read mx-auto" set:html={bodyHtml} />
+  <section class="border-b border-line py-[72px]">
+    <div class="wrap">
+      <div class="mb-[22px] text-[13px] text-grey">
+        <a href={localePath(locale, '/')} class="text-grey hover:text-ink">{t(locale, 'breadcrumb_home')}</a>
+        {' / '}
+        <span class="text-ink">{t(locale, 'nav_about')}</span>
+      </div>
+      <div class="grid grid-cols-1 items-stretch gap-10 md:grid-cols-[1.1fr_.9fr] md:gap-14">
+        <div>
+          <span class="eyebrow">{pick(about.eyebrow, locale)}</span>
+          <h1 class="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight md:text-[56px]">
+            {pick(about.heading, locale)}
+          </h1>
+          <p class="mt-[18px] max-w-xl text-lg text-grey">{pick(about.intro, locale)}</p>
+        </div>
+        <div class="relative min-h-[240px] self-stretch overflow-hidden rounded-md bg-ink md:min-h-[320px]">
+          <img
+            src={about.heroImage ?? '/uploads/activities/placeholder.svg'}
+            alt={t(locale, 'about_hero_image_alt')}
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="wrap py-16 md:py-20">
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-16 lg:gap-20">
+      <div class="md:sticky md:top-[118px] md:self-start">
+        <div class="aspect-[16/10] overflow-hidden rounded-md bg-ink md:aspect-[3/4]">
+          <img src={about.bodyImage ?? '/uploads/activities/placeholder.svg'} alt={t(locale, 'about_image_alt')} class="h-full w-full object-cover" />
+        </div>
+      </div>
+      <div class="article-body max-w-read" set:html={bodyHtml} />
+    </div>
   </div>
 </BaseLayout>

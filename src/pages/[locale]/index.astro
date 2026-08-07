@@ -41,28 +41,36 @@ const categoryKey = (cat: string) => `category_${cat}` as const;
     quoteAttribution={pick(home.heroQuoteAttribution, locale)}
   />
 
+  <!-- MISSION & VISION -->
+  <section class="section py-20 md:py-[110px]">
+    <div class="wrap">
+      <div class="grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-0 md:divide-x md:divide-line rtl:md:divide-x-reverse">
+        <div class="md:pe-16">
+          <span class="eyebrow mb-[18px] block">{pick(home.missionHeading, locale)}</span>
+          <p class="font-serif text-[26px] font-medium leading-[1.35] tracking-tight text-ink md:text-[32px]">
+            {pick(home.missionText, locale)}
+          </p>
+        </div>
+        <div class="md:ps-16">
+          <span class="eyebrow mb-[18px] block">{pick(home.visionHeading, locale)}</span>
+          <p class="font-serif text-[26px] font-medium leading-[1.35] tracking-tight text-ink md:text-[32px]">
+            {pick(home.visionText, locale)}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOCUS -->
   <section class="section py-20 md:py-[110px]">
     <div class="wrap">
-      <div class="mb-16 max-w-xl">
-        <span class="eyebrow mb-[18px] block">{pick(home.focusEyebrow, locale)}</span>
-        <h2 class="font-serif text-[32px] font-medium leading-[1.1] tracking-tight text-ink md:text-[42px]">
-          {pick(home.focusHeading, locale)}
-        </h2>
-        <p class="mt-[18px] text-lg text-grey">{pick(home.focusIntro, locale)}</p>
-      </div>
-      <div class="border-t border-line">
-        {
-          home.focusAreas.map((area, i) => (
-            <div class="grid grid-cols-[40px_1fr] items-start gap-4 border-b border-line py-9 transition hover:rounded hover:bg-bone2 md:grid-cols-[64px_1fr_1.3fr_auto] md:gap-8 md:hover:px-[18px]">
-              <span class="pt-1 font-serif text-lg font-semibold text-rose">{String(i + 1).padStart(2, '0')}</span>
-              <h3 class="font-serif text-2xl font-medium leading-tight text-ink">{pick(area.title, locale)}</h3>
-              <p class="hidden text-base leading-relaxed text-grey md:block">{pick(area.description, locale)}</p>
-              <span class="rtl-flip hidden pt-0.5 text-xl text-ink opacity-0 transition group-hover:opacity-50 md:block">→</span>
-            </div>
-          ))
-        }
-      </div>
+      <span class="eyebrow mb-[18px] block">{pick(home.focusEyebrow, locale)}</span>
+      <h2 class="font-serif text-[32px] font-medium leading-[1.1] tracking-tight text-ink md:text-[42px]">
+        {pick(home.focusHeading, locale)}
+      </h2>
+      <p class="mt-[18px] max-w-4xl text-lg leading-relaxed text-grey md:text-xl">
+        {pick(home.focusIntro, locale)}
+      </p>
     </div>
   </section>
 

@@ -156,19 +156,13 @@ export default config({
           ),
           { label: 'Hero meta stats', itemLabel: (p) => p.fields.number.value || 'Stat' }
         ),
+        missionHeading: localizedText({ label: 'Mission label (e.g. "Our mission")' }),
+        missionText: localizedText({ label: 'Mission statement', multiline: true }),
+        visionHeading: localizedText({ label: 'Vision label (e.g. "Our vision")' }),
+        visionText: localizedText({ label: 'Vision statement', multiline: true }),
         focusEyebrow: localizedText({ label: 'Focus section eyebrow' }),
         focusHeading: localizedText({ label: 'Focus section heading' }),
         focusIntro: localizedText({ label: 'Focus section intro', multiline: true }),
-        focusAreas: fields.array(
-          fields.object(
-            {
-              title: localizedText({ label: 'Title' }),
-              description: localizedText({ label: 'Description', multiline: true }),
-            },
-            { label: 'Focus area' }
-          ),
-          { label: 'Focus areas' }
-        ),
         recentEyebrow: localizedText({ label: 'Recent activities eyebrow' }),
         recentHeading: localizedText({ label: 'Recent activities heading' }),
         quoteBand: localizedText({ label: 'Quote band text', multiline: true }),
@@ -217,6 +211,16 @@ export default config({
         eyebrow: localizedText({ label: 'Eyebrow' }),
         heading: localizedText({ label: 'Heading' }),
         intro: localizedText({ label: 'Intro', multiline: true }),
+        heroImage: fields.image({
+          label: 'Top hero image (beside intro)',
+          directory: 'public/uploads/about',
+          publicPath: '/uploads/about/',
+        }),
+        bodyImage: fields.image({
+          label: 'Body image (beside mission/goals text)',
+          directory: 'public/uploads/about',
+          publicPath: '/uploads/about/',
+        }),
         body: localizedText({ label: 'Body (Markdown)', multiline: true }),
       },
     }),
