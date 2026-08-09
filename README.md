@@ -4,9 +4,12 @@ Trilingual (English / Arabic / Kurdish) website for **Nujeen for Family
 Democratizing Organization**, an NGO in Duhok, Kurdistan Region of Iraq. Built
 with **Astro + Keystatic + Tailwind**, output as a plain static site.
 
-See [`NUJEEN_BUILD_BRIEF.md`](./NUJEEN_BUILD_BRIEF.md) for the original brief
-and [`_design-reference/`](./_design-reference/) for the approved design this
-site was ported from.
+See [`NUJEEN_BUILD_BRIEF.md`](./NUJEEN_BUILD_BRIEF.md) for the original brief,
+[`_design-reference/`](./_design-reference/) for the approved design this
+site was ported from, and [`NUJEEN_PROJECT_HANDOFF.md`](./NUJEEN_PROJECT_HANDOFF.md)
+for a plain-status summary of what's done, what's a known gap, and what
+hasn't been started yet — read that first if you're picking this project
+back up.
 
 ## Stack
 
@@ -69,10 +72,12 @@ means copying that function's call, nothing more.
 ## Internationalization
 
 - Locales: `en` (LTR), `ar` (RTL), `ku` — Kurdish (RTL, Arabic script).
-  **Dialect note:** the seeded `ku` content is currently written in Sorani.
-  Nujeen is based in Duhok (Badini-speaking region), so it should be
-  **Kurmanji/Badini** in Arabic script instead — see "Known placeholders"
-  and the translation export/import workflow below.
+  **Dialect note — confirmed, not a guess:** the seeded `ku` content is
+  currently written in Sorani, but the client has **confirmed in writing**
+  that it must be **Kurmanji/Badini** in Arabic script instead (Duhok is a
+  Badini-speaking region). This is a confirmed launch blocker, not a
+  probable one — see "Known placeholders" and the translation export/
+  import workflow below.
 - Every page lives under `/en/...`, `/ar/...`, `/ku/...` via
   `src/pages/[locale]/`.
 - `ar`/`ku` pages render with `dir="rtl"` and the Arabic webfont
@@ -110,22 +115,41 @@ must be swapped for the client's real material before going live:
 - **Projects collection is intentionally empty.** No real Projects content
   has been supplied yet — the collection, schema, listing, and detail
   pages are fully built and ready for the editor to populate.
+- **About page images:** the hero image (top, beside the intro) is a real
+  client-supplied photo. The body image (lower, beside the goals/partners
+  text) is a **placeholder** — it reuses the Domiz-2 clinic activity photo
+  and needs client confirmation or a replacement. Both are swappable via
+  Keystatic → About without touching code.
 - **Arabic and Kurdish translations on all real Activities (and the rest of
   the site) are machine-translated (LLM-authored), not reviewed by a native
   speaker.** Each of the 8 real Activities carries a `# TRANSLATION STATUS`
-  comment at the top of its YAML file saying so explicitly. **The Kurdish
-  is Sorani, filled in only for site-wide consistency — the client's actual
-  dialect is Kurmanji/Badini in Arabic script** (Duhok is a Badini-speaking
-  area). This is a launch blocker: use the export/import workflow below to
-  send `translations-export.json` to a native speaker/translator for real
-  Arabic review and Badini re-translation, then re-import.
+  comment at the top of its YAML file saying so explicitly. **The client has
+  now confirmed in writing that Kurdish must be Kurmanji/Badini in Arabic
+  script** (Duhok is a Badini-speaking area), not the Sorani currently
+  seeded — this is a confirmed launch blocker, not a probable one. This is
+  the last step, done once: significant new English copy was added this
+  session (Home's Mission & Vision + "What we do", and the entire new About
+  page) that hasn't been translated at all yet, which is why `/ar` and
+  `/ku` currently render those two pages partially in English fallback —
+  expected interim state, not a bug. Once ALL English copy is final, use
+  the export/import workflow below to send `translations-export.json` to a
+  native speaker/translator for one combined Arabic review + Badini
+  re-translation pass, then re-import.
+- **Social share buttons, Open Graph image, activity-photo lightbox, and a
+  "latest 3 YouTube videos" feed are not built.** Share icons on activity
+  pages currently link to `#` (no-op); no `og:image` meta tag exists yet;
+  activity galleries show a hover-zoom grid with no click-to-enlarge; no
+  YouTube feed exists anywhere in the codebase. See
+  [`NUJEEN_PROJECT_HANDOFF.md`](./NUJEEN_PROJECT_HANDOFF.md) for details and
+  a hosting-model recommendation on live social feed embeds.
 
 ## Contact form
 
 The Contact page (`src/components/ContactForm.astro`) sends messages via
 [Web3Forms](https://web3forms.com) — a plain `fetch()` POST from the
 browser, no server or API route needed, so it works unchanged on a static
-host.
+host. **Not yet configured** — blocked on the client's domain not being
+ready yet (Web3Forms ties an access key to a verified sender).
 
 **Setup before launch:**
 

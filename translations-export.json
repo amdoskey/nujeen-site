@@ -6,7 +6,7 @@
     "keyFormat": "Dotted path: \"<collection/singleton>.<slug-if-any>.<field>[.<arrayIndex>.<subfield>]\". \"ui.*\" keys map 1:1 to src/i18n/ui.ts. Everything else maps to a field in the matching content/*.yaml file (title/titleAr/titleKu are the one exception — see keystatic.config.ts comment).",
     "roundTrip": "Do not add, remove, or rename keys — the import step matches purely by key. See README.md \"Translation export / import\" for the full workflow.",
     "generatedBy": "scripts/export-translations.mjs",
-    "generatedAt": "2026-08-07"
+    "generatedAt": "2026-08-09"
   },
   "strings": {
     "ui.nav_home": {
@@ -269,6 +269,11 @@
       "ar": "قيادة نوجين في حفل توقيع أحد المشاريع",
       "ku": "ڕابەرایەتی نوجین لە ڕووداوێکی واژووکردنی پڕۆژەیەک"
     },
+    "ui.about_section_nav_label": {
+      "en": "On this page",
+      "ar": "في هذه الصفحة",
+      "ku": "لەم پەڕەیەدا"
+    },
     "ui.menu_open": {
       "en": "Open menu",
       "ar": "فتح القائمة",
@@ -360,9 +365,9 @@
       "ku": "یان ڕاستەوخۆ پەیوەندیمان پێوە بکە:"
     },
     "home.eyebrow": {
-      "en": "Family health · Women's rights · Community",
-      "ar": "الصحة الأسرية · حقوق المرأة · المجتمع",
-      "ku": "تەندروستی خێزان · مافی ژنان · کۆمەڵگا"
+      "en": "Family · Youth · Women's rights · Community",
+      "ar": "",
+      "ku": ""
     },
     "home.headlinePlain": {
       "en": "Standing with women and families,",
@@ -388,6 +393,16 @@
       "en": "Nujeen field team, Duhok",
       "ar": "فريق نوجين الميداني، دهوك",
       "ku": "تیمی مەیدانی نوجین، دهۆک"
+    },
+    "home.sloganEyebrow": {
+      "en": "Our vision for the decade",
+      "ar": "",
+      "ku": ""
+    },
+    "home.sloganText": {
+      "en": "A Cohesive Family · Empowered Youth · A Democratic and Sustainable Society",
+      "ar": "",
+      "ku": ""
     },
     "home.missionHeading": {
       "en": "Our mission",
@@ -420,7 +435,7 @@
       "ku": ""
     },
     "home.focusIntro": {
-      "en": "It takes many forms across the communities we serve — from child protection and women's empowerment to reproductive health, support for displaced families, youth leadership, and the inclusion of people with disabilities and minorities. Nujeen works wherever families and individuals need support to live with dignity and equal rights.",
+      "en": "It takes many forms across the communities we serve. From child protection and women's empowerment to reproductive health, youth leadership, support for displaced families, and a growing focus on sustainability, Nujeen works wherever families and individuals need support to live with dignity and equal rights.",
       "ar": "",
       "ku": ""
     },
@@ -453,6 +468,11 @@
       "en": "Work measured in trust, not just numbers.",
       "ar": "عمل يُقاس بالثقة، لا بالأرقام فقط.",
       "ku": "کارێک بە متمانە دەپێورێت، نەک تەنها بە ژمارە."
+    },
+    "home.impactNote": {
+      "en": "Nujeen leads \"The Choice is Yours,\" a coalition of 18 women's organizations across Iraq.",
+      "ar": "",
+      "ku": ""
     },
     "home.ctaHeading": {
       "en": "Partner with us, or lend your support.",
@@ -555,7 +575,7 @@
       "ku": ""
     },
     "about.body": {
-      "en": "## Our mission\n\nTo spread a culture of democracy and humanity among families and throughout society.\n\n## Our vision\n\nA democratic, civil community built on coexistence, mutual respect, and acceptance of one another.\n\n## Our goals\n\nNujeen's work is guided by a set of long-standing commitments:\n\n- To build family and social relationships on the foundations of democracy, participation, pluralism, and the peaceful resolution of disputes.\n- To strengthen the role of individuals within the family and society, protecting their freedoms and building their capacities.\n- To raise awareness among family members and nurture a spirit of understanding, dialogue, and mutual respect.\n- To reduce the harm of gender discrimination and the negative social attitudes that weigh most heavily on women.\n- To support family economic wellbeing by engaging with public and private policies that affect household income.\n- To respond to the needs of marginalized people — children, people with disabilities, orphans, displaced persons, and refugees.\n- To advance the democratization of educational curricula in partnership with the relevant authorities.\n- To improve health at the individual and community levels, promoting wellbeing and equal access to health services for all.\n\n## How we work\n\nNujeen pursues these goals through awareness-raising, capacity building, advocacy, accountability and transparency work, conflict resolution, and by building and joining coalitions with partners who share its values.\n\n## Our structure\n\nNujeen's work is organized across three areas — peace-building and conflict resolution, development, and human rights — spanning child protection, women's empowerment, minority rights, support for people with special needs, social integration and livelihoods, and youth participation and leadership.\n\n## Our partners\n\nOver the years, Nujeen has worked with a wide range of national and international partners, including SAAF, IPPF, Médecins Sans Frontières (MSF), Handicap International, the European Union, Concern Worldwide, GIZ, and UN agencies including UNICEF, UN Women, UNDP, UNFPA, and IOM, alongside ministries and agencies of the Kurdistan Regional Government.\n",
+      "en": "## Our mission\n\nTo spread a culture of democracy and humanity among families and throughout society.\n\n## Our vision\n\nA democratic, civil community built on coexistence, mutual respect, and acceptance of one another.\n\n## Our goals\n\nNujeen's work is guided by a set of long-standing commitments:\n\n- To build family and social relationships on the foundations of democracy, participation, pluralism, and the peaceful resolution of disputes.\n- To strengthen the role of individuals within the family and society, protecting their freedoms and building their capacities.\n- To raise awareness among family members and nurture a spirit of understanding, dialogue, and mutual respect.\n- To reduce the harm of gender discrimination and the negative social attitudes that weigh most heavily on women.\n- To support family economic wellbeing by engaging with public and private policies that affect household income.\n- To respond to the needs of marginalized people — children, people with disabilities, orphans, displaced persons, and refugees.\n- To advance the democratization of educational curricula in partnership with the relevant authorities.\n- To improve health at the individual and community levels, promoting wellbeing and equal access to health services for all.\n\n## How we work\n\nNujeen pursues these goals through awareness-raising, capacity building, advocacy, accountability and transparency work, conflict resolution, and by building and joining coalitions with partners who share its values.\n\n## Our structure\n\nNujeen's work is organized across three areas — peace-building and conflict resolution, development, and human rights — spanning child protection, women's empowerment, minority rights, support for people with special needs, social integration and livelihoods, and youth participation and leadership.\n\n## Looking ahead — our 2026–2030 strategy\n\nBuilding on more than two decades of work, Nujeen has set a five-year strategy under the banner \"A Cohesive Family · Empowered Youth · A Democratic and Sustainable Society.\" It carries our founding conviction into a new decade: that strong, protected families — alongside empowered youth and a healthy environment — are the foundation of a just, democratic, and sustainable society.\n\nOur direction for 2026–2030 spans six areas:\n\n- **Stronger institutions** — Investing in transparency, digital systems, and the skills of our staff and volunteers, so we can serve communities with the highest standards of efficiency and accountability.\n- **Reaching further** — Expanding our services across Duhok, Nineveh, and the displacement camps, and opening new community centres in conflict-affected areas — with a focus on reaching those most often left behind, including people with disabilities, children, orphans, and displaced families.\n- **Building alliances** — Leading civil-society coalitions, including the \"The Choice is Yours\" coalition of 18 women's organizations, and working within national and international networks to advance women's rights, health, and child protection.\n- **Sustainable development, health, and climate** — Advancing economic empowerment and livelihoods, sexual and reproductive health and rights, psychosocial support, and — for the first time — environmental and climate initiatives, all aligned with the UN Sustainable Development Goals.\n- **Empowering youth** — Equipping young women and men with future-ready skills, entrepreneurship, and leadership opportunities, and creating safe spaces for them to speak, participate, and lead.\n- **Advancing rights and reform** — Working through advocacy and partnership to strengthen legal protections for fundamental rights and freedoms, and to build a more protective environment for families and individuals.\n\n## Our partners\n\nOver the years, Nujeen has worked with a wide range of national and international partners, including SAAF, IPPF, Médecins Sans Frontières (MSF), Handicap International, the European Union, Concern Worldwide, GIZ, and UN agencies including UNICEF, UN Women, UNDP, UNFPA, and IOM, alongside ministries and agencies of the Kurdistan Regional Government.\n",
       "ar": "",
       "ku": ""
     },

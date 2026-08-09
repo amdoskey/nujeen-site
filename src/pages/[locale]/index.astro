@@ -41,6 +41,16 @@ const categoryKey = (cat: string) => `category_${cat}` as const;
     quoteAttribution={pick(home.heroQuoteAttribution, locale)}
   />
 
+  <!-- SLOGAN BAND -->
+  <section class="border-y border-line bg-bone2 py-10 md:py-12">
+    <div class="wrap text-center">
+      <span class="eyebrow mb-3 block">{pick(home.sloganEyebrow, locale)}</span>
+      <p class="font-serif text-[21px] font-medium leading-snug tracking-tight text-ink md:text-[28px]">
+        {pick(home.sloganText, locale)}
+      </p>
+    </div>
+  </section>
+
   <!-- MISSION & VISION -->
   <section class="section py-20 md:py-[110px]">
     <div class="wrap">
@@ -143,6 +153,7 @@ const categoryKey = (cat: string) => `category_${cat}` as const;
           ))
         }
       </div>
+      <p class="mt-8 max-w-xl text-[15px] leading-relaxed text-grey">{pick(home.impactNote, locale)}</p>
     </div>
   </section>
 

@@ -156,6 +156,8 @@ export default config({
           ),
           { label: 'Hero meta stats', itemLabel: (p) => p.fields.number.value || 'Stat' }
         ),
+        sloganEyebrow: localizedText({ label: 'Slogan band eyebrow' }),
+        sloganText: localizedText({ label: 'Slogan band text', multiline: true }),
         missionHeading: localizedText({ label: 'Mission label (e.g. "Our mission")' }),
         missionText: localizedText({ label: 'Mission statement', multiline: true }),
         visionHeading: localizedText({ label: 'Vision label (e.g. "Our vision")' }),
@@ -180,6 +182,7 @@ export default config({
           ),
           { label: 'Impact stats' }
         ),
+        impactNote: localizedText({ label: 'Impact proof line (below stats)', multiline: true }),
         ctaHeading: localizedText({ label: 'CTA heading' }),
         ctaText: localizedText({ label: 'CTA text', multiline: true }),
       },

@@ -5,6 +5,7 @@ import { pick, localePath } from '../../i18n/utils';
 import { t } from '../../i18n/ui';
 import { reader } from '../../lib/reader';
 import { renderMarkdown } from '../../lib/markdown';
+import { slugify } from '../../lib/slugify';
 
 export function getStaticPaths() {
   return locales.map((locale) => ({ params: { locale } }));
@@ -15,10 +16,25 @@ const about = await reader.singletons.about.read();
 if (!about) throw new Error('About singleton content is missing — run the Keystatic admin (npm run dev) to create it.');
 
 const bodyHtml = renderMarkdown(pick(about.body, locale));
+
+// English section headings drive the anchor ids (matches src/lib/markdown.ts's
+// heading renderer, which slugifies whatever heading text actually renders).
+// Nav labels are short, curated forms of those headings — English-only for
+// now; once ar/ku body copy is translated this list should move to a
+// per-locale source instead of hardcoded English strings.
+const sectionNav = [
+  { label: 'Who we are', id: 'who-we-are' },
+  { label: 'Mission & Vision', id: slugify('Our mission') },
+  { label: 'Goals', id: slugify('Our goals') },
+  { label: 'How we work', id: slugify('How we work') },
+  { label: 'Structure', id: slugify('Our structure') },
+  { label: 'Looking ahead', id: slugify('Looking ahead — our 2026–2030 strategy') },
+  { label: 'Partners', id: slugify('Our partners') },
+];
 ---
 
 <BaseLayout locale={locale} activeNav="about" title={`Nujeen — ${pick(about.heading, locale)}`} description={pick(about.intro, locale)}>
-  <section class="border-b border-line py-[72px]">
+  <section id="who-we-are" class="scroll-mt-[140px] border-b border-line py-[72px]">
     <div class="wrap">
       <div class="mb-[22px] text-[13px] text-grey">
         <a href={localePath(locale, '/')} class="text-grey hover:text-ink">{t(locale, 'breadcrumb_home')}</a>
@@ -44,7 +60,25 @@ const bodyHtml = renderMarkdown(pick(about.body, locale));
     </div>
   </section>
   <div class="wrap py-16 md:py-20">
-    <div class="grid grid-cols-1 gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-16 lg:gap-20">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-[160px_.8fr_1.2fr] md:gap-8 lg:gap-12">
+      <nav aria-label={t(locale, 'about_section_nav_label')} class="hidden md:sticky md:top-[118px] md:block md:self-start">
+        <span class="eyebrow mb-3 block">{t(locale, 'about_section_nav_label')}</span>
+        <ul class="border-s border-line">
+          {
+            sectionNav.map((item) => (
+              <li>
+                <a
+                  href={`#${item.id}`}
+                  data-section-link={item.id}
+                  class="block border-s-2 border-transparent py-1.5 ps-3.5 text-[14px] text-grey transition hover:text-ink data-[active=true]:border-rose data-[active=true]:font-semibold data-[active=true]:text-ink"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
       <div class="md:sticky md:top-[118px] md:self-start">
         <div class="aspect-[16/10] overflow-hidden rounded-md bg-ink md:aspect-[3/4]">
           <img src={about.bodyImage ?? '/uploads/activities/placeholder.svg'} alt={t(locale, 'about_image_alt')} class="h-full w-full object-cover" />
@@ -54,3 +88,54 @@ const bodyHtml = renderMarkdown(pick(about.body, locale));
     </div>
   </div>
 </BaseLayout>
+
+<script>
+  function initSectionScrollSpy() {
+    const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('[data-section-link]'));
+    if (!links.length) return;
+
+    const targets = links
+      .map((link) => {
+        const id = link.getAttribute('data-section-link');
+        const el = id ? document.getElementById(id) : null;
+        return el ? { id: id!, el, link } : null;
+      })
+      .filter((x): x is { id: string; el: HTMLElement; link: HTMLAnchorElement } => x !== null);
+    if (!targets.length) return;
+
+    function setActive(id: string) {
+      for (const t of targets) {
+        if (t.id === id) t.link.setAttribute('data-active', 'true');
+        else t.link.removeAttribute('data-active');
+      }
+    }
+
+    const OFFSET = 150; // matches the sticky header height + a little breathing room
+
+    function updateActiveFromScroll() {
+      let current = targets[0];
+      for (const t of targets) {
+        if (t.el.getBoundingClientRect().top <= OFFSET) current = t;
+      }
+      setActive(current.id);
+    }
+
+    updateActiveFromScroll();
+
+    let ticking = false;
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          updateActiveFromScroll();
+          ticking = false;
+        });
+      },
+      { passive: true }
+    );
+  }
+
+  initSectionScrollSpy();
+</script>

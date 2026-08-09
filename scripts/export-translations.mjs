@@ -54,6 +54,8 @@ const home = loadYaml('content/home.yaml');
   'dek',
   'heroQuote',
   'heroQuoteAttribution',
+  'sloganEyebrow',
+  'sloganText',
   'missionHeading',
   'missionText',
   'visionHeading',
@@ -67,6 +69,7 @@ const home = loadYaml('content/home.yaml');
   'quoteBandSource',
   'impactEyebrow',
   'impactHeading',
+  'impactNote',
   'ctaHeading',
   'ctaText',
 ].forEach((f) => addField('home', f, home[f]));
