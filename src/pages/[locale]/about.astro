@@ -5,7 +5,6 @@ import { pick, localePath } from '../../i18n/utils';
 import { t } from '../../i18n/ui';
 import { reader } from '../../lib/reader';
 import { renderMarkdown } from '../../lib/markdown';
-import { slugify } from '../../lib/slugify';
 
 export function getStaticPaths() {
   return locales.map((locale) => ({ params: { locale } }));
@@ -17,16 +16,17 @@ if (!about) throw new Error('About singleton content is missing — run the Keys
 
 const bodyHtml = renderMarkdown(pick(about.body, locale));
 
-// English section headings drive the anchor ids (matches src/lib/markdown.ts's
-// heading renderer, which slugifies whatever heading text actually renders).
-// Nav labels are short, curated forms of those headings — English-only for
-// now; once ar/ku body copy is translated this list should move to a
-// per-locale source instead of hardcoded English strings.
+// Anchor ids are stable across locales (pinned via `{#id}` markers on the
+// body's markdown headings — see src/lib/markdown.ts), so nav links keep
+// working even where the heading text itself is translated per-locale.
+// Nav labels come from the localized UI dictionary (or, for "Who we are",
+// the page's own eyebrow copy) rather than the heading text, since a
+// locale may still be pending an official translation for a given heading.
 const sectionNav = [
-  { label: 'Who we are', id: 'who-we-are' },
-  { label: 'Mission & Vision', id: slugify('Our mission') },
-  { label: 'Objectives', id: slugify('Our strategic objectives') },
-  { label: 'Looking ahead', id: slugify('Looking ahead — our 2026–2030 strategy') },
+  { label: pick(about.eyebrow, locale), id: 'who-we-are' },
+  { label: t(locale, 'about_nav_mission_vision'), id: 'mission' },
+  { label: t(locale, 'about_nav_objectives'), id: 'objectives' },
+  { label: t(locale, 'about_nav_looking_ahead'), id: 'looking-ahead' },
 ];
 ---
 

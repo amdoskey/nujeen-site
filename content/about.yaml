@@ -1,3 +1,12 @@
+# TRANSLATION STATUS: ar (intro/philosophy/mission/vision/objectives) and ku
+# (intro/philosophy/mission/vision/objectives/strategy) are the client's
+# official Kurdish (Badini) and Arabic copy, verbatim — ku converted from
+# legacy Ali-K encoding to Unicode, pending client confirmation at review.
+# The "Looking ahead" strategy section's ar text has no official client
+# source and is a machine translation pending review; ku strategy text is
+# the client's official copy, verbatim. Section headings (Who we are,
+# Mission, Vision, Objectives, Looking ahead) are the client's official
+# labels in both ar and ku, including the sticky-nav labels.
 eyebrow:
   en: Who we are
   ar: من نحن
@@ -9,22 +18,22 @@ heading:
 intro:
   en: Nujeen for Family Democratizing Organization is an independent, non-governmental, non-profit, and humanitarian organization. Founded in September 2003, it is officially registered with both the Kurdistan Regional Government and the Federal Government in Baghdad.
   ar: منظمة نووژين لدمقرطة العائلة هي منظمة غير حكومية، مستقلة، غير ربحية، وإنسانية، تأسست في أيلول (سبتمبر) 2003، ومجازة رسمياً من قبل حكومة إقليم كوردستان والحكومة الاتحادية في بغداد.
-  ku: ریَكخراوا نوذین ذبو دیموكراسیكرنا خیَزانیَ، ریَكخراوةكا ناحكومى، سةربةخوَ، مروظاتى و نة قازانجویستة، كار ذبو مةدةنیكرن و دیموكراسیكرنا جظاكى ب ریَیا دیموكراسیكرنا مالباتیَ دكة، ل ئیلونا سالا 2003 هاتیة دامةزراندن و ذثال هةردوو حكومةتیَن هةریَما كوردستانیَ و حكومةتا فةدرالا بةغدا بئاوایةكیَ فةرمى هاتیة ناساندن.
+  ku: "پێناسەیا رێکخراوێ: رێکخراوا نوژین ژبو دیموکراسیکرنا خێزانێ، رێکخراوەکا ناحکومی، سەربەخۆ، مروڤاتی و نە قازانجویستە، کار ژبو مەدەنیکرن و دیموکراسیکرنا جڤاکی ب رێیا دیموکراسیکرنا مالباتێ دکە، ل ئیلونا سالا 2003 هاتیە دامەزراندن و ژپال هەردوو حکومەتێن هەرێما کوردستانێ و حکومەتا فەدرالا بەغدا ب ئاوایەکێ فەرمی هاتیە ناساندن."
 heroImage: /uploads/about/about-hero.jpg
 bodyImage: /uploads/about/about-clinic-domiz-2.jpg
 body:
   en: |
     Our core philosophy rests on the principle that "The family is the fundamental building block of society." Guided by this, we strive to advance and modernize society by embedding democratic values and tolerance within the family unit first, ensuring a positive impact on society as a whole.
 
-    ## Our mission
+    ## Our mission {#mission}
 
     Nujeen Organization seeks to advance society and modernize its structure by empowering its core foundation: the family. We work to promote humanistic and democratic culture through capacity building, safeguarding individual freedoms, and combating all forms of discrimination and marginalization — particularly against women and vulnerable groups. Through field and cultural engagement, we foster family relationships based on dialogue and participation, enhance community peace, and facilitate access to essential and health services for all without discrimination.
 
-    ## Our vision
+    ## Our vision {#vision}
 
     We aspire to build a democratic and prosperous civil society where all individuals enjoy justice and dignity, and where familial and societal relationships are built on peaceful coexistence, acceptance of diversity, and mutual respect — a society in which the family serves as the primary environment for instilling values of citizenship, peace, and tolerance.
 
-    ## Our strategic objectives
+    ## Our strategic objectives {#objectives}
 
     - **Strengthening Democratic Approach & Peacebuilding:** Organizing family and societal relationships on principles of pluralism and active participation, while activating peace initiatives and peaceful conflict resolution.
     - **Empowerment & Capacity Building:** Activating the roles of all family and community members, ensuring their fundamental freedoms, and developing their personal capacities.
@@ -33,7 +42,7 @@ body:
     - **Supporting Vulnerable Groups:** Effectively responding to the needs of marginalized populations, particularly children, persons with disabilities and special needs, orphans, IDPs, and refugees.
     - **Promoting Public Health:** Enhancing individual and community health levels through awareness campaigns and facilitating non-discriminatory access to comprehensive healthcare services.
 
-    ## Looking ahead — our 2026–2030 strategy
+    ## Looking ahead — our 2026–2030 strategy {#looking-ahead}
 
     Building on more than two decades of work, Nujeen has set a five-year strategy under the banner "A Cohesive Family · Empowered Youth · A Democratic and Sustainable Society." It carries our founding conviction into a new decade: that strong, protected families — alongside empowered youth and a healthy environment — are the foundation of a just, democratic, and sustainable society.
 
@@ -48,15 +57,15 @@ body:
   ar: |
     تستند فلسفة عملنا إلى أن "العائلة هي اللبنة الأساسية للمجتمع"؛ ومن هذا المنطلق نهدف إلى النهوض بالمجتمع وتحضره عبر ترسيخ نهج الديمقراطية والتسامح داخل الأسرة أولاً، لينعكس ذلك على المجتمع ككل.
 
-    ## Our mission
+    ## الرسالة {#mission}
 
     تسعى منظمة نووژين إلى تحضير المجتمع وتحديث بنيته من خلال تمكين اللبنة الأساسية فيه وهي العائلة. نعمل على نشر الثقافة الإنسانية والديمقراطية عبر تنمية قدرات الأفراد، وحماية حرياتهم، ومناهضة كافة أشكال التمييز والتهميش—لا سيما ضد المرأة والفئات الأكثر هشاشة. نتحرك ميدانياً وثقافياً لبناء علاقات أسرية قائمة على الحوار والمشاركة، وتعزيز السلم الأهلي، وتسهيل وصول الخدمات الأساسية والصحية للجميع دون تمييز.
 
-    ## Our vision
+    ## الرؤية {#vision}
 
     نطمح إلى بناء مجتمع مدني ديمقراطي ومزدهر، ينعم فيه جميع الأفراد بالعدالة والكرامة، وتُبنى فيه العلاقات الأسرية والمجتمعية على أسس التعايش السلمي، وتقبل الاختلاف، والاحترام المتبادل؛ مجتمع تكون فيه الأسرة البيئة الأولى لترسيخ قيم المواطنة والسلام والتسامح.
 
-    ## Our strategic objectives
+    ## أهدافنا الإستراتيجية {#objectives}
 
     - **ترسيخ النهج الديمقراطي والسلام:** تنظيم العلاقات الأسرية والمجتمعية على أسس التعددية والمشاركة التفاعلية، وتنشيط مبادرات السلام وحل النزاعات بالطرق السلمية.
     - **تمكين الأفراد وتطوير القدرات:** تفعيل دور جميع أفراد العائلة والمجتمع، وضمان حرياتهم الأساسية، وبناء قدراتهم الذاتية.
@@ -65,7 +74,7 @@ body:
     - **دعم الفئات الأكثر احتياجاً:** الاستجابة الفاعلة لمتطلبات الفئات المهمشة والضعيفة في المجتمع، وفي مقدمتهم الأطفال، الأشخاص ذوي الإعاقة والاحتياجات الخاصة، الأيتام، والنازحون واللاجئون.
     - **تعزيز الصحة العامة:** الرفع من المستوى الصحي للأفراد والمجتمع عبر نشر التوعية، وتسهيل وصول الخدمات الصحية الشاملة للجميع دون أي تمييز.
 
-    ## Looking ahead — our 2026–2030 strategy
+    ## نظرة إلى المستقبل 2026–2030 {#looking-ahead}
 
     <!-- AR translation of this section is machine-generated; pending official client review. -->
 
@@ -80,36 +89,34 @@ body:
     - **تمكين الشباب** — تزويد الشابات والشباب بالمهارات المستقبلية وفرص ريادة الأعمال والقيادة، وخلق مساحات آمنة لهم للتعبير والمشاركة والقيادة.
     - **النهوض بالحقوق والإصلاح** — العمل من خلال المناصرة والشراكة لتعزيز الحماية القانونية للحقوق والحريات الأساسية، وبناء بيئة أكثر حماية للأسر والأفراد.
   ku: |
-    فةلسةفةیا كاریَ ریَكخراویَ ئةوة كو "خیَزان بةریَ بنیاتا جظاكییة" لةو كاردكة ذبو ثیَشظةبرن و نووذةنكرنا جظاكى ب ریَیا سةرذنؤظة ثةیداكرن و دارشتنا نرخ و بهاییَن دیموكراسى و وةكهةظییَ دناظ تاكیَن خیَزانیَ دا ذبو ظةریَذ و كاریطةریا ویَ ل سةر تةظاهیا جظاكى رةنطظةدة.
+    فەلسەفەیا کارێ رێکخراوێ ئەوە کو "خێزان بەرێ بنیاتا جڤاکییە" لەو کاردکە ژبو پێشڤەبرن و نووژەنکرنا جڤاکی ب رێیا سەرژنۆڤە پەیداکرن و دارشتنا نرخ و بهایێن دیموکراسی و وەکهەڤیێ د ناڤ تاکێن خێزانێ دا ژبو ڤەرێژ و کاریگەریا وێ ل سەر تەڤاهیا جڤاکی رەنگڤەدە.
 
-    ## Our mission
+    ## پەیاما مە {#mission}
 
-    بةلاظكرنا كةلتوَریَ مروظاتییَ و دیموكراسییَ د ناظبةرا تاكیَن خیَزانیَ و جظاكیدة و بةرهةنطاریا هةموو رةنطیَن جوداكارى و فشاریَن جیندةرى تایبةت ل سةر ذنیَ.
+    بەلاڤکرنا کەلتۆرێ مروڤاتیێ و دیموکراسیێ د ناڤبەرا تاکێن خێزانێ و جڤاکیدە و بەرهەنگاریا هەموو رەنگێن جوداکاری و فشارێن جیندەری تایبەت ل سەر ژنێ.
 
-    ## Our vision
+    ## بینینا مە {#vision}
 
-    كاركرن ذبو ئاظاكرنا جظاكةكیَ سفیل و دیموكرات و طةشةبووى كو هةر كةس تیَدا ب روومةت و وةكهةظبن، جظاكةك وةسا كو خیَزان تیَدا ببة ذینطةهةكا ئارام و زةمینساز ذبو بهاییَن هةظوةلاتیبوون و بهةظراذیانیَ.
+    کارکرن ژبو ئاڤاکرنا جڤاکەکێ سفیل و دیموکرات و گەشەبووی کو هەر کەس تێدا ب روومەت و وەکهەڤبن، جڤاکەک وەسا کو خێزان تێدا ببە ژینگەهەکا ئارام و زەمینساز ژبو بهایێن هەڤوەلاتیبوون و ب هەڤراژیانێ.
 
-    ## Our strategic objectives
+    ## ئارمانجێن مە یێن ستراتیژی {#objectives}
 
-    - ریَكخستنا ثةیوةندییَن خیَزانى و ییَن جظاكى ل سةر بنةماییَن؛ دیموكراسییَ، ثشكداریكرنیَ، هةمةرةنطیییَ، ثةذراندنا ییَدن و خورتكرنا ثروسةیا ئاشتییَ ل دةظةریَ و ضارةسةریا ململانییان ب ریَكیَن ئاشتیانة.
-    - ئةكتیظكرنا رولیَ تاكةكةسان د ناظا خیَزانیَ و جظاكیدة و، ثاراستنا ماف و ئازادییان و ثیَشدابرنا شیانیَن طةنجان.
-    - بلندكرنا ئاستیَ هوشیارى و رةوشةنبیرییا تاكیَن خیَزانیَ و بةلاظكرنا طیانیَ د هةظدوطةهشتنیَ و دیالوكیَ و ریَزطرتنا ییَ بةرامبةر.
-    - كیَمكرنا كاریطةرى و فشاریَن جوداكارییَن جیَندةرى، دابونةریتیَن كةظن و شوثثاریَز و نیطةتیف ل سةر ئةندامیَن خیَزانیَ و تایبةتى ل سةر ذنیَ.
-    - كاركرن ذبو بةرسظدانا خواستةك و ثیَدظییَن كةسیَن ثاشظةخستى وةك؛ زاروك و كةسیَن كیَمئةندام و خودان ثیَدظییَن تایبةت و ئیَتیم و بىَ سةمیان و ثةنابةر و دةربةدةران.
-    - هاندانا تةندروستییا تةظاهى و بلندكرنا ئاستیَ ساخلةمییَ د ناظ تاكةكةسان و جظاكیدا بریَیا هةوییَن هووشیاربوونیَ و هیَسانكرنا طةهاندنا خزمةتطؤزارییَن ساخلةمییَ ذبو هةموو كةسان بىَ جوداهى.
+    - رێکخستنا پەیوەندیێن خێزانی و یێن جڤاکی ل سەر بنەمایێن؛ دیموکراسیێ، پشکداریکرنێ، هەمەرەنگییێ، پەژراندنا یێدن و خورتکرنا پرۆسەیا ئاشتیێ ل دەڤەرێ و چارەسەریا ململانییان ب رێکێن ئاشتیانە.
+    - ئەکتیڤکرنا رولێ تاکەکەسان د ناڤا خێزانێ و جڤاکیدە، پاراستنا ماف و ئازادییان و پێشدابرنا شیانێن گەنجان.
+    - بلندکرنا ئاستێ هوشیاری و رەوشەنبیرییا تاکێن خێزانێ و بەلاڤکرنا گیانێ د هەڤدوگەهشتنێ و دیالۆکێ و رێزگرتنا یێ بەرامبەر.
+    - کێمکرنا کاریگەری و فشارێن جوداکاریێن جێندەری، دابونەریتێن کەڤن و شوپپارێز و نیگەتیڤ ل سەر ئەندامێن خێزانێ و تایبەتی ل سەر ژنێ.
+    - کارکرن ژبو بەرسڤدانا خواستەک و پێدڤیێن کەسێن پاشڤەخستی وەک؛ زارۆک و کەسێن کێمئەندام و خودان پێدڤیێن تایبەت و ئێتیم و بێ سەمیان و پەنابەر و دەربەدەران.
+    - هاندانا تەندروستییا تەڤاهی و بلندکرنا ئاستێ ساخلەمیێ د ناڤ تاکەکەسان و جڤاکیدا ب رێیا هەوێن هووشیاربوونێ و هێسانکرنا گەهاندنا خزمەتگۆزاریێن ساخلەمیێ ژبو هەموو کەسان بێ جوداهی.
 
-    ## Looking ahead — our 2026–2030 strategy
+    ## بەرەڤ پاشەرۆژێ — ستراتیژییا مە یا 2026–2030 {#looking-ahead}
 
-    <!-- KU: no Kurdish text supplied in the client's strategy document; English fallback shown pending translation. -->
+    ل سەر بنەمایێ پتر ژ دوو دەهسالیێن کارکرنێ، نوژین ستراتیژیەکا پێنج سالی ل ژێر درووشمێ "خێزانەکا هەڤگرتی – گەنجێن ب هێز – جڤاکەکێ دیموکرات و بەردەوام" دانا. ئەڤ ستراتیژییە باوەریا مە یا بنەڕەتی دەربازی دەهسالیەکا نوو دکەت: کو خێزانێن ب هێز و پاراستی — دگەل گەنجێن پێگەهشتی و ژینگەهەکا ساخلەم — بنیاتێن جڤاکەکێ دادپەروەر، دیموکرات و بەردەوامن.
 
-    Building on more than two decades of work, Nujeen has set a five-year strategy under the banner "A Cohesive Family · Empowered Youth · A Democratic and Sustainable Society." It carries our founding conviction into a new decade: that strong, protected families — alongside empowered youth and a healthy environment — are the foundation of a just, democratic, and sustainable society.
+    ئاراستەیێ کارێ مە بۆ سالێن 2026–2030 شەش تەوەران بخۆڤەدگریت:
 
-    Our direction for 2026–2030 spans six areas:
-
-    - **Stronger institutions** — Investing in transparency, digital systems, and the skills of our staff and volunteers, so we can serve communities with the highest standards of efficiency and accountability.
-    - **Reaching further** — Expanding our services across Duhok, Nineveh, and the displacement camps, and opening new community centres in conflict-affected areas — with a focus on reaching those most often left behind, including people with disabilities, children, orphans, and displaced families.
-    - **Building alliances** — Leading civil-society coalitions, including the "The Choice is Yours" coalition of 18 women's organizations, and working within national and international networks to advance women's rights, health, and child protection.
-    - **Sustainable development, health, and climate** — Advancing economic empowerment and livelihoods, sexual and reproductive health and rights, psychosocial support, and — for the first time — environmental and climate initiatives, all aligned with the UN Sustainable Development Goals.
-    - **Empowering youth** — Equipping young women and men with future-ready skills, entrepreneurship, and leadership opportunities, and creating safe spaces for them to speak, participate, and lead.
-    - **Advancing rights and reform** — Working through advocacy and partnership to strengthen legal protections for fundamental rights and freedoms, and to build a more protective environment for families and individuals.
+    - دامەزراوەیێن ب هێزتر — وەبەرهێنان د سیستەمێن شەفاف و دیجیتاڵی دا، دگەل بلندکرنا شیانێن کارمەند و خۆبەخشێن مە، دا کو بشێین ب بلندترین ئاستێن کارایی و لێپرسینەوەیێ خزمەتا جڤاکی بکەین.
+    - گەهشتنا بەرفرەھتر — بەرفرەھکرنا خزمەتگۆزاریێن مە ل سەرانسەری دهۆک، نەینەوا، و کەمپێن ئاواران، و ڤەکرنا سەنتەرێن نوو یێن جڤاکی ل دەڤەرێن زیانڤێکەفتیێن ململانێیان — ب سەرنجدان ل سەر گەهشتن ب وان کەسێن پتر پشتگوێ هاتینە هاڤێتن، ژ وان ژی کەسێن خودان پێدڤیێن تایبەت، زارۆک، ئێتیم و خێزانێن دەربەدەر.
+    - ئاڤاکرنا هەڤپەیمانییان — سەرکردایەتیکرنا هەڤپەیمانیێن جڤاکێ مەدەنی، ژ وان ژی هەڤپەیمانیا "بریار یا تە یە" یا 18 رێکخراوێن ژنان، و کارکرن د ناڤ تۆڕێن نیشتمانی و نێڤدەولەتی دا ژبو پێشڤەبرنا مافێن ژنان، ساخلەمی، و پاراستنا زارۆکان.
+    - پەرەپێدانا بەردەوام، ساخلەمی و کەشوهەوا — پێشڤەبرنا هێزدانا ئابووری و دابینکرنا دەلیڤەیێن ژیانێ، ساخلەمی و مافێن زاوزێ، پشتەڤانیا دەروونی-جڤاکی، و — بۆ ئێکەم جار — دەستپێشخەریێن ژینگەهی و کەشوهەوایی، کو هەمی دگەل ئارمانجێن پەرەپێدانا بەردەوام یا نەتەوەیێن ئێکگرتی د هەڤئاڕاستەنە.
+    - ب هێزکرنا گەنجان — ئامادەکرنا کچ و کوڕێن گەنج ب شیانێن پاشەرۆژێ، دەلیڤەیێن کارسازی و سەرکردایەتیێ، و دروستکرنا جهێن ئارام بۆ وان دا کو باخڤن، پشکداریێ بکەن، و پێشەنگیێ بکەن.
+    - پێشڤەبرنا مافان و چاکسازی — کارکرن ب رێیا داکۆکیکردن و هەڤپشکیێ ژبو بهێزکرنا پاراستنا یاسایی بۆ ماف و ئازادیێن بنەڕەتی، و ئاڤاکرنا ژینگەهەکا پارێزەرتەر بۆ خێزان و تاکەکەسان.
