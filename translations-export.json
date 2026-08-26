@@ -319,6 +319,16 @@
       "ar": "مشاركة عبر فيسبوك",
       "ku": "هاوبەشکردن لە فەیسبووک"
     },
+    "ui.share_x": {
+      "en": "Share on X",
+      "ar": "مشاركة عبر إكس",
+      "ku": "هاوبەشکردن لە ئێکس"
+    },
+    "ui.share_whatsapp": {
+      "en": "Share on WhatsApp",
+      "ar": "مشاركة عبر واتساب",
+      "ku": "هاوبەشکردن لە واتساپ"
+    },
     "ui.share_linkedin": {
       "en": "Share on LinkedIn",
       "ar": "مشاركة عبر لينكدإن",
@@ -328,6 +338,11 @@
       "en": "Copy link",
       "ar": "نسخ الرابط",
       "ku": "کۆپیکردنی لینک"
+    },
+    "ui.share_copied": {
+      "en": "Copied",
+      "ar": "تم النسخ",
+      "ku": "کۆپی کرا"
     },
     "ui.not_found_message": {
       "en": "This page couldn't be found. It may have moved, or the link may be out of date.",
