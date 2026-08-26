@@ -12,6 +12,7 @@ interface Props {
     brandName: string;
     tagline: { en: string; ar: string; ku: string };
     locationLine: { en: string; ar: string; ku: string };
+    socialLinks: { instagram: string; facebook: string; youtube: string };
   };
 }
 
@@ -24,13 +25,80 @@ const navItems: Array<{ key: Props['activeNav']; label: string; href: string }> 
   { key: 'projects', label: t(locale, 'nav_projects'), href: localePath(locale, '/projects') },
   { key: 'contact', label: t(locale, 'nav_contact'), href: localePath(locale, '/contact') },
 ];
+
+const socialLinks: Array<{ href: string; label: string; icon: 'instagram' | 'facebook' | 'youtube' }> = [
+  { href: siteSettings.socialLinks.instagram, label: t(locale, 'social_instagram'), icon: 'instagram' },
+  { href: siteSettings.socialLinks.facebook, label: t(locale, 'social_facebook'), icon: 'facebook' },
+  { href: siteSettings.socialLinks.youtube, label: t(locale, 'social_youtube'), icon: 'youtube' },
+];
 ---
 
 <div class="border-b border-lineSoft text-[13px] text-grey">
   <div class="wrap flex h-[46px] items-center justify-between">
-    <div class="flex items-center gap-2">
-      <span class="h-[5px] w-[5px] rounded-full bg-teal"></span>
-      <span>{pick(siteSettings.locationLine, locale)}</span>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2">
+        <span class="h-[5px] w-[5px] rounded-full bg-teal"></span>
+        <span>{pick(siteSettings.locationLine, locale)}</span>
+      </div>
+      <div class="hidden items-center gap-2.5 border-s border-lineSoft ps-3 sm:flex">
+        {
+          socialLinks.map((social) => (
+            <a
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              class="text-grey transition hover:text-blue"
+            >
+              {social.icon === 'instagram' && (
+                <svg
+                  class="h-[15px] w-[15px]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4.2" />
+                  <circle cx="17.4" cy="6.6" r="0.6" fill="currentColor" stroke="none" />
+                </svg>
+              )}
+              {social.icon === 'facebook' && (
+                <svg
+                  class="h-[15px] w-[15px]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M14.5 8.5h2V5.3c-.4-.05-1.6-.16-2.9-.16-2.9 0-4.6 1.7-4.6 4.9v2.5H6.3v3.4h2.7V21h3.5v-4.9h2.7l.4-3.4h-3.1V10.3c0-1 .3-1.8 1.8-1.8z"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              )}
+              {social.icon === 'youtube' && (
+                <svg
+                  class="h-[15px] w-[15px]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <rect x="3" y="6" width="18" height="12" rx="4" />
+                  <path d="M10.5 9.8l4.5 2.2-4.5 2.2z" fill="currentColor" stroke="none" />
+                </svg>
+              )}
+            </a>
+          ))
+        }
+      </div>
     </div>
     <LangSwitcher locale={locale} />
   </div>

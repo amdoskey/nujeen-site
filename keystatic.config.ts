@@ -186,6 +186,14 @@ export default config({
         brandName: fields.text({ label: 'Brand name (plain)', defaultValue: 'nujeen' }),
         tagline: localizedText({ label: 'Tagline (under logo)' }),
         locationLine: localizedText({ label: 'Topbar location line' }),
+        socialLinks: fields.object(
+          {
+            instagram: fields.text({ label: 'Instagram URL' }),
+            facebook: fields.text({ label: 'Facebook URL' }),
+            youtube: fields.text({ label: 'YouTube URL' }),
+          },
+          { label: 'Social links' }
+        ),
         phone1: fields.text({ label: 'Phone 1' }),
         phone2: fields.text({ label: 'Phone 2' }),
         email: fields.text({ label: 'Email' }),

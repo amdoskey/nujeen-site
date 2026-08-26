@@ -289,6 +289,21 @@
       "ar": "نظرة إلى المستقبل",
       "ku": "بەرەڤ پاشەرۆژێ"
     },
+    "ui.social_instagram": {
+      "en": "Nujeen on Instagram",
+      "ar": "نوجين على إنستغرام",
+      "ku": "نوجین لسەر ئینستەگرام"
+    },
+    "ui.social_facebook": {
+      "en": "Nujeen on Facebook",
+      "ar": "نوجين على فيسبوك",
+      "ku": "نوجین لسەر فەیسبووک"
+    },
+    "ui.social_youtube": {
+      "en": "Nujeen on YouTube",
+      "ar": "نوجين على يوتيوب",
+      "ku": "نوجین لسەر یوتیوب"
+    },
     "ui.menu_open": {
       "en": "Open menu",
       "ar": "فتح القائمة",
