@@ -106,13 +106,12 @@ const socialLinks: Array<{ href: string; label: string; icon: 'instagram' | 'fac
 
 <header class="sticky top-0 z-50 border-b border-lineSoft bg-bone/85 backdrop-blur-xs">
   <div class="wrap flex h-[88px] items-center justify-between">
-    <a href={localePath(locale, '/')} class="flex flex-col leading-none">
-      <span class="font-serif text-3xl font-semibold tracking-tight text-blue"
-        >nu<i class="not-italic text-ink">jeen</i></span
-      >
-      <span class="mt-[5px] text-[10px] font-medium uppercase text-grey" style="letter-spacing:.24em">
-        {pick(siteSettings.tagline, locale)}
-      </span>
+    <a href={localePath(locale, '/')} class="flex items-center">
+      <img
+        src="/logo/nujeen-dark.png"
+        alt="Nujeen for Family Democratizing Organization"
+        class="h-11 w-auto"
+      />
     </a>
     <nav class="hidden md:block">
       <ul class="flex items-center gap-9">
@@ -166,10 +165,12 @@ const socialLinks: Array<{ href: string; label: string; icon: 'instagram' | 'fac
   aria-label={t(locale, 'nav_home')}
 >
   <div class="wrap flex h-[88px] shrink-0 items-center justify-between border-b border-lineSoft">
-    <a href={localePath(locale, '/')} class="flex flex-col leading-none" data-menu-link>
-      <span class="font-serif text-3xl font-semibold tracking-tight text-blue"
-        >nu<i class="not-italic text-ink">jeen</i></span
-      >
+    <a href={localePath(locale, '/')} class="flex items-center" data-menu-link>
+      <img
+        src="/logo/nujeen-dark.png"
+        alt="Nujeen for Family Democratizing Organization"
+        class="h-11 w-auto"
+      />
     </a>
     <button
       id="menu-close"

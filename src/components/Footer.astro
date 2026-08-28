@@ -28,8 +28,12 @@ const year = new Date().getFullYear();
   <div class="wrap">
     <div class="grid grid-cols-1 gap-12 border-b border-bone/10 pb-14 md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
       <div>
-        <a href={localePath(locale, '/')} class="font-serif text-3xl font-semibold leading-none text-bone">
-          nu<i class="not-italic text-[#9FD4C4]">jeen</i>
+        <a href={localePath(locale, '/')} class="inline-block">
+          <img
+            src="/logo/nujeen-light.png"
+            alt="Nujeen for Family Democratizing Organization"
+            class="h-11 w-auto"
+          />
         </a>
         <p class="mt-5 max-w-[300px] leading-relaxed text-bone/60">{pick(siteSettings.footerBlurb, locale)}</p>
       </div>
