@@ -19,3 +19,6 @@ Thumbs.db
 
 # logs
 npm-debug.log*
+
+# Vercel adapter build output
+.vercel/

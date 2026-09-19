@@ -31,16 +31,12 @@ npm run build    # production static build -> dist/
 npm run preview  # serve the production build locally
 ```
 
-Note there are **two** Astro configs:
-
-- [`astro.config.mjs`](./astro.config.mjs) — production. Pure static output, no admin, no Node runtime needed.
-- [`astro.config.dev.mjs`](./astro.config.dev.mjs) — adds the Keystatic admin UI. Used only by `npm run dev`.
-
-The admin needs server-rendered API routes to write files to disk, which is
-incompatible with a plain static build. Since the production site never needs
-to serve the admin (see workflow below), it's simply left out of
-`astro.config.mjs`/`npm run build` entirely — the deployed site stays 100%
-static with no Node runtime required on the host.
+There is a single Astro config, [`astro.config.mjs`](./astro.config.mjs). It
+keeps `output: 'static'` (public pages are prerendered) and adds the Vercel
+adapter plus the Keystatic admin, so `/keystatic` and `/api/keystatic/*` are
+served on demand in production as well as in `npm run dev`. Keystatic uses
+**Keystatic Cloud** storage (`editors1/nujeenweb`, see
+[`keystatic.config.ts`](./keystatic.config.ts)).
 
 ## Editing content (for the client / editor)
 

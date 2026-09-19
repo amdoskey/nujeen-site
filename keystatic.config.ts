@@ -109,7 +109,8 @@ function sharedContentSchema(kind: string) {
 // ---------------------------------------------------------------------------
 
 export default config({
-  storage: { kind: 'local' },
+  storage: { kind: 'cloud' },
+  cloud: { project: 'editors1/nujeenweb' },
 
   collections: {
     activities: collection({
