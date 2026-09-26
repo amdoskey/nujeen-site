@@ -79,7 +79,11 @@ body:
 
     ئارمانجا مە یا بەردەوام پاراستنا مافێن تەندرۆستی و بڵندکرنا ئاستێ لێهاتن و
     ساخلەمیا جڤاکی یە ل ناو کامپاندا.
-gallery: []
+featuredImage: >-
+  /uploads/activities/srhr-consultations-family-planning-domiz-2/featuredImage.JPEG
+gallery:
+  - >-
+    /uploads/activities/gallery/srhr-consultations-family-planning-domiz-2/gallery/0.JPEG
 date: 2026-09-09
 category: awareness
 documents: []
