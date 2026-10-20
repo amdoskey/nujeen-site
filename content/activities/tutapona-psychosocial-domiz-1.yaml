@@ -71,7 +71,8 @@ body:
     دبین د ب هێزکرنا ژنان، خورتکرنا خۆراگریێ، و پەروەردەکرنا سەرکردەیێن سوبەهی
     دا.
 featuredImage: /uploads/activities/tutapona-psychosocial-domiz-1/featuredImage.jpeg
-gallery: []
+gallery:
+  - /uploads/activities/gallery/tutapona-psychosocial-domiz-1/gallery/0.jpeg
 category: camps
 documents: []
 status: published
