@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { reader } from './reader';
 
 type CollectionName = 'activities' | 'projects';
@@ -18,21 +19,59 @@ function normalizeEntry<T extends { title: string; titleAr: string; titleKu: str
   };
 }
 
+/**
+ * When each content file was first committed (`YYYY-MM-DD`), keyed by repo
+ * path. Used only as a sort fallback for entries without a `date`: Keystatic
+ * stores no created-at timestamp, and git history is the one honest record
+ * of when an entry was added. Read once per process; if git is unavailable
+ * (or the clone is shallow) entries are simply missing from the map.
+ */
+let addedDatesCache: Map<string, string> | undefined;
+
+function getAddedDates(): Map<string, string> {
+  if (addedDatesCache) return addedDatesCache;
+  const added = new Map<string, string>();
+  try {
+    const log = execFileSync(
+      'git',
+      ['log', '--diff-filter=A', '--format=@%cs', '--name-only', '--', 'content'],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }
+    );
+    let commitDate = '';
+    for (const line of log.split('\n')) {
+      if (line.startsWith('@')) commitDate = line.slice(1);
+      // Log is newest-first, so the first hit is the latest (re-)add.
+      else if (line && !added.has(line)) added.set(line, commitDate);
+    }
+  } catch {
+    // No git at build time — undated entries fall back to "newest" below.
+  }
+  addedDatesCache = added;
+  return added;
+}
+
+/** Sorts after any real date, so not-yet-committed (brand-new) entries lead. */
+const NOT_YET_COMMITTED = '9999-12-31';
+
+/**
+ * Newest first. An entry's recency is its `date`; until the client sets one,
+ * it's the date the entry was added to the repo — so a freshly added, undated
+ * activity surfaces at the top instead of sinking among older content.
+ * Ties break on slug so the order is stable across builds.
+ */
+function recencyKey(collectionName: CollectionName, slug: string, date: string | null) {
+  return date ?? getAddedDates().get(`content/${collectionName}/${slug}.yaml`) ?? NOT_YET_COMMITTED;
+}
+
 export async function getPublished(collectionName: CollectionName) {
   const all = await reader.collections[collectionName].all();
   return all
     .filter((item) => item.entry.status === 'published')
-    .sort((a, b) => {
-      // Entries without a date (not yet set by the client) sort after dated
-      // ones, rather than producing an inconsistent/undefined ordering.
-      const aDate = a.entry.date;
-      const bDate = b.entry.date;
-      if (!aDate && !bDate) return 0;
-      if (!aDate) return 1;
-      if (!bDate) return -1;
-      return aDate < bDate ? 1 : -1;
-    })
-    .map((item) => ({ slug: item.slug, entry: normalizeEntry(item.entry) }));
+    .map((item) => ({ item, key: recencyKey(collectionName, item.slug, item.entry.date) }))
+    .sort((a, b) =>
+      a.key === b.key ? a.item.slug.localeCompare(b.item.slug) : a.key < b.key ? 1 : -1
+    )
+    .map(({ item }) => ({ slug: item.slug, entry: normalizeEntry(item.entry) }));
 }
 
 export async function getEntry(collectionName: CollectionName, slug: string) {
