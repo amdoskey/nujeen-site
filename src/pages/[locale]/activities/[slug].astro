@@ -69,9 +69,11 @@ const canonicalUrl = new URL(localePath(locale, `/activities/${slug}`), Astro.si
   </section>
 
   <div class="wrap read mx-auto">
-    <div class="relative mb-14 mt-2 h-[280px] overflow-hidden rounded-md bg-ink md:h-[480px]">
-      <img src={entry.featuredImage} alt={pick(entry.title, locale)} class="absolute inset-0 h-full w-full object-cover" />
-    </div>
+    {entry.featuredImage && (
+      <div class="relative mb-14 mt-2 h-[280px] overflow-hidden rounded-md bg-ink md:h-[480px]">
+        <img src={entry.featuredImage} alt={pick(entry.title, locale)} class="absolute inset-0 h-full w-full object-cover" />
+      </div>
+    )}
 
     <div class="article-body" set:html={bodyHtml} />
 
@@ -107,7 +109,7 @@ const canonicalUrl = new URL(localePath(locale, `/activities/${slug}`), Astro.si
               <a href={localePath(locale, `/activities/${rSlug}`)} class="group cursor-pointer">
                 <div class="mb-4 h-[190px] overflow-hidden rounded bg-ink">
                   <img
-                    src={rEntry.featuredImage}
+                    src={rEntry.featuredImage ?? '/uploads/activities/placeholder.svg'}
                     alt={pick(rEntry.title, locale)}
                     class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
