@@ -20,7 +20,7 @@ function localizedText({
     {
       en: fields.text({ label: 'English', multiline }),
       ar: fields.text({ label: 'Arabic', multiline }),
-      ku: fields.text({ label: 'Kurdish Sorani', multiline }),
+      ku: fields.text({ label: 'Kurdish (Badini)', multiline }),
     },
     { label }
   );
@@ -37,7 +37,7 @@ const CATEGORY_OPTIONS = [
 const DOC_LANGUAGE_OPTIONS = [
   { label: 'English', value: 'en' },
   { label: 'Arabic', value: 'ar' },
-  { label: 'Kurdish Sorani', value: 'ku' },
+  { label: 'Kurdish (Badini)', value: 'ku' },
 ];
 
 // The shared dynamic content-type pattern. `kind` is only used to namespace
@@ -50,7 +50,7 @@ function sharedContentSchema(kind: string) {
     // sibling fields since only one field per collection can be `slug`.
     title: fields.slug({ name: { label: 'Title (English)' } }),
     titleAr: fields.text({ label: 'Title (Arabic)' }),
-    titleKu: fields.text({ label: 'Title (Kurdish Sorani)' }),
+    titleKu: fields.text({ label: 'Title (Kurdish Badini)' }),
     summary: localizedText({ label: 'Summary', multiline: true }),
     body: localizedText({ label: 'Body (Markdown)', multiline: true }),
     featuredImage: fields.image({

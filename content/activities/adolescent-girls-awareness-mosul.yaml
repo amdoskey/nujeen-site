@@ -1,23 +1,21 @@
-# TRANSLATION STATUS: ar/ku below are machine-translated (LLM-authored), not
-# yet reviewed by a native speaker. ku is Sorani, used only for site-wide
-# consistency — the client's actual dialect is Kurmanji/Badini (Arabic
-# script). Pending native review + Badini re-translation before launch.
-# See translations-export.json _meta.dialectNote and README.md "Known
-# placeholders".
+# TRANSLATION STATUS: ar below is machine-translated (LLM-authored), not
+# yet reviewed by a native speaker. Kurdish = machine Badini conversion from
+# Sorani, pending native review. (ku is Kurmanji/Badini in Arabic script, per
+# the client's written confirmation; style follows content/about.yaml.)
 title: Awareness Sessions for Adolescent Girls in Mosul
 titleAr: جلسات توعية للمراهقات الإناث حول الصحة الإنجابية — الموصل
-titleKu: دانیشتنی ئاگادارکردنەوە بۆ کچە گەنجەکان دەربارەی SRHR — موسڵ
+titleKu: دانیشتنێن هۆشیارکرنێ بۆ کچێن هەرزەکار ل سەر SRHR — مووسل
 summary:
   en: Nujeen for Family Democratizing Organization held awareness sessions for adolescent female aged between (11-18) years old, on age appropriate SRHR topics in Mosul and surrounding areas.
   ar: عقدت نوجين جلسات توعية للمراهقات اللواتي تتراوح أعمارهن بين 11 و18 عامًا حول مواضيع الصحة والحقوق الجنسية والإنجابية المناسبة لأعمارهن، في الموصل والمناطق المحيطة بها.
-  ku: نوجین دانیشتنی ئاگادارکردنەوەی بۆ کچە گەنجەکانی تەمەن 11 تا 18 ساڵ دەربارەی بابەتی SRHR ی گونجاو لەگەڵ تەمەنیان، لە موسڵ و ناوچەکانی دەوروبەری بەڕێوەبرد.
+  ku: رێکخراوا نوژین دانیشتنێن هۆشیارکرنێ بۆ کچێن هەرزەکار یێن تەمەنێ وان د ناڤبەرا 11 بۆ 18 سالان دا، ل سەر بابەتێن SRHR یێن گونجای دگەل تەمەنێ وان، ل مووسل و دەڤەرێن دەوروبەر ئەنجامدان.
 body:
   en: |
     Nujeen for Family Democratizing Organization held awareness sessions for adolescent female aged between (11-18) years old, on age appropriate SRHR topics in Mosul and surrounding areas.
   ar: |
     عقدت منظمة نوجين لدمقرطة الأسرة جلسات توعية للمراهقات اللواتي تتراوح أعمارهن بين 11 و18 عامًا، حول مواضيع الصحة والحقوق الجنسية والإنجابية المناسبة لأعمارهن، في الموصل والمناطق المحيطة بها.
   ku: |
-    ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان دانیشتنی ئاگادارکردنەوەی بۆ کچە گەنجەکانی تەمەن 11 تا 18 ساڵ بەڕێوەبرد، دەربارەی بابەتی SRHR ی گونجاو لەگەڵ تەمەنیان، لە موسڵ و ناوچەکانی دەوروبەری.
+    رێکخراوا نوژین ژبو دیموکراسیکرنا خێزانێ دانیشتنێن هۆشیارکرنێ بۆ کچێن هەرزەکار یێن تەمەنێ وان د ناڤبەرا 11 بۆ 18 سالان دا ئەنجامدان، ل سەر بابەتێن ساخلەمی و مافێن سێکسی و زاوزێ (SRHR) یێن گونجای دگەل تەمەنێ وان، ل مووسل و دەڤەرێن دەوروبەر.
 featuredImage: /uploads/activities/adolescent-girls-awareness-mosul.jpg
 gallery:
   - /uploads/activities/gallery/adolescent-girls-awareness-mosul-1.jpg

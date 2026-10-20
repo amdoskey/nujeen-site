@@ -7,6 +7,8 @@
 # the client's official copy, verbatim. Section headings (Who we are,
 # Mission, Vision, Objectives, Looking ahead) are the client's official
 # labels in both ar and ku, including the sticky-nav labels.
+# heading.ku ("About Nujeen"): Kurdish = machine Badini conversion from
+# Sorani, pending native review.
 eyebrow:
   en: Who we are
   ar: من نحن
@@ -14,7 +16,7 @@ eyebrow:
 heading:
   en: About Nujeen
   ar: عن نوجين
-  ku: دەربارەی نوجین
+  ku: دەربارێ نوژین
 intro:
   en: Nujeen for Family Democratizing Organization is an independent, non-governmental, non-profit, and humanitarian organization. Founded in September 2003, it is officially registered with both the Kurdistan Regional Government and the Federal Government in Baghdad.
   ar: منظمة نووژين لدمقرطة العائلة هي منظمة غير حكومية، مستقلة، غير ربحية، وإنسانية، تأسست في أيلول (سبتمبر) 2003، ومجازة رسمياً من قبل حكومة إقليم كوردستان والحكومة الاتحادية في بغداد.

@@ -1,16 +1,14 @@
-# TRANSLATION STATUS: ar/ku below are machine-translated (LLM-authored), not
-# yet reviewed by a native speaker. ku is Sorani, used only for site-wide
-# consistency — the client's actual dialect is Kurmanji/Badini (Arabic
-# script). Pending native review + Badini re-translation before launch.
-# See translations-export.json _meta.dialectNote and README.md "Known
-# placeholders".
+# TRANSLATION STATUS: ar below is machine-translated (LLM-authored), not
+# yet reviewed by a native speaker. Kurdish = machine Badini conversion from
+# Sorani, pending native review. (ku is Kurmanji/Badini in Arabic script, per
+# the client's written confirmation; style follows content/about.yaml.)
 title: Investing in the Next Generation of Healthcare Leaders
 titleAr: الاستثمار في الجيل القادم من قادة الرعاية الصحية
-titleKu: وەبەرهێنان لە نەوەی داهاتووی سەرکردەکانی تەندروستی
+titleKu: وەبەرهێنان د نەڤشێ داهاتی یێ سەرکردەیێن بوارێ ساخلەمیێ دا
 summary:
   en: Nujeen was a Golden Sponsor of the IFMSA Kurdistan 16th Assembly, supporting medical students and young healthcare leaders across sessions on SRHR, GBV, and gender equality.
   ar: كانت نوجين راعيًا ذهبيًا للجمعية السادسة عشرة لـ IFMSA كردستان، دعمًا لطلاب الطب وقادة الرعاية الصحية الشباب عبر جلسات حول الصحة والحقوق الجنسية والإنجابية (SRHR)، والعنف القائم على النوع الاجتماعي (GBV)، والمساواة بين الجنسين.
-  ku: نوجین سپۆنسەری زێڕینی کۆنگرەی شازدەیەمی IFMSA کوردستان بوو، و پشتگیری خوێندکارانی پزیشکی و سەرکردە گەنجەکانی بواری تەندروستی کرد لە ڕێگەی دانیشتنەکان دەربارەی SRHR، توندوتیژی لەسەر بنەمای ڕەگەز (GBV)، و یەکسانی ڕەگەزی.
+  ku: رێکخراوا نوژین سپۆنسەرێ زێڕین یێ کۆنگرەیێ شازدێ یێ IFMSA کوردستان بوو، و پشتەڤانیا قوتابیێن پزیشکیێ و سەرکردەیێن گەنج یێن بوارێ ساخلەمیێ کر د دانیشتنێن ل سەر SRHR، توندوتیژیا جیندەری (GBV) و وەکهەڤیا جیندەری دا.
 body:
   en: |
     We were honored to be a Golden Sponsor of the IFMSA Kurdistan 16th Assembly, bringing together passionate medical students and young healthcare leaders for meaningful learning, dialogue, and connection.
@@ -25,11 +23,11 @@ body:
 
     في نوجين، نؤمن بأن تمكين الشباب — ولا سيما المتخصصين الصحيين في المستقبل — أمر أساسي لبناء نظام رعاية صحية أكثر وعيًا وشمولًا وإنصافًا. ونفخر بالوقوف إلى جانب طلاب الطب الشباب ودعم المساحات التي يستطيعون فيها أن يتعلّموا ويتساءلوا ويدافعوا ويقودوا.
   ku: |
-    شانازیمان پێوە کرد کە سپۆنسەری زێڕینی کۆنگرەی شازدەیەمی IFMSA کوردستان بووین، کە خوێندکارانی پزیشکیی بەتامەزرۆ و سەرکردە گەنجەکانی بواری تەندروستی کۆکردەوە بۆ فێربوون، گفتوگۆ، و پەیوەندییەکی بەسوود.
+    مە شانازی ب هندێ کر کو ببینە سپۆنسەرێ زێڕین یێ کۆنگرەیێ شازدێ یێ IFMSA کوردستان، یێ کو قوتابیێن پزیشکیێ یێن دلگەرم و سەرکردەیێن گەنج یێن بوارێ ساخلەمیێ کۆمکرین ژبو فێربوون، گفتوگۆ و پەیوەندیێن ب مفا.
 
-    لە ماوەی کۆنگرەکەدا، بەشداربووان ئامادەی ئەو دانیشتنانە بوون کە کۆمەڵێکی بەرفراوان لە بابەتەکانی تەندروستی و دادپەروەری کۆمەڵایەتییان لەخۆدەگرت، لەوانە تەندروستی و مافەکانی سێکسی و زاوزێ (SRHR)، توندوتیژی لەسەر بنەمای ڕەگەز (GBV)، یەکسانی ڕەگەزی، و پرسە گرنگەکانی تر کە کاریگەرییان لەسەر تەندروستی و خۆشگوزەرانی کۆمەڵگاکان هەیە.
+    ب درێژاهیا کۆنگرەی، بەشداربوویان پشکداری د دانیشتنان دا کر کو کۆمەکا بەرفرەه ژ بابەتێن ساخلەمیێ و دادپەروەریا جڤاکی ب خۆڤە دگرتن، ژ وان ژی ساخلەمی و مافێن سێکسی و زاوزێ (SRHR)، توندوتیژیا جیندەری (GBV)، وەکهەڤیا جیندەری، و پرسێن دی یێن گرنگ کو کارتێکرنێ ل ساخلەمی و خۆشگوزەرانیا جڤاکان دکەن.
 
-    لە نوجین، باوەڕمان وایە کە بەهێزکردنی گەنجان — بەتایبەتی پیشەگەرانی داهاتووی تەندروستی — بنەڕەتییە بۆ بونیاتنانی سیستەمێکی تەندروستی ئاگادارتر، گشتگیرتر، و دادپەروەرتر. شانازی دەکەین کە لە پاڵ خوێندکارە گەنجەکانی پزیشکیدا دەوەستین و پشتگیری ئەو بۆشاییانە دەکەین کە تیایدا دەتوانن فێر ببن، پرسیار بکەن، داکۆکی بکەن، و ڕابەرایەتی بکەن.
+    ل نوژین، ئەم باوەر دکەین کو ب هێزکرنا گەنجان — ب تایبەتی کارمەندێن داهاتی یێن بوارێ ساخلەمیێ — بنەڕەتە ژبو ئاڤاکرنا سیستەمەکێ ساخلەمیێ یێ هۆشیارتر، بەرفرەهتر و دادپەروەرتر. ئەم شانازیێ دکەین کو ل پاڵ قوتابیێن پزیشکیێ یێن گەنج رادوەستین و پشتەڤانیا وان جهان دکەین یێن کو تێدا دشێن فێر ببن، پسیاران بکەن، بەرەڤانیێ بکەن و پێشەنگیێ بکەن.
 featuredImage: /uploads/activities/ifmsa-golden-sponsorship.jpg
 gallery: []
 category: youth

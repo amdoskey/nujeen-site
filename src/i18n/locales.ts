@@ -17,7 +17,7 @@ export const localeLabels: Record<Locale, string> = {
 export const localeNames: Record<Locale, string> = {
   en: 'English',
   ar: 'العربية',
-  ku: 'کوردیی ناوەندی',
+  ku: 'کوردی (بادینی)',
 };
 
 export function isLocale(value: string): value is Locale {

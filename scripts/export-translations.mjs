@@ -132,7 +132,7 @@ const output = {
     description:
       'Every translatable string on nujeen.org, keyed by a stable dotted path. English is the source of truth (source column); fill in / correct ar and ku.',
     dialectNote:
-      'ku values must be Kurmanji/Badini written in Arabic script (Duhok is a Badini-speaking area) — NOT Sorani. The seed content currently in this file is Sorani and needs re-translating.',
+      'ku values must be Kurmanji/Badini written in Arabic script (Duhok is a Badini-speaking area) — NOT Sorani. All ku values are now Badini: About and the Domiz-2 activity body are client-authored; everything else is a machine Badini conversion from Sorani and needs native review/correction.',
     doNotTranslate:
       'Proper nouns and technical tokens embedded inside a string (e.g. "IFMSA", "SRHR", "Domiz 2", "PDF") should be left as-is by the translator. Phone numbers, emails, dates, slugs, and file paths are not included in this export at all — they are not localized fields.',
     keyFormat:

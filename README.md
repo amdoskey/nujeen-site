@@ -68,12 +68,13 @@ means copying that function's call, nothing more.
 ## Internationalization
 
 - Locales: `en` (LTR), `ar` (RTL), `ku` — Kurdish (RTL, Arabic script).
-  **Dialect note — confirmed, not a guess:** the seeded `ku` content is
-  currently written in Sorani, but the client has **confirmed in writing**
-  that it must be **Kurmanji/Badini** in Arabic script instead (Duhok is a
-  Badini-speaking region). This is a confirmed launch blocker, not a
-  probable one — see "Known placeholders" and the translation export/
-  import workflow below.
+  **Dialect note:** the client has **confirmed in writing** that `ku` must
+  be **Kurmanji/Badini** in Arabic script (Duhok is a Badini-speaking
+  region). All `ku` content is now Badini: the About page and the Domiz-2
+  activity body are client-authored; everything else is a machine Badini
+  conversion from the earlier Sorani seed, pending native review (see
+  "Known placeholders"). Kurdish dates use Badini month names via
+  `formatDate()` in `src/lib/content.ts`, since `Intl` has no Badini locale.
 - Every page lives under `/en/...`, `/ar/...`, `/ku/...` via
   `src/pages/[locale]/`.
 - `ar`/`ku` pages render with `dir="rtl"` and the Arabic webfont
@@ -119,18 +120,18 @@ must be swapped for the client's real material before going live:
 - **Arabic and Kurdish translations on all real Activities (and the rest of
   the site) are machine-translated (LLM-authored), not reviewed by a native
   speaker.** Each of the 8 real Activities carries a `# TRANSLATION STATUS`
-  comment at the top of its YAML file saying so explicitly. **The client has
-  now confirmed in writing that Kurdish must be Kurmanji/Badini in Arabic
-  script** (Duhok is a Badini-speaking area), not the Sorani currently
-  seeded — this is a confirmed launch blocker, not a probable one. This is
+  comment at the top of its YAML file saying so explicitly. **Kurdish is
+  Kurmanji/Badini in Arabic script** (client-confirmed); the former Sorani
+  seed has been machine-converted to Badini and still needs a native
+  Badini speaker's review before launch. This is
   the last step, done once: significant new English copy was added this
   session (Home's Mission & Vision + "What we do", and the entire new About
   page) that hasn't been translated at all yet, which is why `/ar` and
   `/ku` currently render those two pages partially in English fallback —
   expected interim state, not a bug. Once ALL English copy is final, use
   the export/import workflow below to send `translations-export.json` to a
-  native speaker/translator for one combined Arabic review + Badini
-  re-translation pass, then re-import.
+  native speaker/translator for one combined Arabic + Badini review
+  pass, then re-import.
 - **Social share buttons, Open Graph image, activity-photo lightbox, and a
   "latest 3 YouTube videos" feed are not built.** Share icons on activity
   pages currently link to `#` (no-op); no `og:image` meta tag exists yet;
@@ -173,8 +174,8 @@ see the file's own `_meta` block for the full convention.
 
 **To get new translations:** send `translations-export.json` to a
 translator, asking them to fill/correct the `ar` and `ku` values against
-the same keys (the `ku` values should be **Kurmanji/Badini** in Arabic
-script, not Sorani — see "Known placeholders" above). Do not add, remove,
+the same keys (the `ku` values are **Kurmanji/Badini** in Arabic script — correct
+them in Badini, not Sorani; see "Known placeholders" above). Do not add, remove,
 or rename keys.
 
 **To import it back:** hand the filled-in file back to whoever maintains

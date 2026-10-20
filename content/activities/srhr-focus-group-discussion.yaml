@@ -1,23 +1,21 @@
-# TRANSLATION STATUS: ar/ku below are machine-translated (LLM-authored), not
-# yet reviewed by a native speaker. ku is Sorani, used only for site-wide
-# consistency — the client's actual dialect is Kurmanji/Badini (Arabic
-# script). Pending native review + Badini re-translation before launch.
-# See translations-export.json _meta.dialectNote and README.md "Known
-# placeholders".
+# TRANSLATION STATUS: ar below is machine-translated (LLM-authored), not
+# yet reviewed by a native speaker. Kurdish = machine Badini conversion from
+# Sorani, pending native review. (ku is Kurmanji/Badini in Arabic script, per
+# the client's written confirmation; style follows content/about.yaml.)
 title: Focus Group Discussion on SRHR
 titleAr: جلسة نقاش مجموعة مركزة حول الصحة والحقوق الجنسية والإنجابية
-titleKu: دانیشتنی گروپی سەرەکی دەربارەی SRHR
+titleKu: گفتوگۆیا گروپێن تایبەت ل سەر SRHR
 summary:
   en: Nujeen held Focus Group Discussions with community Leaders in different sectors including (Health, education, NGO and humanitarian fields) on SRHR and the how to improve access to it in the region.
   ar: عقدت نوجين جلسات نقاش مع قادة المجتمع من قطاعات الصحة والتعليم والعمل الإنساني لتحديد سبل تحسين الوصول إلى خدمات الصحة والحقوق الجنسية والإنجابية في المنطقة.
-  ku: نوجین دانیشتنی گروپی سەرەکی لەگەڵ ڕابەرانی کۆمەڵگا لە بوارەکانی تەندروستی، پەروەردە، و مرۆیی سازدا بۆ دۆزینەوەی ڕێگاکانی باشترکردنی دەستگەیشتن بە SRHR لە هەرێمەکەدا.
+  ku: رێکخراوا نوژین گفتوگۆیێن گروپێن تایبەت دگەل رێبەرێن جڤاکی ژ بوارێن جۆراوجۆر (ساخلەمی، پەروەردە، رێکخراوێن ناحکومی و بوارێ مروڤاتی) ل سەر SRHR و چاوانیا باشترکرنا گەهشتنا وێ ل دەڤەرێ ئەنجامدان.
 body:
   en: |
     Nujeen held Focus Group Discussions with community Leaders in different sectors including (Health, education, NGO and humanitarian fields) on SRHR and the how to improve access to it in the region.
   ar: |
     عقدت نوجين جلسات نقاش مجموعة مركزة مع قادة المجتمع في قطاعات مختلفة — بما في ذلك الصحة والتعليم والمنظمات غير الحكومية والمجال الإنساني — حول الصحة والحقوق الجنسية والإنجابية (SRHR) وكيفية تحسين الوصول إليها في المنطقة.
   ku: |
-    نوجین دانیشتنی گروپی سەرەکی لەگەڵ ڕابەرانی کۆمەڵگا لە بوارە جیاوازەکاندا — لەوانە تەندروستی، پەروەردە، ڕێکخراوە ناحکومییەکان و بوارە مرۆییەکان — سازدا، دەربارەی تەندروستی و مافەکانی سێکسی و زاوزێ (SRHR) و چۆنیەتی باشترکردنی دەستگەیشتن بەوە لە هەرێمەکەدا.
+    رێکخراوا نوژین گفتوگۆیێن گروپێن تایبەت دگەل رێبەرێن جڤاکی ژ بوارێن جۆراوجۆر ئەنجامدان — ژ وان ژی ساخلەمی، پەروەردە، رێکخراوێن ناحکومی و بوارێ مروڤاتی — ل سەر ساخلەمی و مافێن سێکسی و زاوزێ (SRHR) و چاوانیا باشترکرنا گەهشتنا خەلکی بۆ ڤان خزمەتان ل دەڤەرێ.
 featuredImage: /uploads/activities/srhr-focus-group-discussion.jpg
 gallery:
   - /uploads/activities/gallery/srhr-focus-group-discussion-1.jpg

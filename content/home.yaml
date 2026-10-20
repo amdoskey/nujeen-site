@@ -1,3 +1,5 @@
+# TRANSLATION STATUS: Kurdish = machine Badini conversion from Sorani,
+# pending native review. ar is machine-translated, pending review.
 eyebrow:
   en: Family · Youth · Women's rights · Community
   ar: ""
@@ -5,11 +7,11 @@ eyebrow:
 headlinePlain:
   en: "Standing with women and families,"
   ar: "الوقوف إلى جانب النساء والأسر،"
-  ku: "لەگەڵ ژنان و خێزانەکاندا ڕاوەستاون،"
+  ku: ل پاڵ ژن و خێزانان رادوەستین،
 headlineEmphasis:
   en: where it matters most.
   ar: حيث تشتد الحاجة.
-  ku: لەوێ کە زۆرترین پێویستیشیانە.
+  ku: ل وێ جهێ کو پتر پێدڤی پێ هەی.
 dek:
   en: Since 2003, from the neighborhoods of Duhok to the displacement camps, Nujeen has worked to strengthen families, advance human rights, and build a more democratic, inclusive community — for every woman, child, and family.
   ar: ""
@@ -18,11 +20,11 @@ heroImage: /uploads/home/hero.jpeg
 heroQuote:
   en: When a woman understands her own health, a whole family grows stronger.
   ar: عندما تفهم المرأة صحتها، تكبر الأسرة بأكملها قوةً.
-  ku: کاتێک ژنێک لە تەندروستی خۆی تێبگات، هەموو خێزانەکە بەهێزتر دەبێت.
+  ku: دەمێ ژنەک ل ساخلەمیا خۆ تێدگەهیت، تەڤاهیا خێزانێ ب هێزتر لێدهێت.
 heroQuoteAttribution:
   en: Nujeen field team, Duhok
   ar: فريق نوجين الميداني، دهوك
-  ku: تیمی مەیدانی نوجین، دهۆک
+  ku: تیما مەیدانی یا نوژین، دهۆک
 heroStats:
   - number: "2003"
     label:
@@ -47,27 +49,27 @@ heroStats:
 recentEyebrow:
   en: From the field
   ar: من الميدان
-  ku: لە مەیدانەوە
+  ku: ژ مەیدانێ
 recentHeading:
   en: Recent activities
   ar: أحدث الأنشطة
-  ku: چالاکییە نوێیەکان
+  ku: دوماهیک چالاکی
 quoteBand:
   en: We don't just deliver sessions. We build the *understanding* that lets a community care for its own.
   ar: نحن لا نكتفي بتقديم الجلسات. نحن نبني *الفهم* الذي يمكّن المجتمع من رعاية أفراده.
-  ku: ئێمە تەنها دانیشتن پێشکەش ناکەین. ئێمە *تێگەیشتن* بنیات دەنێین کە ڕێگا بە کۆمەڵگا دەدات خۆی چاودێری بکات.
+  ku: ئەم بتنێ دانیشتنان پێشکێش ناکەین. ئەم ئەو *تێگەهشتنێ* ئاڤا دکەین یا کو رێکێ ددەتە جڤاکی خۆدانیێ ل ئەندامێن خۆ بکەت.
 quoteBandSource:
   en: Nujeen for Family Democratizing Organization
   ar: منظمة نوجين لدمقرطة الأسرة
-  ku: ڕێکخراوی نوجین بۆ دیموکراتیزەکردنی خێزان
+  ku: رێکخراوا نوژین ژبو دیموکراسیکرنا خێزانێ
 impactEyebrow:
   en: Our reach
   ar: أثرنا
-  ku: گەیشتنمان
+  ku: گەهشتنا مە
 impactHeading:
   en: Work measured in trust, not just numbers.
   ar: عمل يُقاس بالثقة، لا بالأرقام فقط.
-  ku: کارێک بە متمانە دەپێورێت، نەک تەنها بە ژمارە.
+  ku: کارێ مە ب باوەریێ دهێتە پیڤان، نە بتنێ ب ژمارەیان.
 impactStats:
   - number: "2003"
     suffix: ""
@@ -100,8 +102,8 @@ impactNote:
 ctaHeading:
   en: Partner with us, or lend your support.
   ar: كن شريكًا معنا، أو قدّم دعمك.
-  ku: بەشداریمان بکە، یان پشتگیری پێشکەش بکە.
+  ku: ببە هەڤپشکێ مە، یان پشتەڤانیا خۆ پێشکێش بکە.
 ctaText:
   en: Health directorates, academic faculties, international partners, and individuals — there's a place for you in this work.
   ar: مديريات الصحة، الكليات الأكاديمية، الشركاء الدوليون، والأفراد — هناك مكان لكم في هذا العمل.
-  ku: بەڕێوەبەرایەتی تەندروستی، کۆلێژی ئەکادیمی، هاوبەشی نێودەوڵەتی، و تاکەکان — لەم کارەدا شوێنێک بۆ ئێوە هەیە.
+  ku: رێڤەبەریێن ساخلەمیێ، کولیژێن ئەکادیمی، هەڤپشکێن نێڤدەولەتی، و تاکەکەس — جهەک بۆ هەوە د ڤی کاری دا هەیە.

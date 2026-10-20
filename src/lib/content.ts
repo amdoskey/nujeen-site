@@ -41,11 +41,22 @@ export async function getEntry(collectionName: CollectionName, slug: string) {
   return normalizeEntry(entry);
 }
 
+// Intl has no Badini (Kurmanji, Arabic script) locale — `ckb` is Sorani and
+// `ku` is Latin-script Kurmanji — so Kurdish dates use the Badini month names
+// customary in Duhok (Syriac/Arabic-derived, as in About's "ئیلونا سالا 2003").
+const BADINI_MONTHS = [
+  'کانوونا دووێ', 'شوبات', 'ئادار', 'نیسان', 'گولان', 'حزیران',
+  'تیرمەه', 'تەباخ', 'ئیلون', 'چریا ئێکێ', 'چریا دووێ', 'کانوونا ئێکێ',
+] as const;
+
 export function formatDate(iso: string | null | undefined, locale: string): string {
   if (!iso) return '';
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
-  const localeTag = locale === 'ar' ? 'ar' : locale === 'ku' ? 'ckb' : 'en-GB';
+  if (locale === 'ku') {
+    return `${d.getUTCDate()} ${BADINI_MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+  }
+  const localeTag = locale === 'ar' ? 'ar' : 'en-GB';
   try {
     return new Intl.DateTimeFormat(localeTag, {
       day: 'numeric',
