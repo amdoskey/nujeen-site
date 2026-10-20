@@ -1,34 +1,79 @@
-# TRANSLATION STATUS: ar below is machine-translated (LLM-authored), not
-# yet reviewed by a native speaker. Kurdish = machine Badini conversion from
-# Sorani, pending native review. (ku is Kurmanji/Badini in Arabic script, per
-# the client's written confirmation; style follows content/about.yaml.)
 title: Psychosocial Awareness Sessions for Young Refugee Women
 titleAr: جلسات توعية نفسية اجتماعية للشابات اللاجئات
 titleKu: دانیشتنێن هۆشیارکرنا دەروونی-جڤاکی بۆ ژنێن گەنج یێن پەنابەر
 summary:
-  en: Over eight days, Nujeen and Tutapona ran psychosocial sessions in Domiz-1 camp for 17 young Syrian refugee girls (13–18) on mental health, resilience, and personal development.
-  ar: على مدى ثمانية أيام، نظّمت نوجين وتوتابونا جلسات نفسية اجتماعية في مخيم دوميز 1 لـ 17 فتاة سورية لاجئة (13–18 عامًا) حول الصحة النفسية والقدرة على الصمود والتطوير الشخصي.
-  ku: ب درێژاهیا هەشت رۆژان، نوژین و توتاپۆنا دانیشتنێن دەروونی-جڤاکی ل کەمپا دومیز-1 بۆ 17 کچێن گەنج یێن پەنابەرێن سووری (13–18 سال) ل سەر ساخلەمیا دەروونی، خۆراگری و پێشڤەچوونا کەسایەتی ئەنجامدان.
+  en: >-
+    Over eight days, Nujeen and Tutapona ran psychosocial sessions in Domiz-1
+    camp for 17 young Syrian refugee girls (13–18) on mental health, resilience,
+    and personal development.
+  ar: >-
+    على مدى ثمانية أيام، نظّمت نوجين وتوتابونا جلسات نفسية اجتماعية في مخيم
+    دوميز 1 لـ 17 فتاة سورية لاجئة (13–18 عامًا) حول الصحة النفسية والقدرة على
+    الصمود والتطوير الشخصي.
+  ku: >-
+    ب درێژاهیا هەشت رۆژان، نوژین و توتاپۆنا دانیشتنێن دەروونی-جڤاکی ل کەمپا
+    دومیز-1 بۆ 17 کچێن گەنج یێن پەنابەرێن سووری (13–18 سال) ل سەر ساخلەمیا
+    دەروونی، خۆراگری و پێشڤەچوونا کەسایەتی ئەنجامدان.
 body:
-  en: |
-    Over eight days, Nujeen for Family Democratizing Organization (NFDO), in collaboration with Tutapona, conducted a series of psychosocial awareness sessions in Domiz-1 refugee camp for 17 young Syrian refugee girls aged 13 to 18, focusing on mental health, anxiety management, and personal development.
+  en: >
+    Over eight days, Nujeen for Family Democratizing Organization (NFDO), in
+    collaboration with Tutapona, conducted a series of psychosocial awareness
+    sessions in Domiz-1 refugee camp for 17 young Syrian refugee girls aged 13
+    to 18, focusing on mental health, anxiety management, and personal
+    development.
 
-    Through these sessions, participants explored practical ways to cope with stress, overcome challenges, protect their mental well-being, and build confidence and resilience. The sessions encouraged them to recognize their strengths, develop strong personalities, and embrace their potential as successful women and future leaders.
 
-    We believe that every woman deserves the knowledge, confidence, and support to navigate life's challenges, protect her mental health, and create a brighter future for herself and her community. Together, we continue to empower women, strengthen resilience, and nurture the leaders of tomorrow.
-  ar: |
-    على مدى ثمانية أيام، نفّذت منظمة نوجين لدمقرطة الأسرة (NFDO)، بالتعاون مع منظمة توتابونا، سلسلة من جلسات التوعية النفسية الاجتماعية في مخيم دوميز 1 للاجئين، استهدفت 17 فتاة سورية لاجئة تتراوح أعمارهن بين 13 و18 عامًا، وركّزت على الصحة النفسية وإدارة القلق والتطوير الشخصي.
+    Through these sessions, participants explored practical ways to cope with
+    stress, overcome challenges, protect their mental well-being, and build
+    confidence and resilience. The sessions encouraged them to recognize their
+    strengths, develop strong personalities, and embrace their potential as
+    successful women and future leaders.
 
-    ومن خلال هذه الجلسات، استكشفت المشاركات طرقًا عملية للتعامل مع التوتر، وتجاوز التحديات، وحماية صحتهن النفسية، وبناء الثقة بالنفس والقدرة على الصمود. كما شجّعتهن الجلسات على التعرّف على نقاط قوتهن، وتنمية شخصيات قوية، واحتضان إمكاناتهن كنساء ناجحات وقائدات للمستقبل.
 
-    نؤمن بأن كل امرأة تستحق المعرفة والثقة والدعم لمواجهة تحديات الحياة، وحماية صحتها النفسية، وصنع مستقبل أكثر إشراقًا لنفسها ولمجتمعها. معًا، نواصل تمكين المرأة، وتعزيز القدرة على الصمود، ورعاية قادة الغد.
-  ku: |
-    ب درێژاهیا هەشت رۆژان، رێکخراوا نوژین ژبو دیموکراسیکرنا خێزانێ (NFDO)، ب هەڤکاری دگەل توتاپۆنا، زنجیرەکا دانیشتنێن هۆشیارکرنا دەروونی-جڤاکی ل کەمپا پەنابەران یا دومیز-1 بۆ 17 کچێن گەنج یێن پەنابەرێن سووری یێن تەمەنێ وان د ناڤبەرا 13 بۆ 18 سالان دا ئەنجامدان، کو سەرنج ل سەر ساخلەمیا دەروونی، رێڤەبرنا دلەراوکێ و پێشڤەچوونا کەسایەتی هاتبوو دان.
+    We believe that every woman deserves the knowledge, confidence, and support
+    to navigate life's challenges, protect her mental health, and create a
+    brighter future for herself and her community. Together, we continue to
+    empower women, strengthen resilience, and nurture the leaders of tomorrow.
+  ar: >
+    على مدى ثمانية أيام، نفّذت منظمة نوجين لدمقرطة الأسرة (NFDO)، بالتعاون مع
+    منظمة توتابونا، سلسلة من جلسات التوعية النفسية الاجتماعية في مخيم دوميز 1
+    للاجئين، استهدفت 17 فتاة سورية لاجئة تتراوح أعمارهن بين 13 و18 عامًا، وركّزت
+    على الصحة النفسية وإدارة القلق والتطوير الشخصي.
 
-    ب رێیا ڤان دانیشتنان، بەشداربوویان رێکێن کرداری دیتن ژبو مامەلەکرنێ دگەل فشارا دەروونی، زالبوونێ ل سەر ئاستەنگان، پاراستنا ساخلەمیا خۆ یا دەروونی، و ئاڤاکرنا باوەری ب خۆبوون و خۆراگریێ. دانیشتنان هاندانا وان کر کو خالێن ب هێز یێن خۆ نیاس بکەن، کەسایەتیەکا ب هێز پێش بێخن، و شیانێن خۆ وەک ژنێن سەرکەفتی و سەرکردەیێن پاشەرۆژێ هەمێز بکەن.
 
-    ئەم باوەر دکەین کو هەر ژنەک هێژایی زانین، باوەری ب خۆبوون و پشتەڤانیێ یە دا کو بشێت ل بەرامبەر ئاستەنگێن ژیانێ راوەستیت، ساخلەمیا خۆ یا دەروونی بپارێزیت، و پاشەرۆژەکا گەشتر بۆ خۆ و جڤاکێ خۆ ئاڤا بکەت. پێکڤە، ئەم بەردەوام دبین د ب هێزکرنا ژنان، خورتکرنا خۆراگریێ، و پەروەردەکرنا سەرکردەیێن سوبەهی دا.
+    ومن خلال هذه الجلسات، استكشفت المشاركات طرقًا عملية للتعامل مع التوتر،
+    وتجاوز التحديات، وحماية صحتهن النفسية، وبناء الثقة بالنفس والقدرة على
+    الصمود. كما شجّعتهن الجلسات على التعرّف على نقاط قوتهن، وتنمية شخصيات قوية،
+    واحتضان إمكاناتهن كنساء ناجحات وقائدات للمستقبل.
+
+
+    نؤمن بأن كل امرأة تستحق المعرفة والثقة والدعم لمواجهة تحديات الحياة، وحماية
+    صحتها النفسية، وصنع مستقبل أكثر إشراقًا لنفسها ولمجتمعها. معًا، نواصل تمكين
+    المرأة، وتعزيز القدرة على الصمود، ورعاية قادة الغد.
+  ku: >
+    ب درێژاهیا هەشت رۆژان، رێکخراوا نوژین ژبو دیموکراسیکرنا خێزانێ (NFDO)، ب
+    هەڤکاری دگەل توتاپۆنا، زنجیرەکا دانیشتنێن هۆشیارکرنا دەروونی-جڤاکی ل کەمپا
+    پەنابەران یا دومیز-1 بۆ 17 کچێن گەنج یێن پەنابەرێن سووری یێن تەمەنێ وان د
+    ناڤبەرا 13 بۆ 18 سالان دا ئەنجامدان، کو سەرنج ل سەر ساخلەمیا دەروونی،
+    رێڤەبرنا دلەراوکێ و پێشڤەچوونا کەسایەتی هاتبوو دان.
+
+
+    ب رێیا ڤان دانیشتنان، بەشداربوویان رێکێن کرداری دیتن ژبو مامەلەکرنێ دگەل
+    فشارا دەروونی، زالبوونێ ل سەر ئاستەنگان، پاراستنا ساخلەمیا خۆ یا دەروونی، و
+    ئاڤاکرنا باوەری ب خۆبوون و خۆراگریێ. دانیشتنان هاندانا وان کر کو خالێن ب هێز
+    یێن خۆ نیاس بکەن، کەسایەتیەکا ب هێز پێش بێخن، و شیانێن خۆ وەک ژنێن سەرکەفتی
+    و سەرکردەیێن پاشەرۆژێ هەمێز بکەن.
+
+
+    ئەم باوەر دکەین کو هەر ژنەک هێژایی زانین، باوەری ب خۆبوون و پشتەڤانیێ یە دا
+    کو بشێت ل بەرامبەر ئاستەنگێن ژیانێ راوەستیت، ساخلەمیا خۆ یا دەروونی
+    بپارێزیت، و پاشەرۆژەکا گەشتر بۆ خۆ و جڤاکێ خۆ ئاڤا بکەت. پێکڤە، ئەم بەردەوام
+    دبین د ب هێزکرنا ژنان، خورتکرنا خۆراگریێ، و پەروەردەکرنا سەرکردەیێن سوبەهی
+    دا.
+featuredImage: /uploads/activities/tutapona-psychosocial-domiz-1/featuredImage.jpeg
 gallery: []
 category: camps
 documents: []
 status: published
+seoTitle: {}
+seoDescription: {}
